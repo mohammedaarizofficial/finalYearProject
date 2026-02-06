@@ -1,0 +1,7 @@
+Strategy,Steps_to_50%_LCC,Improvement_%,Faster_by_nodes
+Betweenness (SEAL),81.0,17.346938775510203,17.0
+Degree (Original),98.0,0.0,0.0
+Degree (SEAL),98.0,0.0,0.0
+Closeness (SEAL),105.0,-7.142857142857142,-7.0
+MO-Based (SEAL),108.0,-10.204081632653061,-10.0
+Random (SEAL),151.0,-54.08163265306123,-53.0

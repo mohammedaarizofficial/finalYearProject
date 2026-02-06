@@ -1,0 +1,1363 @@
+incident_id,person_id,date,crime_type,modus_operandi,severity,location,persons_involved,description
+0,93,2021-07-07,Logistics,Enabler,Low,City_7,93;368;41;8,Logistics operation led by Enabler
+1,345,2020-04-09,Intimidation,Peripheral,Medium,City_4,345;160,Intimidation operation led by Peripheral
+2,346,2023-02-16,Illegal Contracts,Broker,Low,City_6,346;124,Illegal Contracts operation led by Broker
+3,213,2024-01-31,Document Forgery,Enabler,Severe,City_2,213;216,Document Forgery operation led by Enabler
+4,256,2021-11-20,Weapons Supply,Enabler,High,City_7,256;279,Weapons Supply operation led by Enabler
+5,57,2020-11-03,Intimidation,Peripheral,Medium,City_7,57;264;193,Intimidation operation led by Peripheral
+6,209,2022-05-17,Drug Trafficking,Enabler,High,City_7,209;147,Drug Trafficking operation led by Enabler
+7,190,2021-10-22,Arson,Peripheral,Medium,City_7,190;276;288,Arson operation led by Peripheral
+8,58,2022-06-06,Collection,Peripheral,Medium,City_7,58;206;68,Collection operation led by Peripheral
+9,333,2023-11-05,Logistics,Enabler,Severe,City_10,333;279;368,Logistics operation led by Enabler
+10,294,2024-02-12,Money Laundering,Coordinator,High,City_3,294;50;144;252;136,Money Laundering operation led by Coordinator
+11,327,2024-11-03,Extortion,Broker,Medium,City_6,327;398;218;392;223,Extortion operation led by Broker
+12,13,2021-08-25,Robbery,Peripheral,Low,City_2,13;393;193;5;369,Robbery operation led by Peripheral
+13,153,2021-04-27,Resource Distribution,Broker,Medium,City_10,153;361,Resource Distribution operation led by Broker
+14,142,2020-04-09,Robbery,Peripheral,Low,City_2,142;84;302;330,Robbery operation led by Peripheral
+15,44,2024-11-23,Weapons Supply,Enabler,High,City_5,44;235,Weapons Supply operation led by Enabler
+16,27,2020-01-03,Drug Trafficking,Enabler,High,City_4,27;239;15,Drug Trafficking operation led by Enabler
+17,194,2024-06-05,Arson,Peripheral,Severe,City_2,194;71;229;34,Arson operation led by Peripheral
+18,347,2021-04-04,Drug Trafficking,Enabler,Low,City_3,347;289,Drug Trafficking operation led by Enabler
+19,61,2023-02-26,Territory Control,Coordinator,Medium,City_5,61;234;80;377;15,Territory Control operation led by Coordinator
+20,186,2020-11-28,Document Forgery,Enabler,Severe,City_10,186;101;86,Document Forgery operation led by Enabler
+21,233,2023-09-22,Corruption,Coordinator,Medium,City_1,233;144;148,Corruption operation led by Coordinator
+22,42,2020-05-28,Arson,Peripheral,High,City_4,42;71;335,Arson operation led by Peripheral
+23,301,2020-04-08,Collection,Peripheral,Low,City_8,301;220;208;347,Collection operation led by Peripheral
+24,61,2020-03-31,Territory Control,Coordinator,High,City_6,61;245,Territory Control operation led by Coordinator
+25,9,2020-06-03,Illegal Contracts,Broker,Low,City_3,9;244,Illegal Contracts operation led by Broker
+26,66,2020-01-03,Money Laundering,Coordinator,Severe,City_2,66;30,Money Laundering operation led by Coordinator
+27,249,2024-12-02,Drug Trafficking,Enabler,Severe,City_9,249;344;206,Drug Trafficking operation led by Enabler
+28,81,2023-10-03,Strategic Planning,Coordinator,High,City_7,81;286;213;66,Strategic Planning operation led by Coordinator
+29,72,2024-02-19,Coordination,Broker,Medium,City_8,72;77;143;276,Coordination operation led by Broker
+30,2,2022-11-02,Corruption,Coordinator,Medium,City_10,2;380;213;189,Corruption operation led by Coordinator
+31,351,2024-09-03,Extortion,Broker,High,City_2,351;45;233,Extortion operation led by Broker
+32,97,2021-03-09,Illegal Contracts,Broker,High,City_9,97;30;149;214;297,Illegal Contracts operation led by Broker
+33,399,2021-02-12,Territory Control,Coordinator,Low,City_2,399;381;85;73,Territory Control operation led by Coordinator
+34,112,2020-09-13,Drug Trafficking,Enabler,Low,City_1,112;89,Drug Trafficking operation led by Enabler
+35,338,2022-03-24,Weapons Supply,Enabler,Low,City_5,338;237;228;317,Weapons Supply operation led by Enabler
+36,50,2023-05-08,Strategic Planning,Coordinator,Severe,City_10,50;81;377;280,Strategic Planning operation led by Coordinator
+37,210,2022-07-20,Document Forgery,Enabler,Low,City_7,210;139,Document Forgery operation led by Enabler
+38,173,2024-01-20,Extortion,Broker,High,City_7,173;373;207;339,Extortion operation led by Broker
+39,104,2023-06-02,Weapons Supply,Enabler,Low,City_7,104;289;325,Weapons Supply operation led by Enabler
+40,16,2023-11-28,Weapons Supply,Enabler,High,City_3,16;302;364;25;306,Weapons Supply operation led by Enabler
+41,0,2022-04-23,Arson,Peripheral,Low,City_3,0;70;21,Arson operation led by Peripheral
+42,224,2022-12-17,Strategic Planning,Coordinator,Severe,City_4,224;219,Strategic Planning operation led by Coordinator
+43,31,2023-02-06,Extortion,Broker,Low,City_5,31;167,Extortion operation led by Broker
+44,25,2023-05-24,Intimidation,Peripheral,High,City_9,25;336,Intimidation operation led by Peripheral
+45,37,2020-12-25,Drug Trafficking,Enabler,High,City_3,37;361;169;105;353,Drug Trafficking operation led by Enabler
+46,181,2023-07-05,Robbery,Peripheral,Medium,City_6,181;179;378;145;74,Robbery operation led by Peripheral
+47,228,2024-12-10,Drug Trafficking,Enabler,High,City_9,228;336;265;366,Drug Trafficking operation led by Enabler
+48,395,2024-02-01,Intimidation,Peripheral,Medium,City_1,395;323;347;283;165,Intimidation operation led by Peripheral
+49,257,2020-01-22,Intimidation,Peripheral,Severe,City_1,257;281;274;288;225,Intimidation operation led by Peripheral
+50,381,2023-05-24,Document Forgery,Enabler,High,City_6,381;49;322;341;155,Document Forgery operation led by Enabler
+51,81,2023-07-15,Strategic Planning,Coordinator,High,City_7,81;213;153;247,Strategic Planning operation led by Coordinator
+52,139,2022-05-19,Illegal Contracts,Broker,Medium,City_4,139;94;260,Illegal Contracts operation led by Broker
+53,263,2022-11-24,Strategic Planning,Coordinator,Medium,City_8,263;72;220;351;313,Strategic Planning operation led by Coordinator
+54,60,2021-08-09,Intimidation,Peripheral,Severe,City_4,60;276,Intimidation operation led by Peripheral
+55,59,2020-02-07,Extortion,Broker,Medium,City_4,59;87;179;112;385,Extortion operation led by Broker
+56,123,2021-12-12,Drug Trafficking,Enabler,High,City_3,123;221;26;206;384,Drug Trafficking operation led by Enabler
+57,313,2024-12-11,Illegal Contracts,Broker,Medium,City_1,313;371;31;127;67,Illegal Contracts operation led by Broker
+58,156,2024-02-08,Illegal Contracts,Broker,High,City_5,156;313;294;196;326,Illegal Contracts operation led by Broker
+59,135,2023-10-15,Weapons Supply,Enabler,Medium,City_3,135;18,Weapons Supply operation led by Enabler
+60,196,2023-08-02,Intimidation,Peripheral,Low,City_4,196;223,Intimidation operation led by Peripheral
+61,86,2023-08-11,Coordination,Broker,High,City_10,86;160;34;80;213,Coordination operation led by Broker
+62,32,2020-04-18,Intimidation,Peripheral,Medium,City_2,32;24;199;196,Intimidation operation led by Peripheral
+63,81,2022-05-25,Strategic Planning,Coordinator,Low,City_6,81;140;132;287,Strategic Planning operation led by Coordinator
+64,65,2021-07-26,Coordination,Broker,Low,City_1,65;102;22,Coordination operation led by Broker
+65,152,2020-12-08,Territory Control,Coordinator,Medium,City_4,152;16,Territory Control operation led by Coordinator
+66,131,2022-06-14,Document Forgery,Enabler,Medium,City_5,131;353;378;398,Document Forgery operation led by Enabler
+67,385,2023-11-05,Collection,Peripheral,Low,City_10,385;246;165,Collection operation led by Peripheral
+68,255,2020-05-18,Collection,Peripheral,Medium,City_9,255;249,Collection operation led by Peripheral
+69,242,2020-08-15,Extortion,Broker,High,City_6,242;346;222,Extortion operation led by Broker
+70,139,2024-02-12,Extortion,Broker,Medium,City_5,139;316;10,Extortion operation led by Broker
+71,258,2022-09-26,Logistics,Enabler,Severe,City_7,258;142;34,Logistics operation led by Enabler
+72,110,2024-09-28,Coordination,Broker,Severe,City_6,110;214;387;79;193,Coordination operation led by Broker
+73,239,2021-03-17,Illegal Contracts,Broker,Low,City_9,239;142;331;121;241,Illegal Contracts operation led by Broker
+74,365,2021-08-28,Document Forgery,Enabler,Medium,City_10,365;300;222;97;59,Document Forgery operation led by Enabler
+75,309,2023-11-13,Document Forgery,Enabler,Low,City_8,309;161;209,Document Forgery operation led by Enabler
+76,396,2021-05-09,Illegal Contracts,Broker,Low,City_6,396;314;168;89;112,Illegal Contracts operation led by Broker
+77,182,2021-12-17,Logistics,Enabler,Severe,City_4,182;58;380;24,Logistics operation led by Enabler
+78,335,2020-07-10,Collection,Peripheral,Low,City_5,335;270;87;183,Collection operation led by Peripheral
+79,198,2023-03-18,Robbery,Peripheral,Low,City_8,198;354;261,Robbery operation led by Peripheral
+80,94,2023-10-28,Intimidation,Peripheral,Low,City_4,94;48,Intimidation operation led by Peripheral
+81,1,2024-08-03,Extortion,Broker,Severe,City_10,1;297;6,Extortion operation led by Broker
+82,139,2022-10-13,Illegal Contracts,Broker,High,City_5,139;130;280,Illegal Contracts operation led by Broker
+83,112,2020-07-18,Document Forgery,Enabler,Low,City_7,112;14;121;84;106,Document Forgery operation led by Enabler
+84,122,2024-01-10,Arson,Peripheral,High,City_1,122;80;262;240;283,Arson operation led by Peripheral
+85,364,2021-03-15,Logistics,Enabler,Medium,City_1,364;118;163;350,Logistics operation led by Enabler
+86,319,2023-06-21,Drug Trafficking,Enabler,Low,City_5,319;271,Drug Trafficking operation led by Enabler
+87,189,2024-07-27,Corruption,Coordinator,Severe,City_3,189;148,Corruption operation led by Coordinator
+88,355,2021-04-09,Arson,Peripheral,Medium,City_1,355;344;213;123,Arson operation led by Peripheral
+89,382,2024-06-19,Arson,Peripheral,Medium,City_8,382;87,Arson operation led by Peripheral
+90,84,2020-04-13,Document Forgery,Enabler,High,City_3,84;304;260;309;339,Document Forgery operation led by Enabler
+91,154,2022-09-17,Intimidation,Peripheral,High,City_10,154;244;329;45;232,Intimidation operation led by Peripheral
+92,112,2020-10-15,Drug Trafficking,Enabler,Medium,City_10,112;84;383,Drug Trafficking operation led by Enabler
+93,234,2021-06-08,Weapons Supply,Enabler,High,City_9,234;230;104;223,Weapons Supply operation led by Enabler
+94,35,2024-09-13,Collection,Peripheral,Medium,City_7,35;397;286;109,Collection operation led by Peripheral
+95,348,2024-06-04,Money Laundering,Coordinator,High,City_10,348;9;347;173;117,Money Laundering operation led by Coordinator
+96,184,2022-11-09,Drug Trafficking,Enabler,Severe,City_8,184;328;23,Drug Trafficking operation led by Enabler
+97,9,2023-03-01,Illegal Contracts,Broker,Medium,City_1,9;98,Illegal Contracts operation led by Broker
+98,254,2021-06-18,Collection,Peripheral,Medium,City_8,254;373;354,Collection operation led by Peripheral
+99,318,2022-01-29,Intimidation,Peripheral,Medium,City_8,318;270;120;46;331,Intimidation operation led by Peripheral
+100,248,2022-07-20,Territory Control,Coordinator,Severe,City_9,248;46;219;280;296,Territory Control operation led by Coordinator
+101,242,2022-10-16,Resource Distribution,Broker,Medium,City_2,242;34;374;340;32,Resource Distribution operation led by Broker
+102,162,2021-10-07,Weapons Supply,Enabler,High,City_7,162;165;339,Weapons Supply operation led by Enabler
+103,116,2021-04-21,Corruption,Coordinator,Low,City_3,116;239;333;153;368,Corruption operation led by Coordinator
+104,314,2021-10-06,Logistics,Enabler,Low,City_9,314;117,Logistics operation led by Enabler
+105,363,2021-03-23,Document Forgery,Enabler,High,City_9,363;18;146,Document Forgery operation led by Enabler
+106,338,2020-08-27,Drug Trafficking,Enabler,Low,City_9,338;291,Drug Trafficking operation led by Enabler
+107,106,2023-08-07,Collection,Peripheral,High,City_3,106;330;223;222,Collection operation led by Peripheral
+108,256,2020-11-13,Drug Trafficking,Enabler,Medium,City_7,256;349,Drug Trafficking operation led by Enabler
+109,193,2022-06-09,Logistics,Enabler,Low,City_1,193;88;316;339;298,Logistics operation led by Enabler
+110,280,2021-06-20,Logistics,Enabler,Medium,City_8,280;272;313;59,Logistics operation led by Enabler
+111,120,2021-03-02,Robbery,Peripheral,High,City_3,120;17,Robbery operation led by Peripheral
+112,273,2024-02-13,Logistics,Enabler,Medium,City_5,273;16;138;250;309,Logistics operation led by Enabler
+113,81,2023-08-14,Money Laundering,Coordinator,Severe,City_3,81;77;93;59;27,Money Laundering operation led by Coordinator
+114,290,2021-01-18,Corruption,Coordinator,High,City_3,290;2;158;197;263,Corruption operation led by Coordinator
+115,265,2023-07-23,Logistics,Enabler,Medium,City_3,265;223;110;161,Logistics operation led by Enabler
+116,20,2023-10-13,Document Forgery,Enabler,Medium,City_6,20;78;92;376,Document Forgery operation led by Enabler
+117,321,2021-10-29,Arson,Peripheral,Low,City_1,321;388;45,Arson operation led by Peripheral
+118,113,2022-04-08,Arson,Peripheral,High,City_9,113;145,Arson operation led by Peripheral
+119,189,2023-12-06,Corruption,Coordinator,Severe,City_3,189;162;52;123;139,Corruption operation led by Coordinator
+120,228,2021-08-29,Drug Trafficking,Enabler,Severe,City_7,228;352,Drug Trafficking operation led by Enabler
+121,381,2020-09-04,Document Forgery,Enabler,Low,City_7,381;304;72;56;242,Document Forgery operation led by Enabler
+122,14,2021-05-02,Illegal Contracts,Broker,High,City_3,14;333;10;379;220,Illegal Contracts operation led by Broker
+123,223,2020-01-03,Arson,Peripheral,Low,City_7,223;18;157;87;260,Arson operation led by Peripheral
+124,334,2021-04-30,Weapons Supply,Enabler,Medium,City_9,334;320;264;124;213,Weapons Supply operation led by Enabler
+125,117,2020-05-29,Document Forgery,Enabler,Medium,City_10,117;261;170;218;103,Document Forgery operation led by Enabler
+126,50,2024-08-02,Territory Control,Coordinator,Medium,City_6,50;367;44;85;307,Territory Control operation led by Coordinator
+127,105,2022-11-27,Collection,Peripheral,Severe,City_10,105;347,Collection operation led by Peripheral
+128,134,2023-06-03,Arson,Peripheral,Medium,City_9,134;295;250;283;143,Arson operation led by Peripheral
+129,367,2021-09-15,Document Forgery,Enabler,Low,City_3,367;25;120;104;219,Document Forgery operation led by Enabler
+130,148,2024-01-28,Illegal Contracts,Broker,Medium,City_10,148;378;251;122,Illegal Contracts operation led by Broker
+131,147,2023-08-28,Document Forgery,Enabler,Medium,City_4,147;229,Document Forgery operation led by Enabler
+132,86,2022-02-24,Coordination,Broker,Medium,City_3,86;211;349;290,Coordination operation led by Broker
+133,239,2020-06-22,Extortion,Broker,High,City_9,239;366;270;142,Extortion operation led by Broker
+134,162,2022-08-26,Drug Trafficking,Enabler,Severe,City_7,162;80;1;202;37,Drug Trafficking operation led by Enabler
+135,150,2024-05-10,Intimidation,Peripheral,Low,City_3,150;38;199;332,Intimidation operation led by Peripheral
+136,170,2020-08-21,Intimidation,Peripheral,Low,City_4,170;361;79,Intimidation operation led by Peripheral
+137,79,2022-01-15,Weapons Supply,Enabler,Medium,City_9,79;31;45;12,Weapons Supply operation led by Enabler
+138,60,2021-08-30,Collection,Peripheral,Medium,City_4,60;114;46;150,Collection operation led by Peripheral
+139,79,2022-01-27,Logistics,Enabler,High,City_5,79;29;6;210;58,Logistics operation led by Enabler
+140,383,2024-05-12,Document Forgery,Enabler,Medium,City_7,383;147,Document Forgery operation led by Enabler
+141,361,2020-10-27,Intimidation,Peripheral,Low,City_9,361;20;377;118,Intimidation operation led by Peripheral
+142,152,2024-09-01,Corruption,Coordinator,Low,City_10,152;93;338;84,Corruption operation led by Coordinator
+143,69,2024-04-26,Money Laundering,Coordinator,High,City_10,69;389;210;101;365,Money Laundering operation led by Coordinator
+144,263,2024-06-21,Strategic Planning,Coordinator,Severe,City_10,263;72;333;20,Strategic Planning operation led by Coordinator
+145,151,2021-02-25,Illegal Contracts,Broker,Low,City_2,151;264;124,Illegal Contracts operation led by Broker
+146,152,2024-08-06,Corruption,Coordinator,Low,City_10,152;140;79,Corruption operation led by Coordinator
+147,300,2021-02-06,Illegal Contracts,Broker,High,City_8,300;167;216;302,Illegal Contracts operation led by Broker
+148,37,2022-12-17,Weapons Supply,Enabler,Severe,City_7,37;369;177,Weapons Supply operation led by Enabler
+149,4,2023-12-21,Document Forgery,Enabler,Medium,City_3,4;230;322,Document Forgery operation led by Enabler
+150,230,2020-08-17,Collection,Peripheral,Low,City_3,230;113,Collection operation led by Peripheral
+151,9,2023-12-25,Coordination,Broker,High,City_10,9;57,Coordination operation led by Broker
+152,55,2024-02-28,Arson,Peripheral,Severe,City_6,55;118;316;159;340,Arson operation led by Peripheral
+153,231,2022-11-07,Intimidation,Peripheral,High,City_5,231;77;213;206;126,Intimidation operation led by Peripheral
+154,344,2024-10-09,Intimidation,Peripheral,Medium,City_8,344;38;345;102,Intimidation operation led by Peripheral
+155,162,2022-01-18,Weapons Supply,Enabler,Medium,City_2,162;15;241;329;198,Weapons Supply operation led by Enabler
+156,154,2021-12-05,Arson,Peripheral,High,City_4,154;347;268;358;102,Arson operation led by Peripheral
+157,72,2020-04-03,Resource Distribution,Broker,Medium,City_10,72;121;291;135,Resource Distribution operation led by Broker
+158,252,2024-05-13,Extortion,Broker,Medium,City_2,252;300;106;395,Extortion operation led by Broker
+159,328,2023-08-12,Coordination,Broker,Severe,City_8,328;277,Coordination operation led by Broker
+160,346,2023-10-06,Resource Distribution,Broker,Severe,City_6,346;236;289;99,Resource Distribution operation led by Broker
+161,128,2021-07-25,Collection,Peripheral,Low,City_1,128;388;352,Collection operation led by Peripheral
+162,248,2020-04-21,Strategic Planning,Coordinator,Medium,City_7,248;298;104,Strategic Planning operation led by Coordinator
+163,152,2023-03-10,Corruption,Coordinator,Low,City_6,152;283,Corruption operation led by Coordinator
+164,334,2022-09-26,Logistics,Enabler,Severe,City_6,334;173;62;169;257,Logistics operation led by Enabler
+165,14,2020-07-15,Resource Distribution,Broker,High,City_5,14;384;343;311,Resource Distribution operation led by Broker
+166,72,2022-04-27,Extortion,Broker,Severe,City_7,72;342;114,Extortion operation led by Broker
+167,164,2021-08-02,Collection,Peripheral,Low,City_3,164;43;68;394,Collection operation led by Peripheral
+168,348,2020-07-17,Strategic Planning,Coordinator,Severe,City_6,348;378;79;368,Strategic Planning operation led by Coordinator
+169,85,2020-03-25,Strategic Planning,Coordinator,High,City_9,85;189;4;217;396,Strategic Planning operation led by Coordinator
+170,294,2023-06-11,Corruption,Coordinator,Low,City_7,294;220,Corruption operation led by Coordinator
+171,82,2023-04-06,Logistics,Enabler,Medium,City_9,82;139,Logistics operation led by Enabler
+172,300,2022-12-28,Extortion,Broker,Low,City_4,300;13;150;345,Extortion operation led by Broker
+173,303,2022-01-14,Intimidation,Peripheral,High,City_10,303;318;8;167;142,Intimidation operation led by Peripheral
+174,111,2023-01-09,Intimidation,Peripheral,Medium,City_8,111;323,Intimidation operation led by Peripheral
+175,58,2024-12-23,Collection,Peripheral,High,City_5,58;121,Collection operation led by Peripheral
+176,311,2023-03-28,Robbery,Peripheral,Low,City_7,311;182;214;314;345,Robbery operation led by Peripheral
+177,300,2024-01-03,Extortion,Broker,Medium,City_9,300;41;293;159;40,Extortion operation led by Broker
+178,388,2023-10-21,Robbery,Peripheral,Severe,City_6,388;266,Robbery operation led by Peripheral
+179,2,2023-05-22,Corruption,Coordinator,Low,City_10,2;153;213;239;300,Corruption operation led by Coordinator
+180,378,2022-10-03,Document Forgery,Enabler,High,City_7,378;241;110,Document Forgery operation led by Enabler
+181,3,2024-08-07,Money Laundering,Coordinator,High,City_6,3;1,Money Laundering operation led by Coordinator
+182,110,2021-03-06,Extortion,Broker,Severe,City_9,110;14;296;57;199,Extortion operation led by Broker
+183,247,2024-09-15,Drug Trafficking,Enabler,High,City_1,247;385,Drug Trafficking operation led by Enabler
+184,3,2024-01-10,Money Laundering,Coordinator,Severe,City_3,3;347,Money Laundering operation led by Coordinator
+185,77,2020-07-30,Drug Trafficking,Enabler,Medium,City_7,77;219;317,Drug Trafficking operation led by Enabler
+186,34,2023-05-10,Intimidation,Peripheral,Severe,City_6,34;203,Intimidation operation led by Peripheral
+187,248,2023-09-04,Territory Control,Coordinator,Medium,City_1,248;83;132;273;239,Territory Control operation led by Coordinator
+188,207,2022-10-01,Strategic Planning,Coordinator,Low,City_3,207;314;370;234,Strategic Planning operation led by Coordinator
+189,377,2022-02-24,Document Forgery,Enabler,Low,City_6,377;21;67;357;209,Document Forgery operation led by Enabler
+190,162,2020-09-19,Logistics,Enabler,Medium,City_10,162;382;90;15,Logistics operation led by Enabler
+191,219,2020-11-10,Document Forgery,Enabler,Medium,City_9,219;208;130;210;215,Document Forgery operation led by Enabler
+192,217,2021-10-06,Weapons Supply,Enabler,Severe,City_10,217;274;22;165;375,Weapons Supply operation led by Enabler
+193,99,2020-03-03,Arson,Peripheral,Medium,City_4,99;200;144;0;106,Arson operation led by Peripheral
+194,306,2024-03-21,Intimidation,Peripheral,Medium,City_7,306;147;385;266;223,Intimidation operation led by Peripheral
+195,216,2020-04-26,Collection,Peripheral,Medium,City_7,216;321;164,Collection operation led by Peripheral
+196,69,2020-08-18,Money Laundering,Coordinator,Severe,City_7,69;220,Money Laundering operation led by Coordinator
+197,98,2024-01-26,Arson,Peripheral,High,City_4,98;316;93,Arson operation led by Peripheral
+198,336,2024-04-12,Intimidation,Peripheral,High,City_10,336;349,Intimidation operation led by Peripheral
+199,207,2021-01-11,Territory Control,Coordinator,Medium,City_1,207;175,Territory Control operation led by Coordinator
+200,30,2023-09-08,Resource Distribution,Broker,Medium,City_7,30;15;130;177,Resource Distribution operation led by Broker
+201,374,2023-04-17,Corruption,Coordinator,High,City_2,374;80;81;347;346,Corruption operation led by Coordinator
+202,33,2022-07-09,Illegal Contracts,Broker,Medium,City_2,33;42,Illegal Contracts operation led by Broker
+203,321,2021-02-21,Collection,Peripheral,Low,City_3,321;198;93,Collection operation led by Peripheral
+204,185,2024-06-16,Coordination,Broker,Low,City_5,185;150;130;114,Coordination operation led by Broker
+205,352,2020-03-01,Intimidation,Peripheral,Severe,City_2,352;344;378,Intimidation operation led by Peripheral
+206,153,2023-01-30,Coordination,Broker,Severe,City_4,153;279;366;26;205,Coordination operation led by Broker
+207,211,2024-02-21,Illegal Contracts,Broker,Low,City_5,211;227;368,Illegal Contracts operation led by Broker
+208,117,2020-07-17,Logistics,Enabler,High,City_5,117;301;247;381,Logistics operation led by Enabler
+209,369,2024-02-24,Intimidation,Peripheral,Low,City_6,369;57;368;7;19,Intimidation operation led by Peripheral
+210,16,2024-11-21,Drug Trafficking,Enabler,Medium,City_3,16;279;120;372,Drug Trafficking operation led by Enabler
+211,303,2023-11-21,Intimidation,Peripheral,Low,City_6,303;333,Intimidation operation led by Peripheral
+212,207,2023-09-06,Strategic Planning,Coordinator,High,City_9,207;296;383;234;309,Strategic Planning operation led by Coordinator
+213,29,2022-05-30,Arson,Peripheral,Medium,City_6,29;266,Arson operation led by Peripheral
+214,36,2024-07-30,Document Forgery,Enabler,Medium,City_3,36;84;227;397,Document Forgery operation led by Enabler
+215,370,2022-05-28,Extortion,Broker,High,City_6,370;266;249;237;56,Extortion operation led by Broker
+216,344,2023-04-09,Robbery,Peripheral,Medium,City_10,344;184;323;13,Robbery operation led by Peripheral
+217,14,2022-05-20,Coordination,Broker,High,City_4,14;340;206,Coordination operation led by Broker
+218,287,2024-02-16,Logistics,Enabler,Medium,City_6,287;38;286;111,Logistics operation led by Enabler
+219,104,2024-06-07,Drug Trafficking,Enabler,Medium,City_6,104;311;111;365;148,Drug Trafficking operation led by Enabler
+220,320,2021-01-03,Collection,Peripheral,Medium,City_7,320;340;255;154,Collection operation led by Peripheral
+221,168,2020-11-12,Robbery,Peripheral,Severe,City_1,168;167;42;387,Robbery operation led by Peripheral
+222,2,2020-02-21,Strategic Planning,Coordinator,Severe,City_4,2;347,Strategic Planning operation led by Coordinator
+223,62,2023-01-23,Intimidation,Peripheral,High,City_6,62;260;166;138,Intimidation operation led by Peripheral
+224,247,2022-07-05,Weapons Supply,Enabler,Medium,City_9,247;287,Weapons Supply operation led by Enabler
+225,20,2023-04-04,Logistics,Enabler,Medium,City_1,20;147;198;367,Logistics operation led by Enabler
+226,161,2023-10-10,Extortion,Broker,Medium,City_8,161;171;239,Extortion operation led by Broker
+227,257,2020-07-19,Robbery,Peripheral,Low,City_9,257;94,Robbery operation led by Peripheral
+228,116,2023-07-07,Territory Control,Coordinator,High,City_4,116;52;135;27;334,Territory Control operation led by Coordinator
+229,338,2021-11-28,Document Forgery,Enabler,Low,City_5,338;395;250,Document Forgery operation led by Enabler
+230,369,2024-02-19,Collection,Peripheral,Low,City_6,369;5;291;228,Collection operation led by Peripheral
+231,188,2020-11-03,Strategic Planning,Coordinator,Medium,City_7,188;151;287,Strategic Planning operation led by Coordinator
+232,385,2022-10-15,Intimidation,Peripheral,Low,City_6,385;144;32;382;235,Intimidation operation led by Peripheral
+233,228,2020-01-27,Drug Trafficking,Enabler,Medium,City_1,228;27;315;329;281,Drug Trafficking operation led by Enabler
+234,146,2021-12-23,Logistics,Enabler,High,City_1,146;131;309;171;367,Logistics operation led by Enabler
+235,111,2020-03-27,Collection,Peripheral,Low,City_2,111;48;297;154,Collection operation led by Peripheral
+236,131,2020-10-22,Logistics,Enabler,High,City_10,131;338;264;63,Logistics operation led by Enabler
+237,38,2020-10-28,Robbery,Peripheral,Low,City_10,38;77,Robbery operation led by Peripheral
+238,140,2022-03-01,Logistics,Enabler,Medium,City_2,140;323,Logistics operation led by Enabler
+239,186,2021-08-16,Drug Trafficking,Enabler,High,City_8,186;30;327;6,Drug Trafficking operation led by Enabler
+240,220,2022-11-30,Weapons Supply,Enabler,Medium,City_5,220;336,Weapons Supply operation led by Enabler
+241,36,2020-07-25,Drug Trafficking,Enabler,Low,City_3,36;45,Drug Trafficking operation led by Enabler
+242,132,2024-05-02,Resource Distribution,Broker,High,City_1,132;239;231;343;253,Resource Distribution operation led by Broker
+243,173,2023-06-15,Extortion,Broker,Severe,City_2,173;254;88;82;315,Extortion operation led by Broker
+244,165,2021-02-09,Robbery,Peripheral,High,City_5,165;98;261;206;254,Robbery operation led by Peripheral
+245,173,2024-07-04,Extortion,Broker,Severe,City_3,173;357,Extortion operation led by Broker
+246,247,2024-07-20,Weapons Supply,Enabler,High,City_5,247;342;92,Weapons Supply operation led by Enabler
+247,169,2020-11-13,Extortion,Broker,Medium,City_4,169;275,Extortion operation led by Broker
+248,295,2024-12-07,Weapons Supply,Enabler,Low,City_5,295;270;20,Weapons Supply operation led by Enabler
+249,241,2021-03-06,Arson,Peripheral,Severe,City_6,241;311,Arson operation led by Peripheral
+250,363,2021-10-24,Document Forgery,Enabler,Medium,City_4,363;27;153,Document Forgery operation led by Enabler
+251,166,2020-12-31,Weapons Supply,Enabler,Medium,City_8,166;391;17;57;89,Weapons Supply operation led by Enabler
+252,217,2024-05-05,Document Forgery,Enabler,Medium,City_9,217;352,Document Forgery operation led by Enabler
+253,359,2022-02-25,Illegal Contracts,Broker,Severe,City_9,359;211;231;365;40,Illegal Contracts operation led by Broker
+254,309,2020-10-11,Document Forgery,Enabler,Low,City_10,309;225,Document Forgery operation led by Enabler
+255,307,2022-06-19,Money Laundering,Coordinator,High,City_9,307;131;69;191;117,Money Laundering operation led by Coordinator
+256,191,2021-07-10,Drug Trafficking,Enabler,Low,City_9,191;104;262,Drug Trafficking operation led by Enabler
+257,73,2024-07-02,Money Laundering,Coordinator,High,City_5,73;81;131;207,Money Laundering operation led by Coordinator
+258,36,2024-09-29,Document Forgery,Enabler,Medium,City_3,36;65;56;5;295,Document Forgery operation led by Enabler
+259,177,2023-03-24,Arson,Peripheral,High,City_5,177;243,Arson operation led by Peripheral
+260,113,2020-07-05,Arson,Peripheral,Medium,City_10,113;17;200;310,Arson operation led by Peripheral
+261,131,2023-08-31,Document Forgery,Enabler,Medium,City_1,131;163;184;316,Document Forgery operation led by Enabler
+262,61,2021-02-13,Corruption,Coordinator,Low,City_9,61;359,Corruption operation led by Coordinator
+263,305,2023-06-29,Coordination,Broker,High,City_7,305;382;166;84;135,Coordination operation led by Broker
+264,97,2022-03-30,Extortion,Broker,Severe,City_8,97;20;147;156;287,Extortion operation led by Broker
+265,367,2021-02-02,Drug Trafficking,Enabler,Low,City_3,367;37;12,Drug Trafficking operation led by Enabler
+266,157,2021-07-27,Intimidation,Peripheral,Medium,City_4,157;106;112;196,Intimidation operation led by Peripheral
+267,207,2024-01-17,Strategic Planning,Coordinator,High,City_1,207;112;46,Strategic Planning operation led by Coordinator
+268,286,2022-06-28,Document Forgery,Enabler,Severe,City_6,286;54;105;239,Document Forgery operation led by Enabler
+269,307,2023-12-23,Money Laundering,Coordinator,High,City_1,307;108,Money Laundering operation led by Coordinator
+270,248,2022-07-14,Strategic Planning,Coordinator,Severe,City_5,248;286;15,Strategic Planning operation led by Coordinator
+271,256,2024-01-30,Logistics,Enabler,Low,City_1,256;315;68,Logistics operation led by Enabler
+272,221,2024-10-09,Illegal Contracts,Broker,Medium,City_2,221;136,Illegal Contracts operation led by Broker
+273,80,2020-04-04,Document Forgery,Enabler,Medium,City_3,80;89;137;390,Document Forgery operation led by Enabler
+274,248,2022-05-20,Money Laundering,Coordinator,Medium,City_6,248;44;263,Money Laundering operation led by Coordinator
+275,1,2020-01-29,Coordination,Broker,Medium,City_1,1;375;3;81,Coordination operation led by Broker
+276,169,2022-07-01,Resource Distribution,Broker,High,City_8,169;0,Resource Distribution operation led by Broker
+277,230,2021-11-12,Collection,Peripheral,Low,City_4,230;272;231;128,Collection operation led by Peripheral
+278,263,2023-06-02,Territory Control,Coordinator,Severe,City_2,263;362;50,Territory Control operation led by Coordinator
+279,14,2024-06-13,Extortion,Broker,Severe,City_2,14;57;261;249;71,Extortion operation led by Broker
+280,389,2022-01-21,Territory Control,Coordinator,Severe,City_6,389;217;365,Territory Control operation led by Coordinator
+281,144,2023-08-25,Logistics,Enabler,Medium,City_1,144;281;159;318,Logistics operation led by Enabler
+282,371,2023-03-08,Robbery,Peripheral,Low,City_5,371;358,Robbery operation led by Peripheral
+283,184,2021-03-25,Drug Trafficking,Enabler,Medium,City_10,184;387;257;197;30,Drug Trafficking operation led by Enabler
+284,188,2020-09-04,Strategic Planning,Coordinator,Medium,City_6,188;153;217,Strategic Planning operation led by Coordinator
+285,295,2024-09-07,Drug Trafficking,Enabler,Medium,City_9,295;177;390;109;53,Drug Trafficking operation led by Enabler
+286,256,2022-04-11,Drug Trafficking,Enabler,Medium,City_5,256;214;36;205,Drug Trafficking operation led by Enabler
+287,161,2024-05-21,Resource Distribution,Broker,Severe,City_8,161;329;149;350;322,Resource Distribution operation led by Broker
+288,323,2020-01-28,Collection,Peripheral,Medium,City_1,323;87,Collection operation led by Peripheral
+289,174,2020-09-25,Collection,Peripheral,Medium,City_1,174;183;47,Collection operation led by Peripheral
+290,3,2020-06-14,Corruption,Coordinator,Medium,City_6,3;186,Corruption operation led by Coordinator
+291,140,2021-10-14,Logistics,Enabler,Severe,City_4,140;261;209;351;249,Logistics operation led by Enabler
+292,209,2024-11-17,Document Forgery,Enabler,Severe,City_5,209;83,Document Forgery operation led by Enabler
+293,66,2024-03-16,Money Laundering,Coordinator,Severe,City_9,66;132;65;81;213,Money Laundering operation led by Coordinator
+294,208,2023-06-10,Collection,Peripheral,Low,City_5,208;191;333;269,Collection operation led by Peripheral
+295,185,2022-08-16,Extortion,Broker,Medium,City_6,185;228;386,Extortion operation led by Broker
+296,359,2023-10-10,Extortion,Broker,Severe,City_1,359;81;298;125,Extortion operation led by Broker
+297,173,2021-04-25,Illegal Contracts,Broker,Medium,City_4,173;129,Illegal Contracts operation led by Broker
+298,303,2023-09-02,Arson,Peripheral,Medium,City_6,303;201;354,Arson operation led by Peripheral
+299,140,2024-05-14,Logistics,Enabler,Low,City_10,140;91;313;136,Logistics operation led by Enabler
+300,4,2020-05-20,Drug Trafficking,Enabler,Low,City_5,4;102,Drug Trafficking operation led by Enabler
+301,17,2024-09-23,Arson,Peripheral,High,City_3,17;216;138;241,Arson operation led by Peripheral
+302,171,2024-01-04,Robbery,Peripheral,Low,City_7,171;94;83;118;203,Robbery operation led by Peripheral
+303,53,2024-01-13,Arson,Peripheral,Low,City_9,53;322;283;4,Arson operation led by Peripheral
+304,399,2020-04-13,Strategic Planning,Coordinator,Severe,City_8,399;287;80,Strategic Planning operation led by Coordinator
+305,65,2024-08-10,Illegal Contracts,Broker,High,City_4,65;239;198,Illegal Contracts operation led by Broker
+306,14,2021-02-17,Illegal Contracts,Broker,Medium,City_1,14;95;69,Illegal Contracts operation led by Broker
+307,322,2023-06-15,Arson,Peripheral,Severe,City_8,322;254;309,Arson operation led by Peripheral
+308,41,2020-10-14,Extortion,Broker,High,City_1,41;375,Extortion operation led by Broker
+309,265,2023-09-10,Weapons Supply,Enabler,Low,City_9,265;376,Weapons Supply operation led by Enabler
+310,320,2020-07-12,Intimidation,Peripheral,Low,City_7,320;182;275;160;75,Intimidation operation led by Peripheral
+311,54,2023-01-18,Collection,Peripheral,Low,City_5,54;28;196;332;23,Collection operation led by Peripheral
+312,180,2023-04-23,Extortion,Broker,Low,City_6,180;343,Extortion operation led by Broker
+313,263,2022-10-19,Territory Control,Coordinator,Severe,City_1,263;210,Territory Control operation led by Coordinator
+314,135,2022-11-03,Drug Trafficking,Enabler,Low,City_8,135;39,Drug Trafficking operation led by Enabler
+315,244,2021-08-19,Robbery,Peripheral,Low,City_9,244;287;343;103;201,Robbery operation led by Peripheral
+316,320,2024-08-11,Arson,Peripheral,Low,City_8,320;68;285,Arson operation led by Peripheral
+317,398,2024-07-04,Collection,Peripheral,Low,City_7,398;361;205,Collection operation led by Peripheral
+318,50,2023-01-22,Territory Control,Coordinator,Medium,City_6,50;249;132;136,Territory Control operation led by Coordinator
+319,182,2021-08-16,Drug Trafficking,Enabler,High,City_7,182;357;244,Drug Trafficking operation led by Enabler
+320,207,2024-11-08,Money Laundering,Coordinator,Low,City_1,207;220;363;162;110,Money Laundering operation led by Coordinator
+321,4,2023-06-07,Logistics,Enabler,Medium,City_8,4;324;337;106,Logistics operation led by Enabler
+322,218,2024-04-03,Intimidation,Peripheral,Low,City_2,218;272;334;19;183,Intimidation operation led by Peripheral
+323,188,2023-11-13,Territory Control,Coordinator,High,City_9,188;66;85;77,Territory Control operation led by Coordinator
+324,2,2022-08-11,Territory Control,Coordinator,Medium,City_4,2;77;82;283,Territory Control operation led by Coordinator
+325,390,2023-07-23,Weapons Supply,Enabler,High,City_4,390;219;313;21,Weapons Supply operation led by Enabler
+326,395,2020-08-04,Arson,Peripheral,Severe,City_6,395;199;108;210;58,Arson operation led by Peripheral
+327,86,2024-05-17,Resource Distribution,Broker,Severe,City_4,86;45;114,Resource Distribution operation led by Broker
+328,263,2021-06-14,Territory Control,Coordinator,Severe,City_1,263;234,Territory Control operation led by Coordinator
+329,267,2020-01-23,Strategic Planning,Coordinator,High,City_5,267;305;253;64;365,Strategic Planning operation led by Coordinator
+330,37,2023-07-19,Document Forgery,Enabler,High,City_8,37;382;127;314,Document Forgery operation led by Enabler
+331,253,2020-03-03,Corruption,Coordinator,Medium,City_8,253;131,Corruption operation led by Coordinator
+332,252,2021-05-02,Coordination,Broker,Severe,City_5,252;204;331;273,Coordination operation led by Broker
+333,25,2024-03-19,Robbery,Peripheral,Severe,City_2,25;397;35;112;106,Robbery operation led by Peripheral
+334,131,2020-12-04,Weapons Supply,Enabler,Low,City_9,131;342;169,Weapons Supply operation led by Enabler
+335,58,2023-04-03,Arson,Peripheral,Severe,City_2,58;138,Arson operation led by Peripheral
+336,83,2023-06-15,Logistics,Enabler,Low,City_8,83;92;174,Logistics operation led by Enabler
+337,253,2023-12-06,Strategic Planning,Coordinator,Severe,City_5,253;204;161;50,Strategic Planning operation led by Coordinator
+338,52,2022-03-12,Coordination,Broker,High,City_2,52;215;145;367,Coordination operation led by Broker
+339,230,2023-07-01,Arson,Peripheral,Medium,City_3,230;155;17,Arson operation led by Peripheral
+340,31,2023-12-04,Extortion,Broker,Low,City_10,31;142;73;187,Extortion operation led by Broker
+341,309,2021-06-30,Document Forgery,Enabler,High,City_8,309;316;127,Document Forgery operation led by Enabler
+342,44,2022-01-12,Logistics,Enabler,Severe,City_3,44;13;113,Logistics operation led by Enabler
+343,89,2023-03-11,Arson,Peripheral,High,City_1,89;289;384;308,Arson operation led by Peripheral
+344,227,2020-11-18,Arson,Peripheral,Medium,City_4,227;292;68;308;113,Arson operation led by Peripheral
+345,255,2020-10-09,Arson,Peripheral,Low,City_9,255;222,Arson operation led by Peripheral
+346,273,2022-01-15,Document Forgery,Enabler,High,City_3,273;60,Document Forgery operation led by Enabler
+347,396,2024-02-03,Coordination,Broker,Medium,City_2,396;32;27;171,Coordination operation led by Broker
+348,32,2023-07-24,Robbery,Peripheral,Medium,City_2,32;91,Robbery operation led by Peripheral
+349,116,2020-12-23,Territory Control,Coordinator,Severe,City_4,116;135;20;209,Territory Control operation led by Coordinator
+350,97,2022-11-22,Resource Distribution,Broker,Low,City_6,97;194;18;30,Resource Distribution operation led by Broker
+351,40,2024-06-07,Intimidation,Peripheral,Medium,City_2,40;199;28;321,Intimidation operation led by Peripheral
+352,99,2022-05-26,Arson,Peripheral,Low,City_7,99;266;95;276,Arson operation led by Peripheral
+353,247,2021-10-17,Drug Trafficking,Enabler,Low,City_9,247;339,Drug Trafficking operation led by Enabler
+354,383,2022-08-08,Document Forgery,Enabler,Low,City_2,383;82,Document Forgery operation led by Enabler
+355,69,2024-03-19,Territory Control,Coordinator,Severe,City_2,69;20;362;365;185,Territory Control operation led by Coordinator
+356,156,2024-06-07,Coordination,Broker,Medium,City_6,156;330;169;167;399,Coordination operation led by Broker
+357,182,2024-04-27,Weapons Supply,Enabler,Medium,City_1,182;173,Weapons Supply operation led by Enabler
+358,345,2020-12-22,Collection,Peripheral,Low,City_7,345;237;23;295,Collection operation led by Peripheral
+359,348,2024-07-26,Territory Control,Coordinator,Severe,City_2,348;351;139,Territory Control operation led by Coordinator
+360,174,2024-07-04,Collection,Peripheral,Low,City_9,174;19,Collection operation led by Peripheral
+361,158,2023-06-18,Money Laundering,Coordinator,Severe,City_3,158;162;221;136,Money Laundering operation led by Coordinator
+362,41,2023-04-30,Extortion,Broker,High,City_10,41;173,Extortion operation led by Broker
+363,1,2024-08-04,Resource Distribution,Broker,Medium,City_5,1;198;394,Resource Distribution operation led by Broker
+364,72,2020-06-23,Coordination,Broker,Low,City_6,72;4;330;312,Coordination operation led by Broker
+365,115,2020-06-07,Intimidation,Peripheral,Low,City_6,115;164;95,Intimidation operation led by Peripheral
+366,188,2023-10-26,Corruption,Coordinator,Severe,City_10,188;221;116,Corruption operation led by Coordinator
+367,176,2021-04-24,Illegal Contracts,Broker,Low,City_5,176;4;34;289,Illegal Contracts operation led by Broker
+368,280,2021-02-11,Document Forgery,Enabler,Low,City_9,280;185;347,Document Forgery operation led by Enabler
+369,131,2023-11-11,Logistics,Enabler,Medium,City_10,131;87;375;296;392,Logistics operation led by Enabler
+370,184,2021-01-02,Document Forgery,Enabler,Severe,City_6,184;385,Document Forgery operation led by Enabler
+371,180,2022-05-01,Coordination,Broker,High,City_10,180;348;255;9;382,Coordination operation led by Broker
+372,292,2024-12-07,Robbery,Peripheral,High,City_4,292;227;177,Robbery operation led by Peripheral
+373,102,2020-01-18,Robbery,Peripheral,Low,City_6,102;269,Robbery operation led by Peripheral
+374,178,2024-08-07,Arson,Peripheral,High,City_6,178;24;49;205,Arson operation led by Peripheral
+375,19,2021-08-29,Logistics,Enabler,Medium,City_4,19;344;170,Logistics operation led by Enabler
+376,58,2024-08-21,Collection,Peripheral,High,City_5,58;225;367,Collection operation led by Peripheral
+377,123,2022-12-17,Logistics,Enabler,High,City_3,123;329;202;296,Logistics operation led by Enabler
+378,359,2023-05-23,Resource Distribution,Broker,Severe,City_5,359;152;374;245;1,Resource Distribution operation led by Broker
+379,85,2022-05-13,Territory Control,Coordinator,Medium,City_8,85;248,Territory Control operation led by Coordinator
+380,200,2023-01-03,Robbery,Peripheral,Low,City_8,200;216;154,Robbery operation led by Peripheral
+381,111,2021-08-13,Collection,Peripheral,Low,City_6,111;365,Collection operation led by Peripheral
+382,307,2023-09-29,Corruption,Coordinator,Low,City_5,307;353;80;37;258,Corruption operation led by Coordinator
+383,322,2020-01-08,Robbery,Peripheral,Low,City_2,322;76;377,Robbery operation led by Peripheral
+384,121,2021-04-15,Collection,Peripheral,Low,City_6,121;113;273;398,Collection operation led by Peripheral
+385,221,2022-09-06,Resource Distribution,Broker,Severe,City_10,221;364;266;304,Resource Distribution operation led by Broker
+386,390,2023-04-19,Weapons Supply,Enabler,Low,City_9,390;319;283,Weapons Supply operation led by Enabler
+387,213,2023-09-21,Weapons Supply,Enabler,Severe,City_9,213;385;205,Weapons Supply operation led by Enabler
+388,220,2020-10-15,Document Forgery,Enabler,Medium,City_1,220;225;370,Document Forgery operation led by Enabler
+389,375,2024-03-24,Collection,Peripheral,High,City_6,375;371;249;184,Collection operation led by Peripheral
+390,176,2023-12-05,Extortion,Broker,Severe,City_6,176;82;55,Extortion operation led by Broker
+391,228,2020-06-10,Weapons Supply,Enabler,Severe,City_2,228;265;93;270,Weapons Supply operation led by Enabler
+392,34,2020-10-07,Robbery,Peripheral,Low,City_3,34;191;203;111,Robbery operation led by Peripheral
+393,338,2022-07-27,Logistics,Enabler,Severe,City_9,338;346;203;345,Logistics operation led by Enabler
+394,307,2020-06-20,Corruption,Coordinator,Medium,City_7,307;219,Corruption operation led by Coordinator
+395,65,2024-02-24,Coordination,Broker,Low,City_4,65;288;332;339,Coordination operation led by Broker
+396,294,2021-08-24,Strategic Planning,Coordinator,Low,City_5,294;220;219;146,Strategic Planning operation led by Coordinator
+397,383,2024-04-23,Weapons Supply,Enabler,Medium,City_1,383;375,Weapons Supply operation led by Enabler
+398,51,2024-04-13,Intimidation,Peripheral,Medium,City_6,51;195;138,Intimidation operation led by Peripheral
+399,169,2023-11-12,Extortion,Broker,Low,City_3,169;80,Extortion operation led by Broker
+400,274,2022-07-05,Arson,Peripheral,High,City_10,274;304,Arson operation led by Peripheral
+401,28,2021-08-21,Intimidation,Peripheral,Low,City_1,28;129;182;155,Intimidation operation led by Peripheral
+402,270,2022-05-08,Collection,Peripheral,Low,City_9,270;27;191;119,Collection operation led by Peripheral
+403,81,2023-11-14,Strategic Planning,Coordinator,Severe,City_6,81;162;77;188,Strategic Planning operation led by Coordinator
+404,146,2021-05-18,Weapons Supply,Enabler,Low,City_10,146;34;376;390;332,Weapons Supply operation led by Enabler
+405,351,2022-06-03,Coordination,Broker,High,City_9,351;105;281,Coordination operation led by Broker
+406,391,2020-09-29,Illegal Contracts,Broker,High,City_8,391;234;3,Illegal Contracts operation led by Broker
+407,218,2021-05-21,Intimidation,Peripheral,High,City_6,218;314;129;325;39,Intimidation operation led by Peripheral
+408,141,2020-07-21,Robbery,Peripheral,Severe,City_4,141;11;179,Robbery operation led by Peripheral
+409,110,2020-04-29,Extortion,Broker,High,City_5,110;232;282,Extortion operation led by Broker
+410,2,2024-11-12,Money Laundering,Coordinator,Severe,City_1,2;101;209,Money Laundering operation led by Coordinator
+411,212,2020-08-20,Collection,Peripheral,Low,City_6,212;241;20;286,Collection operation led by Peripheral
+412,213,2021-09-20,Logistics,Enabler,Medium,City_7,213;4,Logistics operation led by Enabler
+413,2,2021-03-23,Strategic Planning,Coordinator,High,City_6,2;116;248,Strategic Planning operation led by Coordinator
+414,14,2020-05-31,Extortion,Broker,High,City_2,14;335;242;27,Extortion operation led by Broker
+415,268,2023-11-21,Collection,Peripheral,Low,City_4,268;179;47;137;26,Collection operation led by Peripheral
+416,174,2020-12-25,Intimidation,Peripheral,Low,City_5,174;308,Intimidation operation led by Peripheral
+417,212,2024-12-07,Intimidation,Peripheral,Medium,City_3,212;5;340;333,Intimidation operation led by Peripheral
+418,334,2023-03-11,Logistics,Enabler,Medium,City_5,334;301;133,Logistics operation led by Enabler
+419,248,2022-12-25,Corruption,Coordinator,Severe,City_1,248;346;52;83;108,Corruption operation led by Coordinator
+420,218,2024-04-05,Collection,Peripheral,Medium,City_5,218;264;231;288,Collection operation led by Peripheral
+421,93,2020-08-19,Logistics,Enabler,Low,City_1,93;390;274;260,Logistics operation led by Enabler
+422,81,2024-02-12,Territory Control,Coordinator,Medium,City_8,81;117;280,Territory Control operation led by Coordinator
+423,175,2022-02-25,Coordination,Broker,Medium,City_7,175;6,Coordination operation led by Broker
+424,50,2021-10-21,Strategic Planning,Coordinator,Severe,City_6,50;367;298,Strategic Planning operation led by Coordinator
+425,92,2023-08-01,Collection,Peripheral,Low,City_7,92;358;338;245,Collection operation led by Peripheral
+426,41,2024-01-12,Illegal Contracts,Broker,High,City_2,41;85;330,Illegal Contracts operation led by Broker
+427,176,2024-10-28,Coordination,Broker,Medium,City_6,176;305;57,Coordination operation led by Broker
+428,293,2022-03-06,Arson,Peripheral,Medium,City_1,293;321,Arson operation led by Peripheral
+429,97,2021-04-01,Extortion,Broker,Low,City_5,97;326;24,Extortion operation led by Broker
+430,195,2022-03-05,Weapons Supply,Enabler,Severe,City_8,195;72;62,Weapons Supply operation led by Enabler
+431,185,2021-01-05,Extortion,Broker,High,City_7,185;30;264;155;83,Extortion operation led by Broker
+432,320,2023-09-11,Intimidation,Peripheral,Low,City_7,320;89;281;347,Intimidation operation led by Peripheral
+433,333,2023-04-24,Logistics,Enabler,Medium,City_2,333;356,Logistics operation led by Enabler
+434,327,2022-02-23,Resource Distribution,Broker,Medium,City_6,327;326;150,Resource Distribution operation led by Broker
+435,303,2021-05-20,Collection,Peripheral,Medium,City_10,303;43;115;125;187,Collection operation led by Peripheral
+436,209,2020-04-12,Logistics,Enabler,High,City_7,209;201;4;255,Logistics operation led by Enabler
+437,175,2020-03-03,Resource Distribution,Broker,High,City_5,175;240,Resource Distribution operation led by Broker
+438,56,2020-03-28,Robbery,Peripheral,Medium,City_3,56;398,Robbery operation led by Peripheral
+439,27,2024-12-14,Document Forgery,Enabler,Low,City_6,27;239;103,Document Forgery operation led by Enabler
+440,181,2023-10-03,Intimidation,Peripheral,Low,City_1,181;218;236;321;334,Intimidation operation led by Peripheral
+441,152,2021-05-19,Corruption,Coordinator,High,City_7,152;166;219,Corruption operation led by Coordinator
+442,197,2024-01-19,Illegal Contracts,Broker,High,City_4,197;44;230;162;365,Illegal Contracts operation led by Broker
+443,193,2023-01-07,Document Forgery,Enabler,Medium,City_2,193;168;300,Document Forgery operation led by Enabler
+444,108,2022-08-27,Weapons Supply,Enabler,Medium,City_3,108;89,Weapons Supply operation led by Enabler
+445,374,2024-10-24,Money Laundering,Coordinator,High,City_3,374;176;359;383,Money Laundering operation led by Coordinator
+446,146,2023-10-31,Logistics,Enabler,Medium,City_9,146;136,Logistics operation led by Enabler
+447,158,2022-06-09,Money Laundering,Coordinator,High,City_8,158;186;242;15,Money Laundering operation led by Coordinator
+448,313,2021-08-14,Resource Distribution,Broker,High,City_5,313;110;329;396,Resource Distribution operation led by Broker
+449,282,2022-08-13,Robbery,Peripheral,Low,City_3,282;255;94;350;91,Robbery operation led by Peripheral
+450,32,2022-04-10,Arson,Peripheral,Severe,City_4,32;361;280,Arson operation led by Peripheral
+451,255,2021-03-14,Collection,Peripheral,High,City_9,255;234;75;163,Collection operation led by Peripheral
+452,191,2022-12-21,Drug Trafficking,Enabler,Low,City_4,191;297;179;387,Drug Trafficking operation led by Enabler
+453,307,2020-11-11,Territory Control,Coordinator,Severe,City_2,307;296;265;364,Territory Control operation led by Coordinator
+454,148,2023-09-12,Coordination,Broker,High,City_2,148;221,Coordination operation led by Broker
+455,242,2023-12-26,Extortion,Broker,Medium,City_8,242;262;50;197;358,Extortion operation led by Broker
+456,63,2022-02-20,Robbery,Peripheral,Low,City_9,63;363;55;23;381,Robbery operation led by Peripheral
+457,181,2021-08-10,Robbery,Peripheral,Low,City_5,181;63;319;276;103,Robbery operation led by Peripheral
+458,54,2022-11-22,Robbery,Peripheral,Medium,City_4,54;179;133;160;369,Robbery operation led by Peripheral
+459,81,2022-07-25,Territory Control,Coordinator,Severe,City_10,81;313;362;209;217,Territory Control operation led by Coordinator
+460,294,2022-05-10,Strategic Planning,Coordinator,High,City_1,294;110,Strategic Planning operation led by Coordinator
+461,296,2020-12-08,Coordination,Broker,Medium,City_4,296;386;45,Coordination operation led by Broker
+462,338,2024-05-19,Drug Trafficking,Enabler,Medium,City_9,338;369,Drug Trafficking operation led by Enabler
+463,122,2020-12-21,Robbery,Peripheral,Low,City_10,122;364;46;183;262,Robbery operation led by Peripheral
+464,154,2021-06-23,Collection,Peripheral,Severe,City_5,154;383;183;102,Collection operation led by Peripheral
+465,39,2021-10-01,Collection,Peripheral,Medium,City_4,39;191;335;241,Collection operation led by Peripheral
+466,298,2022-12-09,Illegal Contracts,Broker,High,City_1,298;126;125;182;93,Illegal Contracts operation led by Broker
+467,200,2020-08-04,Collection,Peripheral,Severe,City_6,200;377;265;285,Collection operation led by Peripheral
+468,185,2024-06-12,Resource Distribution,Broker,Low,City_5,185;327,Resource Distribution operation led by Broker
+469,33,2022-09-03,Illegal Contracts,Broker,Severe,City_9,33;105;375;397,Illegal Contracts operation led by Broker
+470,317,2021-02-17,Intimidation,Peripheral,Medium,City_4,317;99;341;45;260,Intimidation operation led by Peripheral
+471,82,2020-07-16,Logistics,Enabler,Medium,City_8,82;388,Logistics operation led by Enabler
+472,246,2020-08-13,Intimidation,Peripheral,Low,City_9,246;159,Intimidation operation led by Peripheral
+473,117,2023-08-01,Weapons Supply,Enabler,Medium,City_8,117;355;192;156;347,Weapons Supply operation led by Enabler
+474,101,2020-10-05,Weapons Supply,Enabler,Low,City_5,101;6;187,Weapons Supply operation led by Enabler
+475,61,2021-05-11,Strategic Planning,Coordinator,Severe,City_8,61;176,Strategic Planning operation led by Coordinator
+476,52,2021-04-01,Resource Distribution,Broker,Severe,City_1,52;282;181,Resource Distribution operation led by Broker
+477,258,2024-07-16,Drug Trafficking,Enabler,Low,City_9,258;84;58;82,Drug Trafficking operation led by Enabler
+478,364,2021-07-15,Document Forgery,Enabler,Low,City_2,364;57;261,Document Forgery operation led by Enabler
+479,33,2021-04-09,Coordination,Broker,Severe,City_9,33;44;126;4;121,Coordination operation led by Broker
+480,346,2024-10-08,Illegal Contracts,Broker,Low,City_3,346;167;304;399,Illegal Contracts operation led by Broker
+481,100,2024-10-19,Coordination,Broker,Medium,City_9,100;40;152;5;265,Coordination operation led by Broker
+482,245,2021-03-25,Weapons Supply,Enabler,Severe,City_3,245;269;155,Weapons Supply operation led by Enabler
+483,378,2021-09-20,Drug Trafficking,Enabler,High,City_4,378;151;223;99;88,Drug Trafficking operation led by Enabler
+484,213,2023-05-21,Logistics,Enabler,Low,City_9,213;163,Logistics operation led by Enabler
+485,80,2020-05-04,Weapons Supply,Enabler,Low,City_4,80;75;25;239;121,Weapons Supply operation led by Enabler
+486,215,2020-01-05,Arson,Peripheral,High,City_6,215;202;127;106,Arson operation led by Peripheral
+487,245,2021-02-28,Drug Trafficking,Enabler,Low,City_10,245;371,Drug Trafficking operation led by Enabler
+488,110,2024-07-23,Extortion,Broker,High,City_7,110;244,Extortion operation led by Broker
+489,48,2022-12-02,Robbery,Peripheral,Low,City_8,48;121;79;297,Robbery operation led by Peripheral
+490,395,2023-07-03,Arson,Peripheral,High,City_1,395;99,Arson operation led by Peripheral
+491,369,2024-07-20,Collection,Peripheral,Low,City_1,369;34,Collection operation led by Peripheral
+492,65,2020-01-08,Illegal Contracts,Broker,Medium,City_3,65;131,Illegal Contracts operation led by Broker
+493,231,2020-12-09,Collection,Peripheral,High,City_10,231;44,Collection operation led by Peripheral
+494,31,2020-04-14,Resource Distribution,Broker,High,City_1,31;381;0,Resource Distribution operation led by Broker
+495,199,2024-07-01,Arson,Peripheral,Severe,City_1,199;108;111,Arson operation led by Peripheral
+496,328,2021-03-26,Extortion,Broker,Medium,City_10,328;239;135,Extortion operation led by Broker
+497,150,2024-01-15,Intimidation,Peripheral,Low,City_8,150;398;53;384;128,Intimidation operation led by Peripheral
+498,19,2023-01-01,Drug Trafficking,Enabler,High,City_7,19;111;247;365;53,Drug Trafficking operation led by Enabler
+499,153,2023-11-05,Coordination,Broker,Severe,City_4,153;8;391;16;194,Coordination operation led by Broker
+500,382,2022-05-17,Robbery,Peripheral,High,City_2,382;249;226;215;0,Robbery operation led by Peripheral
+501,83,2021-10-19,Document Forgery,Enabler,Medium,City_6,83;111,Document Forgery operation led by Enabler
+502,275,2023-10-05,Robbery,Peripheral,High,City_9,275;273;339;257;5,Robbery operation led by Peripheral
+503,133,2022-07-18,Collection,Peripheral,Medium,City_4,133;123;383,Collection operation led by Peripheral
+504,123,2021-08-15,Weapons Supply,Enabler,Medium,City_10,123;178;92,Weapons Supply operation led by Enabler
+505,193,2021-05-14,Weapons Supply,Enabler,High,City_9,193;161;141,Weapons Supply operation led by Enabler
+506,286,2024-04-04,Weapons Supply,Enabler,Severe,City_5,286;390,Weapons Supply operation led by Enabler
+507,16,2022-03-26,Document Forgery,Enabler,Medium,City_1,16;247;284,Document Forgery operation led by Enabler
+508,175,2020-09-14,Illegal Contracts,Broker,High,City_7,175;10;365,Illegal Contracts operation led by Broker
+509,376,2023-06-26,Intimidation,Peripheral,Low,City_10,376;308;155;53;321,Intimidation operation led by Peripheral
+510,362,2021-04-20,Corruption,Coordinator,Medium,City_10,362;298;44;204;347,Corruption operation led by Coordinator
+511,362,2020-11-23,Territory Control,Coordinator,Severe,City_1,362;147,Territory Control operation led by Coordinator
+512,109,2023-01-27,Intimidation,Peripheral,High,City_6,109;225,Intimidation operation led by Peripheral
+513,15,2021-05-30,Illegal Contracts,Broker,Severe,City_1,15;374;105;69;89,Illegal Contracts operation led by Broker
+514,90,2021-09-13,Intimidation,Peripheral,Medium,City_3,90;140,Intimidation operation led by Peripheral
+515,97,2020-11-02,Illegal Contracts,Broker,Severe,City_9,97;127;389,Illegal Contracts operation led by Broker
+516,362,2023-08-24,Money Laundering,Coordinator,Severe,City_10,362;100;86,Money Laundering operation led by Coordinator
+517,147,2020-06-21,Weapons Supply,Enabler,Low,City_5,147;55;245;107;212,Weapons Supply operation led by Enabler
+518,265,2023-07-11,Logistics,Enabler,Severe,City_2,265;383;365,Logistics operation led by Enabler
+519,114,2020-05-09,Arson,Peripheral,High,City_3,114;44,Arson operation led by Peripheral
+520,133,2022-10-23,Intimidation,Peripheral,Medium,City_7,133;127;55,Intimidation operation led by Peripheral
+521,48,2021-10-24,Robbery,Peripheral,Medium,City_9,48;70;258;129,Robbery operation led by Peripheral
+522,298,2024-07-16,Extortion,Broker,Medium,City_5,298;266,Extortion operation led by Broker
+523,184,2021-08-06,Logistics,Enabler,Low,City_3,184;398,Logistics operation led by Enabler
+524,30,2024-01-01,Illegal Contracts,Broker,Medium,City_5,30;108,Illegal Contracts operation led by Broker
+525,26,2022-12-20,Arson,Peripheral,High,City_8,26;184,Arson operation led by Peripheral
+526,83,2024-01-22,Logistics,Enabler,Severe,City_1,83;14;288;115,Logistics operation led by Enabler
+527,150,2024-04-10,Intimidation,Peripheral,Medium,City_6,150;258,Intimidation operation led by Peripheral
+528,3,2021-06-04,Territory Control,Coordinator,High,City_5,3;66;44;193;399,Territory Control operation led by Coordinator
+529,192,2024-01-26,Collection,Peripheral,Low,City_3,192;55,Collection operation led by Peripheral
+530,222,2024-11-29,Intimidation,Peripheral,Medium,City_6,222;289;208;371;76,Intimidation operation led by Peripheral
+531,253,2024-02-14,Corruption,Coordinator,High,City_10,253;158,Corruption operation led by Coordinator
+532,86,2024-12-20,Illegal Contracts,Broker,Severe,City_2,86;108;168;333,Illegal Contracts operation led by Broker
+533,307,2023-01-09,Territory Control,Coordinator,Severe,City_3,307;309,Territory Control operation led by Coordinator
+534,151,2024-01-01,Illegal Contracts,Broker,Medium,City_2,151;356,Illegal Contracts operation led by Broker
+535,156,2023-03-29,Extortion,Broker,Medium,City_10,156;182,Extortion operation led by Broker
+536,31,2021-08-11,Illegal Contracts,Broker,Medium,City_10,31;358;353;377,Illegal Contracts operation led by Broker
+537,101,2023-06-06,Logistics,Enabler,Medium,City_1,101;201;341,Logistics operation led by Enabler
+538,263,2021-11-20,Strategic Planning,Coordinator,Medium,City_2,263;139;267;207;362,Strategic Planning operation led by Coordinator
+539,46,2022-09-04,Logistics,Enabler,High,City_5,46;101;135,Logistics operation led by Enabler
+540,81,2020-08-20,Territory Control,Coordinator,Severe,City_9,81;396;265;169,Territory Control operation led by Coordinator
+541,293,2021-06-13,Arson,Peripheral,Low,City_9,293;35;345,Arson operation led by Peripheral
+542,324,2021-07-10,Extortion,Broker,High,City_10,324;118,Extortion operation led by Broker
+543,395,2022-10-06,Arson,Peripheral,Medium,City_1,395;216,Arson operation led by Peripheral
+544,49,2023-04-17,Robbery,Peripheral,Low,City_4,49;219,Robbery operation led by Peripheral
+545,64,2020-03-23,Resource Distribution,Broker,Medium,City_10,64;281;49,Resource Distribution operation led by Broker
+546,346,2020-02-26,Extortion,Broker,Medium,City_1,346;166;336;289;256,Extortion operation led by Broker
+547,305,2022-09-10,Resource Distribution,Broker,Severe,City_7,305;23,Resource Distribution operation led by Broker
+548,286,2020-02-08,Document Forgery,Enabler,Medium,City_9,286;214;320,Document Forgery operation led by Enabler
+549,99,2020-12-19,Arson,Peripheral,Medium,City_5,99;266;150;63,Arson operation led by Peripheral
+550,65,2023-02-20,Coordination,Broker,Medium,City_4,65;89,Coordination operation led by Broker
+551,279,2024-12-29,Arson,Peripheral,Low,City_7,279;361;264;363,Arson operation led by Peripheral
+552,169,2024-10-17,Resource Distribution,Broker,Medium,City_6,169;256;137;273,Resource Distribution operation led by Broker
+553,72,2023-05-19,Illegal Contracts,Broker,Severe,City_2,72;225;329;351;149,Illegal Contracts operation led by Broker
+554,187,2022-08-30,Collection,Peripheral,Medium,City_10,187;205;289,Collection operation led by Peripheral
+555,104,2024-03-10,Drug Trafficking,Enabler,Medium,City_8,104;146;317;128,Drug Trafficking operation led by Enabler
+556,324,2020-04-02,Extortion,Broker,High,City_5,324;387;86,Extortion operation led by Broker
+557,221,2021-07-25,Coordination,Broker,Severe,City_10,221;177;398;250;324,Coordination operation led by Broker
+558,350,2024-03-04,Collection,Peripheral,Low,City_8,350;321;216;326,Collection operation led by Peripheral
+559,11,2021-08-20,Collection,Peripheral,Medium,City_3,11;43;340;222,Collection operation led by Peripheral
+560,46,2023-06-09,Drug Trafficking,Enabler,Low,City_6,46;151;126;131;93,Drug Trafficking operation led by Enabler
+561,201,2024-07-25,Robbery,Peripheral,Low,City_3,201;137;88;120;382,Robbery operation led by Peripheral
+562,252,2020-10-22,Illegal Contracts,Broker,High,City_7,252;348;55;187,Illegal Contracts operation led by Broker
+563,15,2023-04-13,Illegal Contracts,Broker,Severe,City_10,15;54;268,Illegal Contracts operation led by Broker
+564,135,2023-12-29,Document Forgery,Enabler,Low,City_3,135;391;334;183,Document Forgery operation led by Enabler
+565,253,2022-11-12,Money Laundering,Coordinator,High,City_5,253;184;61;151,Money Laundering operation led by Coordinator
+566,256,2021-08-13,Weapons Supply,Enabler,Low,City_2,256;296;97;350,Weapons Supply operation led by Enabler
+567,148,2023-07-22,Coordination,Broker,Low,City_10,148;67;377,Coordination operation led by Broker
+568,80,2023-12-19,Logistics,Enabler,Medium,City_2,80;36,Logistics operation led by Enabler
+569,351,2020-09-23,Illegal Contracts,Broker,Severe,City_5,351;338;43;0;48,Illegal Contracts operation led by Broker
+570,267,2023-12-03,Corruption,Coordinator,Medium,City_8,267;69;295;148;338,Corruption operation led by Coordinator
+571,273,2020-12-17,Drug Trafficking,Enabler,Severe,City_5,273;325;47,Drug Trafficking operation led by Enabler
+572,265,2023-01-27,Drug Trafficking,Enabler,Severe,City_7,265;93;258;292,Drug Trafficking operation led by Enabler
+573,191,2022-04-24,Logistics,Enabler,Medium,City_1,191;380;331;148,Logistics operation led by Enabler
+574,258,2023-02-01,Drug Trafficking,Enabler,Severe,City_2,258;327,Drug Trafficking operation led by Enabler
+575,135,2021-10-24,Document Forgery,Enabler,High,City_1,135;108,Document Forgery operation led by Enabler
+576,193,2021-06-24,Document Forgery,Enabler,Medium,City_2,193;113;388,Document Forgery operation led by Enabler
+577,286,2024-06-19,Logistics,Enabler,High,City_1,286;150;193,Logistics operation led by Enabler
+578,340,2022-10-01,Robbery,Peripheral,Medium,City_7,340;291;398;250;381,Robbery operation led by Peripheral
+579,18,2022-04-11,Arson,Peripheral,Low,City_3,18;165,Arson operation led by Peripheral
+580,73,2023-11-01,Strategic Planning,Coordinator,Severe,City_9,73;14,Strategic Planning operation led by Coordinator
+581,139,2024-11-10,Extortion,Broker,Medium,City_8,139;57;54;387,Extortion operation led by Broker
+582,313,2024-12-10,Coordination,Broker,High,City_1,313;60;349;224,Coordination operation led by Broker
+583,29,2021-01-11,Robbery,Peripheral,Low,City_7,29;226;273;347;192,Robbery operation led by Peripheral
+584,72,2022-08-26,Illegal Contracts,Broker,Severe,City_8,72;139;382;121,Illegal Contracts operation led by Broker
+585,351,2024-11-22,Extortion,Broker,Medium,City_4,351;69;140,Extortion operation led by Broker
+586,224,2024-11-22,Money Laundering,Coordinator,Severe,City_7,224;368;166;378;66,Money Laundering operation led by Coordinator
+587,149,2020-04-08,Collection,Peripheral,High,City_10,149;350;51;220;234,Collection operation led by Peripheral
+588,217,2021-03-27,Document Forgery,Enabler,Low,City_8,217;340;308;282;77,Document Forgery operation led by Enabler
+589,71,2021-12-22,Arson,Peripheral,Low,City_10,71;277,Arson operation led by Peripheral
+590,273,2023-03-06,Document Forgery,Enabler,Medium,City_5,273;166;183;383,Document Forgery operation led by Enabler
+591,353,2023-07-06,Logistics,Enabler,Severe,City_2,353;312;7;42;132,Logistics operation led by Enabler
+592,57,2021-06-19,Robbery,Peripheral,Low,City_6,57;260;5;320,Robbery operation led by Peripheral
+593,76,2022-12-19,Robbery,Peripheral,Low,City_6,76;272;231;19,Robbery operation led by Peripheral
+594,30,2023-02-23,Resource Distribution,Broker,Severe,City_7,30;184;150,Resource Distribution operation led by Broker
+595,278,2022-04-08,Collection,Peripheral,Medium,City_8,278;321,Collection operation led by Peripheral
+596,9,2020-02-10,Coordination,Broker,High,City_2,9;60;124,Coordination operation led by Broker
+597,162,2020-04-29,Document Forgery,Enabler,Medium,City_3,162;59,Document Forgery operation led by Enabler
+598,114,2021-11-12,Robbery,Peripheral,High,City_4,114;71;376,Robbery operation led by Peripheral
+599,105,2024-10-18,Intimidation,Peripheral,Medium,City_5,105;42;354,Intimidation operation led by Peripheral
+600,364,2022-12-10,Drug Trafficking,Enabler,Low,City_2,364;265;182;299,Drug Trafficking operation led by Enabler
+601,210,2021-04-27,Logistics,Enabler,High,City_5,210;150;254,Logistics operation led by Enabler
+602,125,2020-03-19,Arson,Peripheral,Low,City_9,125;191;144,Arson operation led by Peripheral
+603,220,2020-02-18,Drug Trafficking,Enabler,Low,City_7,220;48;115;112;99,Drug Trafficking operation led by Enabler
+604,65,2022-12-26,Coordination,Broker,Low,City_10,65;307,Coordination operation led by Broker
+605,21,2021-02-08,Collection,Peripheral,Low,City_3,21;340;57,Collection operation led by Peripheral
+606,192,2024-02-10,Arson,Peripheral,Low,City_3,192;107;125,Arson operation led by Peripheral
+607,39,2021-10-10,Intimidation,Peripheral,Low,City_8,39;192;386,Intimidation operation led by Peripheral
+608,362,2024-08-10,Money Laundering,Coordinator,Medium,City_8,362;188,Money Laundering operation led by Coordinator
+609,196,2024-06-05,Intimidation,Peripheral,Low,City_7,196;24;17,Intimidation operation led by Peripheral
+610,356,2024-02-09,Collection,Peripheral,Low,City_9,356;315;170;128;365,Collection operation led by Peripheral
+611,182,2020-11-16,Weapons Supply,Enabler,Severe,City_8,182;28,Weapons Supply operation led by Enabler
+612,377,2021-09-28,Document Forgery,Enabler,Low,City_6,377;346,Document Forgery operation led by Enabler
+613,97,2020-12-21,Coordination,Broker,Severe,City_4,97;187;96;77;373,Coordination operation led by Broker
+614,225,2022-01-01,Robbery,Peripheral,Severe,City_9,225;243;137;232,Robbery operation led by Peripheral
+615,354,2022-06-06,Intimidation,Peripheral,High,City_3,354;42;319,Intimidation operation led by Peripheral
+616,337,2024-06-08,Intimidation,Peripheral,Low,City_7,337;22;120,Intimidation operation led by Peripheral
+617,378,2021-07-31,Weapons Supply,Enabler,Low,City_6,378;317,Weapons Supply operation led by Enabler
+618,324,2021-11-29,Coordination,Broker,High,City_7,324;307;88;22,Coordination operation led by Broker
+619,110,2020-03-02,Resource Distribution,Broker,Medium,City_4,110;131,Resource Distribution operation led by Broker
+620,220,2020-12-21,Weapons Supply,Enabler,Severe,City_5,220;228;147;121,Weapons Supply operation led by Enabler
+621,292,2020-08-18,Collection,Peripheral,High,City_10,292;19,Collection operation led by Peripheral
+622,134,2022-01-05,Collection,Peripheral,Medium,City_2,134;77;195;167;68,Collection operation led by Peripheral
+623,37,2023-11-04,Drug Trafficking,Enabler,Medium,City_3,37;173;213;72,Drug Trafficking operation led by Enabler
+624,290,2023-05-29,Strategic Planning,Coordinator,High,City_4,290;210,Strategic Planning operation led by Coordinator
+625,59,2023-04-23,Coordination,Broker,Low,City_7,59;317,Coordination operation led by Broker
+626,348,2023-06-24,Strategic Planning,Coordinator,Medium,City_8,348;16;367,Strategic Planning operation led by Coordinator
+627,176,2020-02-03,Coordination,Broker,High,City_2,176;173,Coordination operation led by Broker
+628,219,2021-04-21,Logistics,Enabler,Low,City_10,219;67;396;316,Logistics operation led by Enabler
+629,86,2022-09-16,Resource Distribution,Broker,Severe,City_3,86;28;38;119;365,Resource Distribution operation led by Broker
+630,5,2022-01-19,Robbery,Peripheral,Low,City_8,5;303;312;84,Robbery operation led by Peripheral
+631,179,2023-10-08,Weapons Supply,Enabler,High,City_4,179;318,Weapons Supply operation led by Enabler
+632,347,2023-03-29,Logistics,Enabler,Medium,City_3,347;142;240;214,Logistics operation led by Enabler
+633,209,2022-02-06,Weapons Supply,Enabler,Medium,City_4,209;205,Weapons Supply operation led by Enabler
+634,233,2021-10-02,Territory Control,Coordinator,Severe,City_4,233;338;175;52,Territory Control operation led by Coordinator
+635,86,2022-02-11,Resource Distribution,Broker,Medium,City_3,86;210;183;72,Resource Distribution operation led by Broker
+636,354,2022-06-27,Robbery,Peripheral,Low,City_10,354;39;330,Robbery operation led by Peripheral
+637,252,2021-11-21,Resource Distribution,Broker,High,City_3,252;354,Resource Distribution operation led by Broker
+638,148,2024-03-27,Resource Distribution,Broker,Severe,City_9,148;303;144,Resource Distribution operation led by Broker
+639,287,2022-06-13,Weapons Supply,Enabler,High,City_8,287;122;144,Weapons Supply operation led by Enabler
+640,224,2021-10-05,Territory Control,Coordinator,Severe,City_6,224;104;1;219;363,Territory Control operation led by Coordinator
+641,331,2024-08-27,Collection,Peripheral,Low,City_10,331;28;225;338;183,Collection operation led by Peripheral
+642,76,2022-05-02,Intimidation,Peripheral,Low,City_3,76;198,Intimidation operation led by Peripheral
+643,348,2021-06-16,Money Laundering,Coordinator,High,City_2,348;65,Money Laundering operation led by Coordinator
+644,242,2023-08-27,Extortion,Broker,Severe,City_5,242;241;109;316;175,Extortion operation led by Broker
+645,111,2022-06-18,Intimidation,Peripheral,High,City_2,111;270;256;140,Intimidation operation led by Peripheral
+646,399,2024-01-29,Corruption,Coordinator,Severe,City_10,399;287;280,Corruption operation led by Coordinator
+647,354,2020-05-03,Robbery,Peripheral,Severe,City_7,354;326;281;198;386,Robbery operation led by Peripheral
+648,388,2022-12-23,Collection,Peripheral,Low,City_6,388;124;234;276,Collection operation led by Peripheral
+649,294,2024-05-27,Corruption,Coordinator,High,City_9,294;248;144;188;338,Corruption operation led by Coordinator
+650,158,2022-10-01,Territory Control,Coordinator,Medium,City_3,158;391;365;211,Territory Control operation led by Coordinator
+651,66,2024-07-17,Money Laundering,Coordinator,High,City_10,66;367,Money Laundering operation led by Coordinator
+652,152,2024-01-02,Corruption,Coordinator,High,City_6,152;110;389;180;370,Corruption operation led by Coordinator
+653,104,2024-02-24,Document Forgery,Enabler,Low,City_3,104;380;127;384;305,Document Forgery operation led by Enabler
+654,358,2023-08-03,Document Forgery,Enabler,Medium,City_10,358;321;203;339;349,Document Forgery operation led by Enabler
+655,12,2022-03-27,Illegal Contracts,Broker,High,City_1,12;309;64,Illegal Contracts operation led by Broker
+656,33,2023-01-27,Resource Distribution,Broker,Medium,City_2,33;393;47,Resource Distribution operation led by Broker
+657,13,2022-08-19,Arson,Peripheral,High,City_8,13;284;133,Arson operation led by Peripheral
+658,85,2024-06-24,Strategic Planning,Coordinator,High,City_3,85;117;144;3,Strategic Planning operation led by Coordinator
+659,126,2022-06-16,Robbery,Peripheral,Low,City_4,126;289,Robbery operation led by Peripheral
+660,296,2022-09-29,Illegal Contracts,Broker,High,City_4,296;95;375;163,Illegal Contracts operation led by Broker
+661,100,2021-04-13,Extortion,Broker,High,City_3,100;134;146;73;174,Extortion operation led by Broker
+662,396,2024-01-24,Resource Distribution,Broker,Severe,City_5,396;157;351;108;225,Resource Distribution operation led by Broker
+663,329,2020-01-07,Robbery,Peripheral,Severe,City_7,329;318;54,Robbery operation led by Peripheral
+664,162,2024-08-04,Logistics,Enabler,Medium,City_1,162;58;240;228;269,Logistics operation led by Enabler
+665,143,2020-07-13,Collection,Peripheral,High,City_2,143;337;206;280;187,Collection operation led by Peripheral
+666,234,2021-11-11,Document Forgery,Enabler,Low,City_10,234;86;377,Document Forgery operation led by Enabler
+667,374,2021-06-02,Money Laundering,Coordinator,Medium,City_6,374;72;209;210;324,Money Laundering operation led by Coordinator
+668,343,2021-01-08,Intimidation,Peripheral,Severe,City_5,343;192;68;84;333,Intimidation operation led by Peripheral
+669,388,2022-08-09,Intimidation,Peripheral,High,City_4,388;7;281;119;42,Intimidation operation led by Peripheral
+670,223,2022-12-17,Robbery,Peripheral,Medium,City_10,223;322;397;70,Robbery operation led by Peripheral
+671,245,2021-03-25,Document Forgery,Enabler,Low,City_10,245;21;304;64,Document Forgery operation led by Enabler
+672,338,2023-07-20,Document Forgery,Enabler,Severe,City_3,338;305,Document Forgery operation led by Enabler
+673,41,2020-05-21,Resource Distribution,Broker,High,City_2,41;248;293,Resource Distribution operation led by Broker
+674,280,2022-12-15,Logistics,Enabler,Medium,City_2,280;326;94,Logistics operation led by Enabler
+675,143,2020-02-12,Arson,Peripheral,Low,City_5,143;124;79;49;240,Arson operation led by Peripheral
+676,14,2022-01-09,Coordination,Broker,Medium,City_8,14;85,Coordination operation led by Broker
+677,52,2021-11-25,Extortion,Broker,High,City_7,52;324;26;89,Extortion operation led by Broker
+678,239,2021-02-10,Illegal Contracts,Broker,Medium,City_9,239;51,Illegal Contracts operation led by Broker
+679,62,2024-07-23,Collection,Peripheral,Medium,City_7,62;365;301;63,Collection operation led by Peripheral
+680,72,2023-03-31,Extortion,Broker,Medium,City_2,72;335,Extortion operation led by Broker
+681,72,2022-03-17,Illegal Contracts,Broker,Severe,City_2,72;98,Illegal Contracts operation led by Broker
+682,390,2020-09-18,Drug Trafficking,Enabler,Severe,City_8,390;266;363;117;371,Drug Trafficking operation led by Enabler
+683,325,2024-10-01,Robbery,Peripheral,High,City_9,325;6;99;265,Robbery operation led by Peripheral
+684,81,2022-02-15,Strategic Planning,Coordinator,High,City_5,81;248;132,Strategic Planning operation led by Coordinator
+685,274,2020-07-18,Collection,Peripheral,Low,City_3,274;330,Collection operation led by Peripheral
+686,134,2021-05-13,Collection,Peripheral,Medium,City_1,134;386;157;319,Collection operation led by Peripheral
+687,156,2020-08-26,Extortion,Broker,Severe,City_2,156;134;397;58,Extortion operation led by Broker
+688,153,2023-04-17,Resource Distribution,Broker,High,City_10,153;282,Resource Distribution operation led by Broker
+689,81,2024-01-26,Strategic Planning,Coordinator,High,City_7,81;287;263;363;91,Strategic Planning operation led by Coordinator
+690,73,2022-02-06,Territory Control,Coordinator,Severe,City_5,73;185;381;267,Territory Control operation led by Coordinator
+691,285,2021-10-23,Arson,Peripheral,Severe,City_3,285;338;246,Arson operation led by Peripheral
+692,188,2021-01-12,Corruption,Coordinator,Low,City_10,188;2,Corruption operation led by Coordinator
+693,226,2024-02-28,Collection,Peripheral,Severe,City_7,226;260;353;214,Collection operation led by Peripheral
+694,131,2023-08-28,Weapons Supply,Enabler,Medium,City_5,131;173;247;190;67,Weapons Supply operation led by Enabler
+695,110,2022-01-17,Coordination,Broker,Severe,City_10,110;217,Coordination operation led by Broker
+696,293,2023-07-30,Robbery,Peripheral,Low,City_5,293;58;201;320;19,Robbery operation led by Peripheral
+697,220,2022-05-11,Weapons Supply,Enabler,High,City_4,220;285;292;360;397,Weapons Supply operation led by Enabler
+698,394,2023-09-19,Collection,Peripheral,High,City_9,394;278;22;174,Collection operation led by Peripheral
+699,179,2021-01-13,Document Forgery,Enabler,High,City_10,179;19;79;184;266,Document Forgery operation led by Enabler
+700,24,2021-08-30,Collection,Peripheral,Low,City_7,24;135;323;318;287,Collection operation led by Peripheral
+701,337,2020-12-09,Robbery,Peripheral,Low,City_2,337;115,Robbery operation led by Peripheral
+702,37,2020-04-10,Document Forgery,Enabler,Low,City_9,37;28;70,Document Forgery operation led by Enabler
+703,98,2022-10-29,Intimidation,Peripheral,Low,City_1,98;232;352;255;140,Intimidation operation led by Peripheral
+704,110,2022-09-01,Coordination,Broker,Severe,City_6,110;311,Coordination operation led by Broker
+705,373,2023-12-30,Robbery,Peripheral,Low,City_3,373;295;301,Robbery operation led by Peripheral
+706,154,2024-01-25,Robbery,Peripheral,Low,City_9,154;286;186;236,Robbery operation led by Peripheral
+707,378,2020-05-31,Document Forgery,Enabler,Severe,City_1,378;372;187;229;324,Document Forgery operation led by Enabler
+708,139,2023-04-30,Illegal Contracts,Broker,High,City_2,139;7;297,Illegal Contracts operation led by Broker
+709,11,2021-05-24,Collection,Peripheral,Medium,City_5,11;127,Collection operation led by Peripheral
+710,188,2024-02-10,Money Laundering,Coordinator,High,City_7,188;374;61;41;324,Money Laundering operation led by Coordinator
+711,381,2024-09-17,Weapons Supply,Enabler,Low,City_2,381;200;245,Weapons Supply operation led by Enabler
+712,176,2020-08-17,Extortion,Broker,High,City_5,176;172;227;12;305,Extortion operation led by Broker
+713,81,2023-04-20,Strategic Planning,Coordinator,Severe,City_9,81;290;351;197,Strategic Planning operation led by Coordinator
+714,88,2022-02-24,Intimidation,Peripheral,Low,City_9,88;144;190;326,Intimidation operation led by Peripheral
+715,36,2021-11-19,Document Forgery,Enabler,Severe,City_1,36;302;57,Document Forgery operation led by Enabler
+716,155,2023-02-16,Intimidation,Peripheral,High,City_4,155;170,Intimidation operation led by Peripheral
+717,101,2024-06-24,Logistics,Enabler,Medium,City_8,101;28;7,Logistics operation led by Enabler
+718,195,2023-07-09,Logistics,Enabler,Medium,City_10,195;170;115,Logistics operation led by Enabler
+719,124,2024-04-01,Intimidation,Peripheral,Severe,City_8,124;147;192;60,Intimidation operation led by Peripheral
+720,152,2023-08-26,Strategic Planning,Coordinator,Medium,City_10,152;209;378;307;15,Strategic Planning operation led by Coordinator
+721,197,2021-12-10,Illegal Contracts,Broker,Severe,City_8,197;365;86;100,Illegal Contracts operation led by Broker
+722,240,2023-10-29,Arson,Peripheral,High,City_1,240;306;392;283,Arson operation led by Peripheral
+723,272,2021-01-20,Intimidation,Peripheral,Severe,City_7,272;225;285;282,Intimidation operation led by Peripheral
+724,328,2020-08-19,Extortion,Broker,High,City_5,328;386;388;3,Extortion operation led by Broker
+725,380,2024-11-07,Weapons Supply,Enabler,High,City_1,380;155;41;335;43,Weapons Supply operation led by Enabler
+726,176,2023-04-06,Illegal Contracts,Broker,Severe,City_9,176;213;264,Illegal Contracts operation led by Broker
+727,78,2024-04-23,Robbery,Peripheral,High,City_10,78;266,Robbery operation led by Peripheral
+728,242,2022-12-16,Resource Distribution,Broker,Severe,City_2,242;48,Resource Distribution operation led by Broker
+729,140,2023-08-10,Document Forgery,Enabler,Medium,City_4,140;71,Document Forgery operation led by Enabler
+730,247,2024-03-25,Weapons Supply,Enabler,High,City_9,247;258;316,Weapons Supply operation led by Enabler
+731,75,2021-05-22,Collection,Peripheral,Severe,City_4,75;369;256,Collection operation led by Peripheral
+732,188,2021-07-22,Territory Control,Coordinator,High,City_8,188;14;377,Territory Control operation led by Coordinator
+733,123,2022-10-30,Document Forgery,Enabler,Low,City_5,123;310;181;147;173,Document Forgery operation led by Enabler
+734,27,2022-07-29,Document Forgery,Enabler,High,City_5,27;171;41;299,Document Forgery operation led by Enabler
+735,385,2022-10-11,Collection,Peripheral,Medium,City_7,385;138;63;336,Collection operation led by Peripheral
+736,370,2021-04-17,Coordination,Broker,High,City_5,370;72;47;303,Coordination operation led by Broker
+737,213,2020-11-30,Document Forgery,Enabler,Medium,City_6,213;322;204,Document Forgery operation led by Enabler
+738,280,2022-02-20,Weapons Supply,Enabler,Severe,City_7,280;114;242;256;144,Weapons Supply operation led by Enabler
+739,138,2022-11-14,Arson,Peripheral,Low,City_7,138;35;308,Arson operation led by Peripheral
+740,374,2023-05-06,Corruption,Coordinator,Severe,City_7,374;36;346;359,Corruption operation led by Coordinator
+741,136,2023-06-01,Drug Trafficking,Enabler,Severe,City_1,136;18;339;259,Drug Trafficking operation led by Enabler
+742,175,2022-05-12,Extortion,Broker,High,City_2,175;217,Extortion operation led by Broker
+743,97,2021-05-16,Resource Distribution,Broker,Severe,City_5,97;262;93;75,Resource Distribution operation led by Broker
+744,249,2021-06-19,Logistics,Enabler,Severe,City_4,249;65;71,Logistics operation led by Enabler
+745,317,2023-04-06,Robbery,Peripheral,Medium,City_2,317;62;130;237;335,Robbery operation led by Peripheral
+746,110,2020-12-30,Coordination,Broker,Severe,City_10,110;86;290,Coordination operation led by Broker
+747,204,2023-02-02,Document Forgery,Enabler,Medium,City_9,204;320;338;12,Document Forgery operation led by Enabler
+748,37,2024-05-29,Drug Trafficking,Enabler,Severe,City_1,37;384;36;394;161,Drug Trafficking operation led by Enabler
+749,207,2024-09-16,Corruption,Coordinator,High,City_5,207;84;153;348,Corruption operation led by Coordinator
+750,176,2022-03-01,Resource Distribution,Broker,High,City_9,176;141;181;364,Resource Distribution operation led by Broker
+751,300,2020-11-28,Extortion,Broker,Low,City_7,300;114;348;40,Extortion operation led by Broker
+752,201,2020-03-16,Arson,Peripheral,High,City_4,201;131;84;193;28,Arson operation led by Peripheral
+753,203,2023-03-06,Robbery,Peripheral,Low,City_5,203;101;364;226;279,Robbery operation led by Peripheral
+754,298,2020-01-12,Extortion,Broker,Medium,City_10,298;168;208,Extortion operation led by Broker
+755,361,2020-01-05,Collection,Peripheral,Severe,City_9,361;102;245;90;37,Collection operation led by Peripheral
+756,249,2024-05-14,Weapons Supply,Enabler,Severe,City_9,249;284;312;217,Weapons Supply operation led by Enabler
+757,39,2022-06-11,Robbery,Peripheral,High,City_6,39;54;217;84;394,Robbery operation led by Peripheral
+758,120,2021-06-13,Intimidation,Peripheral,Low,City_7,120;378,Intimidation operation led by Peripheral
+759,77,2021-02-27,Weapons Supply,Enabler,Severe,City_4,77;324,Weapons Supply operation led by Enabler
+760,3,2023-02-18,Territory Control,Coordinator,Low,City_7,3;283;86,Territory Control operation led by Coordinator
+761,283,2024-08-11,Drug Trafficking,Enabler,High,City_6,283;252;210,Drug Trafficking operation led by Enabler
+762,223,2023-11-02,Collection,Peripheral,Low,City_3,223;145;238,Collection operation led by Peripheral
+763,118,2022-05-27,Robbery,Peripheral,Low,City_5,118;287;251;386,Robbery operation led by Peripheral
+764,66,2020-10-06,Territory Control,Coordinator,High,City_10,66;391;151;79;367,Territory Control operation led by Coordinator
+765,381,2024-08-14,Logistics,Enabler,Low,City_9,381;251;368;372,Logistics operation led by Enabler
+766,93,2020-01-04,Document Forgery,Enabler,High,City_1,93;390,Document Forgery operation led by Enabler
+767,132,2024-09-05,Coordination,Broker,Severe,City_4,132;177;286;92;65,Coordination operation led by Broker
+768,152,2023-12-20,Strategic Planning,Coordinator,Low,City_7,152;82;151,Strategic Planning operation led by Coordinator
+769,296,2024-05-26,Extortion,Broker,Low,City_9,296;394;374;232;267,Extortion operation led by Broker
+770,80,2023-09-27,Document Forgery,Enabler,Medium,City_5,80;381;40,Document Forgery operation led by Enabler
+771,64,2023-04-29,Resource Distribution,Broker,Low,City_4,64;170;248,Resource Distribution operation led by Broker
+772,295,2021-04-16,Logistics,Enabler,Medium,City_3,295;213;184;120;292,Logistics operation led by Enabler
+773,31,2024-10-26,Resource Distribution,Broker,High,City_10,31;96;205;165,Resource Distribution operation led by Broker
+774,247,2023-10-24,Document Forgery,Enabler,Severe,City_1,247;277;214;266,Document Forgery operation led by Enabler
+775,260,2023-10-14,Robbery,Peripheral,High,City_5,260;134,Robbery operation led by Peripheral
+776,152,2020-11-07,Territory Control,Coordinator,High,City_10,152;359;65;36;153,Territory Control operation led by Coordinator
+777,396,2022-02-23,Coordination,Broker,Severe,City_3,396;80;211,Coordination operation led by Broker
+778,389,2022-03-13,Money Laundering,Coordinator,Medium,City_8,389;37,Money Laundering operation led by Coordinator
+779,66,2023-01-31,Territory Control,Coordinator,Medium,City_5,66;242,Territory Control operation led by Coordinator
+780,221,2020-02-10,Resource Distribution,Broker,Low,City_2,221;180,Resource Distribution operation led by Broker
+781,130,2022-01-19,Arson,Peripheral,Low,City_3,130;303,Arson operation led by Peripheral
+782,265,2020-11-30,Drug Trafficking,Enabler,Medium,City_6,265;84;383;178,Drug Trafficking operation led by Enabler
+783,263,2024-11-11,Strategic Planning,Coordinator,Severe,City_8,263;104,Strategic Planning operation led by Coordinator
+784,209,2022-02-21,Weapons Supply,Enabler,High,City_9,209;394,Weapons Supply operation led by Enabler
+785,3,2021-02-12,Corruption,Coordinator,Severe,City_5,3;239;153;378;50,Corruption operation led by Coordinator
+786,221,2020-03-15,Resource Distribution,Broker,Severe,City_4,221;290;261;313;81,Resource Distribution operation led by Broker
+787,229,2023-03-01,Collection,Peripheral,Medium,City_1,229;154;331,Collection operation led by Peripheral
+788,263,2021-02-20,Strategic Planning,Coordinator,Severe,City_8,263;151;233;307;185,Strategic Planning operation led by Coordinator
+789,140,2020-04-29,Weapons Supply,Enabler,Low,City_8,140;288,Weapons Supply operation led by Enabler
+790,99,2024-05-02,Intimidation,Peripheral,Low,City_7,99;237;131;271;354,Intimidation operation led by Peripheral
+791,45,2024-06-28,Collection,Peripheral,Low,City_7,45;124;75;145;222,Collection operation led by Peripheral
+792,86,2021-02-20,Coordination,Broker,Low,City_4,86;313;269;312,Coordination operation led by Broker
+793,346,2020-11-06,Resource Distribution,Broker,Medium,City_6,346;90,Resource Distribution operation led by Broker
+794,144,2023-03-27,Drug Trafficking,Enabler,Low,City_10,144;365;334,Drug Trafficking operation led by Enabler
+795,389,2021-11-23,Strategic Planning,Coordinator,Low,City_5,389;253;280;195,Strategic Planning operation led by Coordinator
+796,167,2020-02-04,Intimidation,Peripheral,Medium,City_7,167;251,Intimidation operation led by Peripheral
+797,138,2024-08-13,Collection,Peripheral,Medium,City_8,138;205;292;394,Collection operation led by Peripheral
+798,47,2021-11-23,Arson,Peripheral,Low,City_3,47;11,Arson operation led by Peripheral
+799,231,2022-05-02,Collection,Peripheral,Medium,City_1,231;177;333;17,Collection operation led by Peripheral
+800,85,2022-06-21,Money Laundering,Coordinator,Medium,City_8,85;77,Money Laundering operation led by Coordinator
+801,305,2021-04-06,Illegal Contracts,Broker,Low,City_9,305;30;389;398,Illegal Contracts operation led by Broker
+802,31,2020-06-15,Extortion,Broker,Low,City_6,31;305,Extortion operation led by Broker
+803,100,2021-04-15,Coordination,Broker,Severe,City_8,100;129;335;338;6,Coordination operation led by Broker
+804,125,2024-06-25,Robbery,Peripheral,Severe,City_4,125;274;112;21;365,Robbery operation led by Peripheral
+805,1,2021-01-14,Illegal Contracts,Broker,Severe,City_9,1;170;45,Illegal Contracts operation led by Broker
+806,245,2021-12-22,Document Forgery,Enabler,High,City_3,245;106,Document Forgery operation led by Enabler
+807,195,2024-03-13,Drug Trafficking,Enabler,High,City_4,195;11;129,Drug Trafficking operation led by Enabler
+808,138,2021-11-01,Robbery,Peripheral,Medium,City_7,138;269;222;378;71,Robbery operation led by Peripheral
+809,305,2021-12-24,Resource Distribution,Broker,Low,City_10,305;376;330;363;215,Resource Distribution operation led by Broker
+810,118,2021-04-21,Arson,Peripheral,Low,City_4,118;384,Arson operation led by Peripheral
+811,365,2020-09-01,Drug Trafficking,Enabler,Low,City_3,365;109;93;38;19,Drug Trafficking operation led by Enabler
+812,344,2022-04-14,Intimidation,Peripheral,Low,City_2,344;243;76,Intimidation operation led by Peripheral
+813,31,2020-05-14,Resource Distribution,Broker,High,City_2,31;258;180,Resource Distribution operation led by Broker
+814,304,2021-08-15,Arson,Peripheral,Low,City_8,304;190,Arson operation led by Peripheral
+815,152,2020-01-02,Money Laundering,Coordinator,High,City_9,152;117;378,Money Laundering operation led by Coordinator
+816,68,2021-11-21,Robbery,Peripheral,Medium,City_2,68;358;106;378;112,Robbery operation led by Peripheral
+817,305,2024-08-18,Extortion,Broker,Severe,City_9,305;168;291;127,Extortion operation led by Broker
+818,339,2020-06-09,Collection,Peripheral,Low,City_7,339;133;135;335;215,Collection operation led by Peripheral
+819,69,2024-12-13,Strategic Planning,Coordinator,Severe,City_10,69;367;61;245;378,Strategic Planning operation led by Coordinator
+820,390,2023-02-17,Document Forgery,Enabler,Severe,City_6,390;155;127,Document Forgery operation led by Enabler
+821,269,2020-03-06,Robbery,Peripheral,High,City_1,269;334;353;18,Robbery operation led by Peripheral
+822,166,2024-10-08,Document Forgery,Enabler,Low,City_2,166;23;42;274,Document Forgery operation led by Enabler
+823,346,2022-04-07,Coordination,Broker,Medium,City_6,346;32;326;286,Coordination operation led by Broker
+824,358,2021-02-04,Logistics,Enabler,Medium,City_1,358;375;352,Logistics operation led by Enabler
+825,360,2023-10-30,Collection,Peripheral,Low,City_9,360;286;67;20;8,Collection operation led by Peripheral
+826,106,2024-01-22,Intimidation,Peripheral,Medium,City_2,106;44;92;365;40,Intimidation operation led by Peripheral
+827,220,2023-03-15,Logistics,Enabler,Low,City_5,220;287,Logistics operation led by Enabler
+828,290,2024-03-11,Money Laundering,Coordinator,High,City_9,290;307,Money Laundering operation led by Coordinator
+829,180,2022-11-26,Resource Distribution,Broker,High,City_6,180;36;248;273;319,Resource Distribution operation led by Broker
+830,44,2021-10-25,Weapons Supply,Enabler,High,City_2,44;329;84,Weapons Supply operation led by Enabler
+831,178,2022-07-17,Intimidation,Peripheral,Severe,City_10,178;199;54;219;237,Intimidation operation led by Peripheral
+832,267,2023-12-31,Corruption,Coordinator,High,City_1,267;253;97;65;110,Corruption operation led by Coordinator
+833,56,2021-07-14,Robbery,Peripheral,High,City_5,56;154;177,Robbery operation led by Peripheral
+834,179,2022-09-17,Logistics,Enabler,High,City_4,179;354;99,Logistics operation led by Enabler
+835,79,2023-07-02,Weapons Supply,Enabler,Severe,City_9,79;296;19;42,Weapons Supply operation led by Enabler
+836,335,2021-04-03,Arson,Peripheral,Medium,City_4,335;245;198;375,Arson operation led by Peripheral
+837,66,2023-03-17,Corruption,Coordinator,High,City_1,66;93,Corruption operation led by Coordinator
+838,101,2022-08-05,Drug Trafficking,Enabler,Medium,City_9,101;169;147,Drug Trafficking operation led by Enabler
+839,12,2021-08-30,Resource Distribution,Broker,Low,City_3,12;230;362;377;312,Resource Distribution operation led by Broker
+840,37,2024-09-15,Logistics,Enabler,High,City_1,37;180;361;230,Logistics operation led by Enabler
+841,51,2021-07-20,Arson,Peripheral,High,City_1,51;209;74;204;258,Arson operation led by Peripheral
+842,193,2020-10-15,Weapons Supply,Enabler,High,City_5,193;208;52;210,Weapons Supply operation led by Enabler
+843,176,2022-10-13,Coordination,Broker,Medium,City_8,176;172,Coordination operation led by Broker
+844,351,2021-05-06,Illegal Contracts,Broker,Low,City_9,351;96;352,Illegal Contracts operation led by Broker
+845,350,2022-06-22,Collection,Peripheral,Low,City_10,350;82;174;236;373,Collection operation led by Peripheral
+846,85,2021-02-28,Strategic Planning,Coordinator,High,City_2,85;41,Strategic Planning operation led by Coordinator
+847,248,2020-02-07,Money Laundering,Coordinator,Medium,City_9,248;41,Money Laundering operation led by Coordinator
+848,46,2021-01-18,Drug Trafficking,Enabler,Low,City_8,46;243;219;391,Drug Trafficking operation led by Enabler
+849,9,2020-11-25,Illegal Contracts,Broker,High,City_4,9;52;151;3;177,Illegal Contracts operation led by Broker
+850,379,2023-12-21,Corruption,Coordinator,Medium,City_6,379;44;307,Corruption operation led by Coordinator
+851,3,2022-02-06,Corruption,Coordinator,Severe,City_5,3;84;52,Corruption operation led by Coordinator
+852,158,2022-01-21,Territory Control,Coordinator,High,City_5,158;245;378;153,Territory Control operation led by Coordinator
+853,9,2022-05-12,Extortion,Broker,Medium,City_1,9;296;50;277,Extortion operation led by Broker
+854,248,2024-03-26,Corruption,Coordinator,High,City_10,248;176;296;69;64,Corruption operation led by Coordinator
+855,180,2023-09-27,Illegal Contracts,Broker,High,City_5,180;320;292,Illegal Contracts operation led by Broker
+856,258,2020-06-17,Logistics,Enabler,Low,City_1,258;82;110;282,Logistics operation led by Enabler
+857,81,2024-11-06,Territory Control,Coordinator,Severe,City_1,81;217,Territory Control operation led by Coordinator
+858,3,2022-10-25,Strategic Planning,Coordinator,Severe,City_6,3;66,Strategic Planning operation led by Coordinator
+859,65,2024-02-12,Illegal Contracts,Broker,Low,City_4,65;292,Illegal Contracts operation led by Broker
+860,281,2022-11-14,Collection,Peripheral,Low,City_10,281;228;96;243,Collection operation led by Peripheral
+861,183,2020-04-22,Robbery,Peripheral,Low,City_5,183;281,Robbery operation led by Peripheral
+862,312,2021-02-20,Robbery,Peripheral,Severe,City_1,312;250,Robbery operation led by Peripheral
+863,135,2020-07-29,Weapons Supply,Enabler,Low,City_5,135;148,Weapons Supply operation led by Enabler
+864,153,2020-01-26,Extortion,Broker,Medium,City_4,153;223;84,Extortion operation led by Broker
+865,152,2024-12-08,Strategic Planning,Coordinator,Severe,City_2,152;242;294;207;69,Strategic Planning operation led by Coordinator
+866,117,2020-09-08,Drug Trafficking,Enabler,Low,City_9,117;118;364;252,Drug Trafficking operation led by Enabler
+867,37,2021-06-05,Weapons Supply,Enabler,Medium,City_4,37;68;298,Weapons Supply operation led by Enabler
+868,273,2024-11-28,Drug Trafficking,Enabler,Medium,City_9,273;305,Drug Trafficking operation led by Enabler
+869,182,2022-04-15,Logistics,Enabler,High,City_5,182;128,Logistics operation led by Enabler
+870,116,2024-01-01,Strategic Planning,Coordinator,Severe,City_9,116;294;144,Strategic Planning operation led by Coordinator
+871,333,2020-09-28,Document Forgery,Enabler,Medium,City_7,333;20,Document Forgery operation led by Enabler
+872,134,2024-02-25,Collection,Peripheral,Medium,City_8,134;212,Collection operation led by Peripheral
+873,73,2020-09-02,Money Laundering,Coordinator,Severe,City_5,73;83;389;44;396,Money Laundering operation led by Coordinator
+874,310,2023-04-11,Collection,Peripheral,High,City_6,310;222,Collection operation led by Peripheral
+875,336,2022-11-15,Collection,Peripheral,High,City_6,336;354;309;371;358,Collection operation led by Peripheral
+876,123,2024-11-05,Document Forgery,Enabler,High,City_4,123;54;283;388;70,Document Forgery operation led by Enabler
+877,144,2024-06-11,Weapons Supply,Enabler,Medium,City_10,144;32,Weapons Supply operation led by Enabler
+878,127,2021-04-27,Arson,Peripheral,Medium,City_5,127;262;213;195,Arson operation led by Peripheral
+879,276,2024-03-17,Arson,Peripheral,Low,City_10,276;26;89,Arson operation led by Peripheral
+880,30,2024-08-02,Coordination,Broker,Medium,City_4,30;229,Coordination operation led by Broker
+881,64,2022-12-12,Resource Distribution,Broker,Medium,City_3,64;96;361,Resource Distribution operation led by Broker
+882,26,2021-02-02,Robbery,Peripheral,Low,City_8,26;271,Robbery operation led by Peripheral
+883,28,2023-05-31,Collection,Peripheral,Low,City_1,28;254;355,Collection operation led by Peripheral
+884,365,2021-02-23,Weapons Supply,Enabler,Low,City_1,365;67,Weapons Supply operation led by Enabler
+885,213,2024-06-26,Weapons Supply,Enabler,Low,City_2,213;123,Weapons Supply operation led by Enabler
+886,346,2024-10-20,Coordination,Broker,Severe,City_7,346;14;25;65;93,Coordination operation led by Broker
+887,186,2022-10-12,Weapons Supply,Enabler,Medium,City_2,186;18,Weapons Supply operation led by Enabler
+888,151,2023-12-09,Extortion,Broker,Low,City_1,151;296;254;162,Extortion operation led by Broker
+889,224,2021-05-29,Money Laundering,Coordinator,Low,City_2,224;117;399,Money Laundering operation led by Coordinator
+890,69,2024-12-29,Territory Control,Coordinator,High,City_2,69;73,Territory Control operation led by Coordinator
+891,233,2023-11-19,Corruption,Coordinator,High,City_1,233;333;33;378,Corruption operation led by Coordinator
+892,73,2023-03-25,Money Laundering,Coordinator,High,City_9,73;234;100;185;224,Money Laundering operation led by Coordinator
+893,61,2022-03-01,Corruption,Coordinator,Medium,City_5,61;252;44;367,Corruption operation led by Coordinator
+894,192,2021-10-25,Arson,Peripheral,Low,City_7,192;57;236,Arson operation led by Peripheral
+895,295,2021-08-27,Drug Trafficking,Enabler,Low,City_1,295;330;58;175,Drug Trafficking operation led by Enabler
+896,379,2022-01-22,Territory Control,Coordinator,Severe,City_1,379;86;83;217,Territory Control operation led by Coordinator
+897,384,2020-03-12,Intimidation,Peripheral,Medium,City_6,384;388;107;62;227,Intimidation operation led by Peripheral
+898,298,2022-08-10,Illegal Contracts,Broker,Low,City_8,298;223;318,Illegal Contracts operation led by Broker
+899,3,2020-07-01,Corruption,Coordinator,Severe,City_2,3;59;298,Corruption operation led by Coordinator
+900,309,2023-04-05,Logistics,Enabler,Low,City_5,309;388,Logistics operation led by Enabler
+901,176,2022-11-04,Coordination,Broker,Severe,City_8,176;372;183,Coordination operation led by Broker
+902,169,2020-01-09,Resource Distribution,Broker,Severe,City_5,169;224;8;273;303,Resource Distribution operation led by Broker
+903,240,2022-04-03,Arson,Peripheral,High,City_3,240;79;167;280,Arson operation led by Peripheral
+904,348,2020-07-14,Territory Control,Coordinator,High,City_5,348;358,Territory Control operation led by Coordinator
+905,56,2022-12-06,Robbery,Peripheral,Severe,City_5,56;247;223;179;137,Robbery operation led by Peripheral
+906,100,2021-09-13,Extortion,Broker,Low,City_7,100;380;111,Extortion operation led by Broker
+907,211,2020-03-23,Resource Distribution,Broker,Severe,City_10,211;270;308;266;16,Resource Distribution operation led by Broker
+908,365,2023-05-13,Document Forgery,Enabler,Medium,City_10,365;35;173;296;60,Document Forgery operation led by Enabler
+909,123,2021-05-16,Document Forgery,Enabler,Severe,City_1,123;352;219;186;82,Document Forgery operation led by Enabler
+910,282,2022-08-25,Robbery,Peripheral,Severe,City_5,282;25;345;387,Robbery operation led by Peripheral
+911,287,2024-08-26,Weapons Supply,Enabler,Severe,City_4,287;135;354,Weapons Supply operation led by Enabler
+912,41,2020-09-12,Extortion,Broker,Medium,City_1,41;117;241;351,Extortion operation led by Broker
+913,185,2020-06-21,Extortion,Broker,Severe,City_2,185;396,Extortion operation led by Broker
+914,295,2023-07-26,Logistics,Enabler,Medium,City_5,295;144,Logistics operation led by Enabler
+915,7,2022-09-06,Collection,Peripheral,Low,City_1,7;247,Collection operation led by Peripheral
+916,112,2023-10-25,Drug Trafficking,Enabler,Severe,City_6,112;19;266,Drug Trafficking operation led by Enabler
+917,49,2024-06-27,Arson,Peripheral,Low,City_5,49;200;4;18;339,Arson operation led by Peripheral
+918,33,2023-12-21,Resource Distribution,Broker,High,City_1,33;48;20;83,Resource Distribution operation led by Broker
+919,18,2024-03-13,Robbery,Peripheral,High,City_7,18;317;56;394,Robbery operation led by Peripheral
+920,108,2024-12-20,Drug Trafficking,Enabler,Low,City_10,108;84,Drug Trafficking operation led by Enabler
+921,347,2022-07-08,Logistics,Enabler,Low,City_9,347;382,Logistics operation led by Enabler
+922,209,2021-04-15,Document Forgery,Enabler,Medium,City_4,209;26;119,Document Forgery operation led by Enabler
+923,189,2022-07-03,Corruption,Coordinator,Severe,City_4,189;280;131;152,Corruption operation led by Coordinator
+924,233,2022-12-16,Corruption,Coordinator,Severe,City_8,233;347;213;73;66,Corruption operation led by Coordinator
+925,348,2024-05-20,Corruption,Coordinator,Medium,City_10,348;132;351;265;2,Corruption operation led by Coordinator
+926,146,2023-05-03,Weapons Supply,Enabler,Medium,City_4,146;397;235,Weapons Supply operation led by Enabler
+927,227,2020-09-16,Arson,Peripheral,High,City_2,227;20,Arson operation led by Peripheral
+928,35,2020-11-11,Robbery,Peripheral,Medium,City_2,35;223;128;70,Robbery operation led by Peripheral
+929,238,2022-12-01,Robbery,Peripheral,Low,City_3,238;42;88;283,Robbery operation led by Peripheral
+930,44,2024-01-18,Drug Trafficking,Enabler,Medium,City_7,44;180;74;67,Drug Trafficking operation led by Enabler
+931,290,2021-11-12,Territory Control,Coordinator,Low,City_10,290;184;69;347;162,Territory Control operation led by Coordinator
+932,31,2020-01-31,Coordination,Broker,Low,City_4,31;56;384;162;171,Coordination operation led by Broker
+933,36,2020-01-20,Logistics,Enabler,Low,City_6,36;143;104,Logistics operation led by Enabler
+934,3,2021-08-09,Territory Control,Coordinator,Severe,City_10,3;381;186;358;273,Territory Control operation led by Coordinator
+935,300,2023-08-17,Resource Distribution,Broker,Low,City_6,300;67;335;205,Resource Distribution operation led by Broker
+936,362,2023-05-14,Strategic Planning,Coordinator,High,City_10,362;14;219;36,Strategic Planning operation led by Coordinator
+937,381,2020-12-03,Document Forgery,Enabler,Medium,City_9,381;210;72,Document Forgery operation led by Enabler
+938,44,2023-12-08,Drug Trafficking,Enabler,Severe,City_5,44;325,Drug Trafficking operation led by Enabler
+939,255,2021-05-30,Arson,Peripheral,Medium,City_3,255;165,Arson operation led by Peripheral
+940,75,2021-11-01,Robbery,Peripheral,Low,City_10,75;345;258,Robbery operation led by Peripheral
+941,89,2020-03-29,Robbery,Peripheral,Low,City_5,89;323;134;292,Robbery operation led by Peripheral
+942,340,2023-08-12,Collection,Peripheral,Medium,City_10,340;249;216;123;160,Collection operation led by Peripheral
+943,226,2020-04-05,Collection,Peripheral,Low,City_3,226;365;315,Collection operation led by Peripheral
+944,17,2023-12-13,Intimidation,Peripheral,Low,City_1,17;25;214,Intimidation operation led by Peripheral
+945,211,2024-01-13,Extortion,Broker,Medium,City_9,211;265,Extortion operation led by Broker
+946,172,2021-12-14,Intimidation,Peripheral,Medium,City_8,172;120,Intimidation operation led by Peripheral
+947,174,2020-09-19,Arson,Peripheral,Severe,City_8,174;299;282,Arson operation led by Peripheral
+948,177,2022-05-07,Robbery,Peripheral,Severe,City_6,177;316,Robbery operation led by Peripheral
+949,150,2024-02-16,Arson,Peripheral,Medium,City_7,150;395;82;388,Arson operation led by Peripheral
+950,391,2021-12-11,Extortion,Broker,Low,City_9,391;157;6;197,Extortion operation led by Broker
+951,242,2020-01-01,Extortion,Broker,High,City_3,242;315;303,Extortion operation led by Broker
+952,314,2020-01-04,Document Forgery,Enabler,Medium,City_4,314;323;251,Document Forgery operation led by Enabler
+953,139,2022-02-20,Coordination,Broker,Low,City_10,139;357;170;4,Coordination operation led by Broker
+954,146,2024-02-15,Weapons Supply,Enabler,Severe,City_7,146;203;201;38;160,Weapons Supply operation led by Enabler
+955,364,2021-03-13,Drug Trafficking,Enabler,Medium,City_6,364;265;350;165,Drug Trafficking operation led by Enabler
+956,240,2021-11-18,Collection,Peripheral,High,City_10,240;82,Collection operation led by Peripheral
+957,183,2021-05-11,Intimidation,Peripheral,Severe,City_3,183;314;38,Intimidation operation led by Peripheral
+958,80,2020-09-12,Document Forgery,Enabler,High,City_10,80;200;261;90;349,Document Forgery operation led by Enabler
+959,280,2023-05-09,Drug Trafficking,Enabler,Low,City_9,280;49;254;367,Drug Trafficking operation led by Enabler
+960,259,2021-12-07,Arson,Peripheral,Medium,City_2,259;291;102;16,Arson operation led by Peripheral
+961,144,2023-02-02,Document Forgery,Enabler,Low,City_5,144;49;340;332,Document Forgery operation led by Enabler
+962,1,2023-07-22,Illegal Contracts,Broker,High,City_4,1;181;287;190;299,Illegal Contracts operation led by Broker
+963,39,2023-01-15,Robbery,Peripheral,High,City_5,39;112;80,Robbery operation led by Peripheral
+964,44,2024-06-14,Document Forgery,Enabler,Low,City_3,44;349;59,Document Forgery operation led by Enabler
+965,307,2020-03-19,Money Laundering,Coordinator,High,City_3,307;19;2;378;81,Money Laundering operation led by Coordinator
+966,229,2022-05-12,Arson,Peripheral,Low,City_3,229;82,Arson operation led by Peripheral
+967,193,2024-02-23,Logistics,Enabler,Medium,City_7,193;65;396;252,Logistics operation led by Enabler
+968,82,2021-02-23,Document Forgery,Enabler,Severe,City_5,82;101;90;35,Document Forgery operation led by Enabler
+969,248,2023-04-08,Money Laundering,Coordinator,Severe,City_2,248;247;1,Money Laundering operation led by Coordinator
+970,276,2020-09-29,Arson,Peripheral,Medium,City_9,276;121;113;356;352,Arson operation led by Peripheral
+971,137,2024-04-28,Robbery,Peripheral,High,City_8,137;332;388,Robbery operation led by Peripheral
+972,12,2022-04-17,Extortion,Broker,Severe,City_4,12;141,Extortion operation led by Broker
+973,277,2022-01-10,Intimidation,Peripheral,Medium,City_1,277;121;60;206;334,Intimidation operation led by Peripheral
+974,11,2021-10-06,Intimidation,Peripheral,High,City_10,11;316,Intimidation operation led by Peripheral
+975,312,2021-03-10,Collection,Peripheral,Low,City_9,312;164;383,Collection operation led by Peripheral
+976,188,2020-10-20,Money Laundering,Coordinator,High,City_2,188;77;313,Money Laundering operation led by Coordinator
+977,380,2023-03-10,Weapons Supply,Enabler,Low,City_8,380;226;282;183,Weapons Supply operation led by Enabler
+978,305,2022-01-29,Illegal Contracts,Broker,High,City_9,305;352;310,Illegal Contracts operation led by Broker
+979,36,2020-09-27,Drug Trafficking,Enabler,Severe,City_7,36;147;369;276,Drug Trafficking operation led by Enabler
+980,342,2024-09-25,Robbery,Peripheral,Medium,City_1,342;343;26,Robbery operation led by Peripheral
+981,224,2021-06-14,Territory Control,Coordinator,High,City_9,224;298;186;249,Territory Control operation led by Coordinator
+982,31,2021-01-15,Extortion,Broker,High,City_2,31;189;37,Extortion operation led by Broker
+983,297,2024-07-01,Arson,Peripheral,Medium,City_5,297;355;260;24;92,Arson operation led by Peripheral
+984,335,2020-04-19,Arson,Peripheral,Low,City_6,335;302;76;62,Arson operation led by Peripheral
+985,169,2020-03-09,Coordination,Broker,Medium,City_7,169;234;87;281;344,Coordination operation led by Broker
+986,158,2021-06-09,Territory Control,Coordinator,High,City_10,158;351;191,Territory Control operation led by Coordinator
+987,384,2022-07-13,Robbery,Peripheral,Medium,City_5,384;245;308;124;353,Robbery operation led by Peripheral
+988,20,2021-06-22,Logistics,Enabler,Severe,City_7,20;67;119;98,Logistics operation led by Enabler
+989,136,2024-07-21,Document Forgery,Enabler,High,City_3,136;88;151;37,Document Forgery operation led by Enabler
+990,377,2023-12-01,Document Forgery,Enabler,Medium,City_9,377;255;125;168;111,Document Forgery operation led by Enabler
+991,96,2020-06-14,Collection,Peripheral,Severe,City_4,96;143;277,Collection operation led by Peripheral
+992,248,2021-06-05,Territory Control,Coordinator,Medium,City_2,248;46;300;44;365,Territory Control operation led by Coordinator
+993,374,2024-02-09,Territory Control,Coordinator,Medium,City_10,374;298;2;368,Territory Control operation led by Coordinator
+994,334,2021-10-08,Weapons Supply,Enabler,High,City_8,334;314;172,Weapons Supply operation led by Enabler
+995,290,2021-09-22,Territory Control,Coordinator,Severe,City_6,290;195,Territory Control operation led by Coordinator
+996,5,2024-09-13,Intimidation,Peripheral,Low,City_2,5;134,Intimidation operation led by Peripheral
+997,145,2023-07-09,Arson,Peripheral,Low,City_2,145;79;368,Arson operation led by Peripheral
+998,95,2023-07-27,Intimidation,Peripheral,Low,City_8,95;283;16,Intimidation operation led by Peripheral
+999,253,2023-12-29,Strategic Planning,Coordinator,Severe,City_10,253;123;319;110;263,Strategic Planning operation led by Coordinator
+1000,186,2020-10-07,Drug Trafficking,Enabler,Medium,City_4,186;175,Drug Trafficking operation led by Enabler
+1001,273,2023-08-20,Drug Trafficking,Enabler,Medium,City_6,273;336,Drug Trafficking operation led by Enabler
+1002,170,2024-01-12,Robbery,Peripheral,Low,City_7,170;326;23;338;297,Robbery operation led by Peripheral
+1003,193,2022-10-26,Weapons Supply,Enabler,Severe,City_2,193;295;252;41,Weapons Supply operation led by Enabler
+1004,171,2024-12-01,Intimidation,Peripheral,Low,City_5,171;247;190;269;394,Intimidation operation led by Peripheral
+1005,94,2022-05-25,Intimidation,Peripheral,Medium,City_8,94;124;287;373;170,Intimidation operation led by Peripheral
+1006,197,2020-07-28,Extortion,Broker,High,City_2,197;52;104;185,Extortion operation led by Broker
+1007,252,2022-09-25,Extortion,Broker,High,City_7,252;64;389;18,Extortion operation led by Broker
+1008,156,2022-03-08,Extortion,Broker,Severe,City_3,156;75;0;171,Extortion operation led by Broker
+1009,327,2024-06-18,Coordination,Broker,Medium,City_2,327;268;101;6,Coordination operation led by Broker
+1010,217,2022-02-25,Weapons Supply,Enabler,Low,City_10,217;365;209;114,Weapons Supply operation led by Enabler
+1011,241,2023-03-05,Arson,Peripheral,Low,City_2,241;106;333,Arson operation led by Peripheral
+1012,175,2022-05-21,Coordination,Broker,Low,City_2,175;253;364,Coordination operation led by Broker
+1013,104,2021-03-27,Weapons Supply,Enabler,Medium,City_2,104;151;296;128,Weapons Supply operation led by Enabler
+1014,265,2020-09-09,Drug Trafficking,Enabler,Severe,City_9,265;151;393;235;395,Drug Trafficking operation led by Enabler
+1015,191,2023-08-24,Drug Trafficking,Enabler,High,City_3,191;284,Drug Trafficking operation led by Enabler
+1016,156,2023-07-27,Extortion,Broker,High,City_2,156;372;219,Extortion operation led by Broker
+1017,258,2021-07-26,Drug Trafficking,Enabler,High,City_5,258;160,Drug Trafficking operation led by Enabler
+1018,139,2020-11-08,Illegal Contracts,Broker,Severe,City_10,139;166,Illegal Contracts operation led by Broker
+1019,221,2020-12-11,Resource Distribution,Broker,Severe,City_8,221;219;157,Resource Distribution operation led by Broker
+1020,253,2020-11-18,Money Laundering,Coordinator,High,City_8,253;204;298,Money Laundering operation led by Coordinator
+1021,247,2023-04-23,Logistics,Enabler,Medium,City_10,247;181,Logistics operation led by Enabler
+1022,363,2020-04-15,Document Forgery,Enabler,High,City_1,363;142;273;74,Document Forgery operation led by Enabler
+1023,351,2024-01-23,Extortion,Broker,High,City_5,351;283;280;138,Extortion operation led by Broker
+1024,374,2021-07-20,Corruption,Coordinator,Severe,City_3,374;362;220;197;239,Corruption operation led by Coordinator
+1025,197,2020-12-06,Illegal Contracts,Broker,Low,City_10,197;54,Illegal Contracts operation led by Broker
+1026,328,2021-01-10,Coordination,Broker,Severe,City_8,328;23,Coordination operation led by Broker
+1027,362,2024-03-17,Territory Control,Coordinator,Severe,City_6,362;86;374,Territory Control operation led by Coordinator
+1028,337,2024-04-01,Arson,Peripheral,Low,City_5,337;144,Arson operation led by Peripheral
+1029,134,2020-03-01,Arson,Peripheral,Severe,City_5,134;225;103,Arson operation led by Peripheral
+1030,374,2024-01-15,Territory Control,Coordinator,High,City_9,374;347,Territory Control operation led by Coordinator
+1031,119,2021-10-20,Collection,Peripheral,Severe,City_10,119;254,Collection operation led by Peripheral
+1032,116,2024-08-28,Territory Control,Coordinator,High,City_4,116;207,Territory Control operation led by Coordinator
+1033,100,2022-06-11,Resource Distribution,Broker,Severe,City_3,100;18,Resource Distribution operation led by Broker
+1034,168,2024-12-24,Robbery,Peripheral,Low,City_5,168;199;371;135;243,Robbery operation led by Peripheral
+1035,330,2020-09-13,Arson,Peripheral,Medium,City_4,330;371;114,Arson operation led by Peripheral
+1036,307,2023-05-12,Strategic Planning,Coordinator,High,City_3,307;79,Strategic Planning operation led by Coordinator
+1037,153,2022-06-22,Resource Distribution,Broker,Medium,City_2,153;7;79;184,Resource Distribution operation led by Broker
+1038,389,2020-04-23,Territory Control,Coordinator,Severe,City_8,389;362;267;188,Territory Control operation led by Coordinator
+1039,189,2022-11-18,Territory Control,Coordinator,Severe,City_10,189;390;132,Territory Control operation led by Coordinator
+1040,80,2022-11-12,Logistics,Enabler,High,City_6,80;325;27;372,Logistics operation led by Enabler
+1041,313,2020-10-22,Resource Distribution,Broker,High,City_9,313;148,Resource Distribution operation led by Broker
+1042,247,2022-07-06,Drug Trafficking,Enabler,Severe,City_5,247;201;130,Drug Trafficking operation led by Enabler
+1043,101,2021-12-21,Document Forgery,Enabler,Medium,City_8,101;351;298;349,Document Forgery operation led by Enabler
+1044,397,2021-07-20,Robbery,Peripheral,Severe,City_5,397;314;206;208,Robbery operation led by Peripheral
+1045,73,2020-07-11,Territory Control,Coordinator,Severe,City_5,73;283;148;313,Territory Control operation led by Coordinator
+1046,340,2022-12-16,Arson,Peripheral,High,City_1,340;228,Arson operation led by Peripheral
+1047,195,2020-01-19,Document Forgery,Enabler,High,City_7,195;105;292;24,Document Forgery operation led by Enabler
+1048,77,2023-05-26,Document Forgery,Enabler,Severe,City_1,77;17;18,Document Forgery operation led by Enabler
+1049,123,2023-03-25,Weapons Supply,Enabler,High,City_9,123;258,Weapons Supply operation led by Enabler
+1050,179,2021-08-09,Logistics,Enabler,Severe,City_7,179;87;30;95,Logistics operation led by Enabler
+1051,50,2021-11-05,Territory Control,Coordinator,Severe,City_6,50;91,Territory Control operation led by Coordinator
+1052,37,2023-10-08,Document Forgery,Enabler,High,City_4,37;130;135;100;52,Document Forgery operation led by Enabler
+1053,3,2021-04-19,Money Laundering,Coordinator,Low,City_3,3;381;250;1;379,Money Laundering operation led by Coordinator
+1054,362,2022-09-14,Corruption,Coordinator,Severe,City_6,362;338;228;294,Corruption operation led by Coordinator
+1055,185,2020-02-10,Illegal Contracts,Broker,Medium,City_4,185;335;294,Illegal Contracts operation led by Broker
+1056,283,2024-07-16,Logistics,Enabler,Medium,City_3,283;318;191;62,Logistics operation led by Enabler
+1057,359,2023-11-26,Resource Distribution,Broker,High,City_8,359;367,Resource Distribution operation led by Broker
+1058,369,2021-07-12,Collection,Peripheral,Low,City_3,369;49,Collection operation led by Peripheral
+1059,319,2023-03-02,Weapons Supply,Enabler,Medium,City_2,319;177;353;58,Weapons Supply operation led by Enabler
+1060,146,2023-01-23,Document Forgery,Enabler,High,City_6,146;308;287,Document Forgery operation led by Enabler
+1061,290,2023-11-02,Corruption,Coordinator,Medium,City_1,290;248,Corruption operation led by Coordinator
+1062,24,2022-01-04,Arson,Peripheral,High,City_6,24;326;40;395,Arson operation led by Peripheral
+1063,59,2021-10-13,Extortion,Broker,Medium,City_10,59;55,Extortion operation led by Broker
+1064,226,2022-09-16,Robbery,Peripheral,Medium,City_9,226;274,Robbery operation led by Peripheral
+1065,135,2022-07-21,Logistics,Enabler,Low,City_1,135;146;237;141;159,Logistics operation led by Enabler
+1066,216,2022-05-07,Robbery,Peripheral,Low,City_6,216;130,Robbery operation led by Peripheral
+1067,268,2023-03-20,Collection,Peripheral,Low,City_8,268;79,Collection operation led by Peripheral
+1068,224,2022-07-28,Strategic Planning,Coordinator,Severe,City_7,224;328;210;147;346,Strategic Planning operation led by Coordinator
+1069,131,2020-04-27,Logistics,Enabler,Medium,City_4,131;23,Logistics operation led by Enabler
+1070,310,2023-09-06,Robbery,Peripheral,Low,City_7,310;112;88,Robbery operation led by Peripheral
+1071,44,2021-11-23,Document Forgery,Enabler,High,City_2,44;341;169;359,Document Forgery operation led by Enabler
+1072,233,2020-02-22,Territory Control,Coordinator,Low,City_6,233;365,Territory Control operation led by Coordinator
+1073,39,2022-09-20,Collection,Peripheral,Medium,City_8,39;174;17;74,Collection operation led by Peripheral
+1074,63,2021-12-07,Robbery,Peripheral,Low,City_1,63;83;273,Robbery operation led by Peripheral
+1075,307,2024-08-05,Territory Control,Coordinator,Low,City_1,307;36,Territory Control operation led by Coordinator
+1076,23,2020-03-23,Intimidation,Peripheral,Low,City_6,23;44;393;42;325,Intimidation operation led by Peripheral
+1077,395,2020-01-26,Arson,Peripheral,High,City_7,395;322;385;191,Arson operation led by Peripheral
+1078,87,2024-11-22,Arson,Peripheral,Low,City_4,87;126;82,Arson operation led by Peripheral
+1079,12,2022-06-12,Resource Distribution,Broker,Medium,City_1,12;143;37;209,Resource Distribution operation led by Broker
+1080,353,2022-01-15,Document Forgery,Enabler,Low,City_6,353;252,Document Forgery operation led by Enabler
+1081,123,2023-07-06,Document Forgery,Enabler,High,City_9,123;375,Document Forgery operation led by Enabler
+1082,36,2021-03-21,Logistics,Enabler,Low,City_6,36;318;82,Logistics operation led by Enabler
+1083,281,2020-04-13,Arson,Peripheral,High,City_7,281;225;192,Arson operation led by Peripheral
+1084,351,2020-10-24,Illegal Contracts,Broker,Severe,City_1,351;152;108;271,Illegal Contracts operation led by Broker
+1085,14,2022-01-25,Illegal Contracts,Broker,Low,City_7,14;50;197;92,Illegal Contracts operation led by Broker
+1086,234,2022-09-06,Drug Trafficking,Enabler,High,City_3,234;215;303;235;77,Drug Trafficking operation led by Enabler
+1087,46,2022-12-24,Document Forgery,Enabler,High,City_5,46;141;64,Document Forgery operation led by Enabler
+1088,241,2022-01-16,Collection,Peripheral,High,City_10,241;292,Collection operation led by Peripheral
+1089,260,2021-08-16,Arson,Peripheral,Low,City_3,260;293;74,Arson operation led by Peripheral
+1090,226,2020-04-08,Robbery,Peripheral,High,City_10,226;398;219;37,Robbery operation led by Peripheral
+1091,218,2022-05-04,Robbery,Peripheral,Medium,City_2,218;126;235;137,Robbery operation led by Peripheral
+1092,179,2024-12-17,Weapons Supply,Enabler,Medium,City_4,179;71;359;33,Weapons Supply operation led by Enabler
+1093,69,2023-10-18,Money Laundering,Coordinator,Severe,City_10,69;146;182,Money Laundering operation led by Coordinator
+1094,247,2020-12-21,Drug Trafficking,Enabler,High,City_1,247;377,Drug Trafficking operation led by Enabler
+1095,86,2024-03-22,Coordination,Broker,Medium,City_2,86;348;320,Coordination operation led by Broker
+1096,338,2020-03-08,Document Forgery,Enabler,High,City_2,338;331;135,Document Forgery operation led by Enabler
+1097,351,2021-09-26,Resource Distribution,Broker,High,City_3,351;187;69,Resource Distribution operation led by Broker
+1098,285,2022-02-19,Collection,Peripheral,Medium,City_5,285;119;330;376,Collection operation led by Peripheral
+1099,175,2024-04-18,Extortion,Broker,High,City_6,175;122,Extortion operation led by Broker
+1100,227,2021-01-08,Collection,Peripheral,Low,City_4,227;53;192;13;27,Collection operation led by Peripheral
+1101,19,2023-07-10,Drug Trafficking,Enabler,Low,City_3,19;13,Drug Trafficking operation led by Enabler
+1102,379,2021-08-20,Money Laundering,Coordinator,Severe,City_1,379;390,Money Laundering operation led by Coordinator
+1103,61,2022-10-10,Corruption,Coordinator,Low,City_4,61;305;169,Corruption operation led by Coordinator
+1104,346,2020-11-27,Illegal Contracts,Broker,High,City_7,346;162;17;270;365,Illegal Contracts operation led by Broker
+1105,164,2024-01-10,Arson,Peripheral,Medium,City_3,164;142;244;334;27,Arson operation led by Peripheral
+1106,41,2020-06-06,Coordination,Broker,Low,City_6,41;248;117,Coordination operation led by Broker
+1107,142,2022-09-07,Robbery,Peripheral,High,City_4,142;123;218;262;202,Robbery operation led by Peripheral
+1108,72,2022-05-17,Extortion,Broker,Severe,City_2,72;6;378,Extortion operation led by Broker
+1109,338,2023-06-23,Drug Trafficking,Enabler,Severe,City_9,338;31;215;92,Drug Trafficking operation led by Enabler
+1110,389,2024-06-07,Strategic Planning,Coordinator,Severe,City_6,389;390;363,Strategic Planning operation led by Coordinator
+1111,388,2020-02-03,Robbery,Peripheral,High,City_1,388;383;170;195,Robbery operation led by Peripheral
+1112,327,2022-05-28,Resource Distribution,Broker,Medium,City_1,327;250,Resource Distribution operation led by Broker
+1113,25,2023-03-25,Robbery,Peripheral,Severe,City_3,25;332,Robbery operation led by Peripheral
+1114,182,2020-12-06,Weapons Supply,Enabler,High,City_4,182;130;397;377,Weapons Supply operation led by Enabler
+1115,389,2022-10-08,Money Laundering,Coordinator,Severe,City_1,389;82;3;61,Money Laundering operation led by Coordinator
+1116,144,2024-06-24,Document Forgery,Enabler,High,City_4,144;19,Document Forgery operation led by Enabler
+1117,398,2023-05-14,Collection,Peripheral,Low,City_10,398;378;20;279,Collection operation led by Peripheral
+1118,183,2024-02-27,Collection,Peripheral,Medium,City_5,183;245,Collection operation led by Peripheral
+1119,19,2023-01-04,Weapons Supply,Enabler,Low,City_3,19;281;195,Weapons Supply operation led by Enabler
+1120,102,2023-04-23,Arson,Peripheral,Low,City_4,102;232;26;6;343,Arson operation led by Peripheral
+1121,97,2024-04-20,Illegal Contracts,Broker,Severe,City_2,97;399,Illegal Contracts operation led by Broker
+1122,123,2024-03-29,Drug Trafficking,Enabler,Medium,City_9,123;327;213,Drug Trafficking operation led by Enabler
+1123,204,2024-11-22,Drug Trafficking,Enabler,Severe,City_3,204;277;346,Drug Trafficking operation led by Enabler
+1124,51,2021-08-07,Arson,Peripheral,Low,City_6,51;231;94;103,Arson operation led by Peripheral
+1125,14,2021-01-08,Extortion,Broker,Low,City_1,14;182;77;270;352,Extortion operation led by Broker
+1126,399,2023-12-12,Strategic Planning,Coordinator,High,City_1,399;173,Strategic Planning operation led by Coordinator
+1127,391,2024-12-20,Coordination,Broker,Medium,City_3,391;194;309;204;330,Coordination operation led by Broker
+1128,37,2022-01-14,Weapons Supply,Enabler,Medium,City_5,37;377;44;382;171,Weapons Supply operation led by Enabler
+1129,87,2022-07-25,Robbery,Peripheral,Medium,City_2,87;306,Robbery operation led by Peripheral
+1130,16,2024-12-07,Logistics,Enabler,Low,City_1,16;176;229;391;155,Logistics operation led by Enabler
+1131,77,2023-08-24,Logistics,Enabler,Medium,City_7,77;214;150,Logistics operation led by Enabler
+1132,121,2023-12-19,Collection,Peripheral,Medium,City_2,121;333;354;56,Collection operation led by Peripheral
+1133,18,2020-07-05,Collection,Peripheral,Medium,City_3,18;106;123;166;341,Collection operation led by Peripheral
+1134,324,2022-07-14,Illegal Contracts,Broker,High,City_6,324;357;55,Illegal Contracts operation led by Broker
+1135,65,2024-07-13,Extortion,Broker,High,City_10,65;153;35;91;90,Extortion operation led by Broker
+1136,116,2022-04-10,Territory Control,Coordinator,Severe,City_7,116;153,Territory Control operation led by Coordinator
+1137,228,2024-07-11,Logistics,Enabler,Severe,City_10,228;367;126;326,Logistics operation led by Enabler
+1138,267,2024-11-01,Territory Control,Coordinator,Medium,City_2,267;290;185;217;175,Territory Control operation led by Coordinator
+1139,248,2021-08-31,Territory Control,Coordinator,Medium,City_1,248;1,Territory Control operation led by Coordinator
+1140,33,2020-05-04,Coordination,Broker,High,City_6,33;100;189;114,Coordination operation led by Broker
+1141,358,2021-04-17,Logistics,Enabler,Medium,City_2,358;0,Logistics operation led by Enabler
+1142,249,2020-11-22,Weapons Supply,Enabler,Low,City_7,249;161;225,Weapons Supply operation led by Enabler
+1143,197,2022-03-27,Extortion,Broker,Medium,City_4,197;57;107;193,Extortion operation led by Broker
+1144,263,2020-07-07,Strategic Planning,Coordinator,High,City_7,263;16,Strategic Planning operation led by Coordinator
+1145,207,2024-02-10,Corruption,Coordinator,Medium,City_2,207;36;9;66;334,Corruption operation led by Coordinator
+1146,237,2022-07-23,Robbery,Peripheral,High,City_8,237;77;145,Robbery operation led by Peripheral
+1147,355,2024-12-02,Intimidation,Peripheral,Low,City_9,355;149,Intimidation operation led by Peripheral
+1148,195,2021-04-24,Drug Trafficking,Enabler,Medium,City_4,195;217,Drug Trafficking operation led by Enabler
+1149,273,2024-12-26,Weapons Supply,Enabler,High,City_10,273;131;190,Weapons Supply operation led by Enabler
+1150,223,2020-12-31,Robbery,Peripheral,Severe,City_6,223;45,Robbery operation led by Peripheral
+1151,218,2020-01-24,Intimidation,Peripheral,High,City_4,218;271,Intimidation operation led by Peripheral
+1152,372,2021-11-12,Intimidation,Peripheral,High,City_9,372;104;62;329;309,Intimidation operation led by Peripheral
+1153,29,2020-11-17,Collection,Peripheral,Low,City_8,29;240;46;36;128,Collection operation led by Peripheral
+1154,64,2021-08-23,Resource Distribution,Broker,Medium,City_4,64;304;247;32;52,Resource Distribution operation led by Broker
+1155,294,2022-04-22,Corruption,Coordinator,Severe,City_2,294;147;146;9,Corruption operation led by Coordinator
+1156,132,2024-05-04,Extortion,Broker,Low,City_5,132;298;29,Extortion operation led by Broker
+1157,247,2024-11-30,Document Forgery,Enabler,Severe,City_4,247;148;137;11,Document Forgery operation led by Enabler
+1158,45,2020-01-21,Robbery,Peripheral,Low,City_4,45;166;268;229;347,Robbery operation led by Peripheral
+1159,339,2020-07-29,Robbery,Peripheral,Medium,City_1,339;360;4;179,Robbery operation led by Peripheral
+1160,161,2024-02-15,Extortion,Broker,Low,City_7,161;94;187;68;308,Extortion operation led by Broker
+1161,13,2023-12-06,Collection,Peripheral,Medium,City_7,13;368;91,Collection operation led by Peripheral
+1162,243,2023-10-12,Collection,Peripheral,Medium,City_10,243;331,Collection operation led by Peripheral
+1163,329,2023-05-20,Intimidation,Peripheral,High,City_9,329;220;214;315;74,Intimidation operation led by Peripheral
+1164,69,2024-06-26,Strategic Planning,Coordinator,High,City_10,69;44,Strategic Planning operation led by Coordinator
+1165,323,2023-02-16,Collection,Peripheral,Medium,City_4,323;181;74;378;216,Collection operation led by Peripheral
+1166,298,2020-05-12,Illegal Contracts,Broker,Severe,City_6,298;321;14;340;256,Illegal Contracts operation led by Broker
+1167,110,2021-01-09,Coordination,Broker,Low,City_10,110;73;374,Coordination operation led by Broker
+1168,378,2020-06-20,Weapons Supply,Enabler,Low,City_4,378;96;330;241;122,Weapons Supply operation led by Enabler
+1169,288,2022-04-15,Robbery,Peripheral,Medium,City_6,288;234;109;136;68,Robbery operation led by Peripheral
+1170,93,2021-09-02,Drug Trafficking,Enabler,Severe,City_5,93;96;56;210,Drug Trafficking operation led by Enabler
+1171,280,2020-12-06,Weapons Supply,Enabler,Low,City_8,280;334;190;231;380,Weapons Supply operation led by Enabler
+1172,150,2022-10-31,Robbery,Peripheral,Low,City_5,150;101,Robbery operation led by Peripheral
+1173,250,2021-07-06,Document Forgery,Enabler,Low,City_4,250;324;42;137;131,Document Forgery operation led by Enabler
+1174,167,2022-12-14,Arson,Peripheral,Low,City_3,167;376;78;68,Arson operation led by Peripheral
+1175,134,2024-04-10,Arson,Peripheral,Medium,City_8,134;204;121,Arson operation led by Peripheral
+1176,30,2021-11-27,Illegal Contracts,Broker,High,City_4,30;242;45;138;360,Illegal Contracts operation led by Broker
+1177,213,2021-09-04,Drug Trafficking,Enabler,Severe,City_10,213;86;244;397,Drug Trafficking operation led by Enabler
+1178,59,2022-08-21,Illegal Contracts,Broker,Medium,City_8,59;91;205;123,Illegal Contracts operation led by Broker
+1179,158,2021-01-25,Strategic Planning,Coordinator,High,City_9,158;144,Strategic Planning operation led by Coordinator
+1180,362,2024-06-04,Corruption,Coordinator,Medium,City_6,362;334;298;91,Corruption operation led by Coordinator
+1181,46,2020-11-04,Document Forgery,Enabler,Low,City_6,46;21;339;219;252,Document Forgery operation led by Enabler
+1182,2,2020-07-20,Territory Control,Coordinator,Severe,City_3,2;169;319,Territory Control operation led by Coordinator
+1183,300,2023-05-25,Coordination,Broker,Medium,City_6,300;309,Coordination operation led by Broker
+1184,143,2023-06-16,Collection,Peripheral,Low,City_1,143;108,Collection operation led by Peripheral
+1185,156,2023-10-20,Extortion,Broker,Medium,City_2,156;153,Extortion operation led by Broker
+1186,395,2021-01-19,Arson,Peripheral,Medium,City_7,395;368;347;129;145,Arson operation led by Peripheral
+1187,37,2023-01-31,Drug Trafficking,Enabler,High,City_10,37;282;120;344;27,Drug Trafficking operation led by Enabler
+1188,197,2023-06-01,Coordination,Broker,Low,City_6,197;300;5,Coordination operation led by Broker
+1189,180,2020-06-15,Coordination,Broker,Severe,City_10,180;127;118;188,Coordination operation led by Broker
+1190,48,2022-11-07,Intimidation,Peripheral,Low,City_5,48;88,Intimidation operation led by Peripheral
+1191,369,2022-05-22,Arson,Peripheral,Medium,City_4,369;287,Arson operation led by Peripheral
+1192,367,2023-07-04,Document Forgery,Enabler,Medium,City_7,367;87;136;185;337,Document Forgery operation led by Enabler
+1193,129,2020-02-16,Arson,Peripheral,Low,City_10,129;323,Arson operation led by Peripheral
+1194,81,2024-09-19,Corruption,Coordinator,Low,City_3,81;166;193,Corruption operation led by Coordinator
+1195,31,2024-03-29,Resource Distribution,Broker,Medium,City_9,31;19;350;11;163,Resource Distribution operation led by Broker
+1196,41,2024-01-05,Coordination,Broker,Medium,City_10,41;118;99,Coordination operation led by Broker
+1197,333,2022-09-24,Logistics,Enabler,Medium,City_8,333;26;287;23;171,Logistics operation led by Enabler
+1198,252,2024-08-16,Illegal Contracts,Broker,Severe,City_4,252;219;12;76;61,Illegal Contracts operation led by Broker
+1199,326,2022-10-08,Intimidation,Peripheral,Low,City_4,326;34,Intimidation operation led by Peripheral
+1200,97,2021-01-16,Illegal Contracts,Broker,Severe,City_10,97;380;169,Illegal Contracts operation led by Broker
+1201,188,2020-10-11,Territory Control,Coordinator,High,City_3,188;233,Territory Control operation led by Coordinator
+1202,133,2023-10-27,Robbery,Peripheral,Medium,City_4,133;46,Robbery operation led by Peripheral
+1203,124,2021-05-03,Intimidation,Peripheral,Medium,City_4,124;353,Intimidation operation led by Peripheral
+1204,225,2024-01-23,Intimidation,Peripheral,Low,City_10,225;228;387;208;117,Intimidation operation led by Peripheral
+1205,233,2020-02-29,Strategic Planning,Coordinator,Medium,City_9,233;158,Strategic Planning operation led by Coordinator
+1206,46,2021-04-03,Logistics,Enabler,High,City_10,46;228,Logistics operation led by Enabler
+1207,20,2021-05-21,Document Forgery,Enabler,Medium,City_2,20;132;181;316,Document Forgery operation led by Enabler
+1208,252,2023-03-15,Extortion,Broker,High,City_4,252;317;202;7;40,Extortion operation led by Broker
+1209,142,2023-10-31,Arson,Peripheral,High,City_9,142;314;166;78;268,Arson operation led by Peripheral
+1210,334,2020-12-29,Weapons Supply,Enabler,Severe,City_6,334;222;209,Weapons Supply operation led by Enabler
+1211,59,2022-09-22,Coordination,Broker,High,City_9,59;370,Coordination operation led by Broker
+1212,235,2024-07-05,Collection,Peripheral,Medium,City_9,235;232;120;315;103,Collection operation led by Peripheral
+1213,14,2022-09-25,Extortion,Broker,Severe,City_8,14;253;292,Extortion operation led by Broker
+1214,80,2020-02-11,Drug Trafficking,Enabler,Low,City_6,80;19;281;0,Drug Trafficking operation led by Enabler
+1215,287,2020-11-24,Weapons Supply,Enabler,Low,City_9,287;288,Weapons Supply operation led by Enabler
+1216,285,2023-07-08,Arson,Peripheral,High,City_2,285;133;325;235;241,Arson operation led by Peripheral
+1217,110,2021-01-07,Resource Distribution,Broker,Severe,City_5,110;263;1;12;391,Resource Distribution operation led by Broker
+1218,379,2023-06-17,Territory Control,Coordinator,Severe,City_8,379;65;117;85,Territory Control operation led by Coordinator
+1219,341,2020-05-24,Arson,Peripheral,Low,City_4,341;280;342;334,Arson operation led by Peripheral
+1220,61,2024-05-12,Corruption,Coordinator,Severe,City_8,61;314;265;12,Corruption operation led by Coordinator
+1221,328,2023-06-19,Illegal Contracts,Broker,High,City_3,328;279;276,Illegal Contracts operation led by Broker
+1222,29,2021-06-30,Collection,Peripheral,Low,City_6,29;289;397;194,Collection operation led by Peripheral
+1223,137,2021-01-01,Intimidation,Peripheral,Low,City_1,137;393;385;128;319,Intimidation operation led by Peripheral
+1224,1,2024-07-09,Resource Distribution,Broker,Medium,City_8,1;69;136;4,Resource Distribution operation led by Broker
+1225,81,2024-05-28,Money Laundering,Coordinator,High,City_7,81;189;287,Money Laundering operation led by Coordinator
+1226,179,2023-07-06,Drug Trafficking,Enabler,Medium,City_9,179;182,Drug Trafficking operation led by Enabler
+1227,127,2024-01-10,Collection,Peripheral,Low,City_6,127;27;40;364;36,Collection operation led by Peripheral
+1228,152,2023-03-29,Territory Control,Coordinator,High,City_1,152;228;338;219,Territory Control operation led by Coordinator
+1229,182,2022-08-05,Logistics,Enabler,High,City_2,182;255;95;90;138,Logistics operation led by Enabler
+1230,328,2020-09-04,Extortion,Broker,High,City_7,328;87;85;141;152,Extortion operation led by Broker
+1231,225,2023-06-04,Arson,Peripheral,Medium,City_6,225;78;275;350;22,Arson operation led by Peripheral
+1232,309,2020-05-15,Drug Trafficking,Enabler,High,City_8,309;246;222,Drug Trafficking operation led by Enabler
+1233,32,2021-09-05,Arson,Peripheral,Low,City_1,32;318;38,Arson operation led by Peripheral
+1234,158,2020-04-09,Territory Control,Coordinator,High,City_8,158;239;85;197,Territory Control operation led by Coordinator
+1235,60,2022-08-25,Arson,Peripheral,Low,City_3,60;303;312;219;220,Arson operation led by Peripheral
+1236,55,2020-03-29,Robbery,Peripheral,Low,City_10,55;238;395,Robbery operation led by Peripheral
+1237,157,2021-05-16,Intimidation,Peripheral,Low,City_8,157;154;286;16;288,Intimidation operation led by Peripheral
+1238,295,2021-05-04,Drug Trafficking,Enabler,Severe,City_6,295;259;122;393;159,Drug Trafficking operation led by Enabler
+1239,210,2024-07-14,Logistics,Enabler,Low,City_7,210;246;19;393,Logistics operation led by Enabler
+1240,39,2021-12-09,Robbery,Peripheral,High,City_7,39;94;310;157;102,Robbery operation led by Peripheral
+1241,234,2022-07-13,Drug Trafficking,Enabler,Severe,City_6,234;289;87,Drug Trafficking operation led by Enabler
+1242,273,2020-02-06,Drug Trafficking,Enabler,Severe,City_4,273;286,Drug Trafficking operation led by Enabler
+1243,168,2020-01-27,Intimidation,Peripheral,Medium,City_7,168;204;13;352,Intimidation operation led by Peripheral
+1244,236,2020-12-18,Arson,Peripheral,Low,City_5,236;388;159;181,Arson operation led by Peripheral
+1245,122,2021-04-25,Robbery,Peripheral,Low,City_4,122;91;95,Robbery operation led by Peripheral
+1246,257,2023-11-08,Arson,Peripheral,Medium,City_2,257;247;293;395,Arson operation led by Peripheral
+1247,290,2022-08-10,Corruption,Coordinator,High,City_4,290;193,Corruption operation led by Coordinator
+1248,185,2021-10-26,Coordination,Broker,Medium,City_1,185;399;113,Coordination operation led by Broker
+1249,67,2024-05-30,Robbery,Peripheral,Severe,City_5,67;149;393;90;209,Robbery operation led by Peripheral
+1250,233,2020-01-26,Money Laundering,Coordinator,Low,City_1,233;290;156,Money Laundering operation led by Coordinator
+1251,188,2024-08-12,Corruption,Coordinator,Severe,City_7,188;280;3;46,Corruption operation led by Coordinator
+1252,294,2021-09-14,Corruption,Coordinator,Severe,City_4,294;263;37;148,Corruption operation led by Coordinator
+1253,132,2024-05-13,Extortion,Broker,Medium,City_2,132;71,Extortion operation led by Broker
+1254,131,2023-11-17,Logistics,Enabler,Low,City_9,131;104,Logistics operation led by Enabler
+1255,19,2023-06-13,Logistics,Enabler,Medium,City_2,19;43;62;268;70,Logistics operation led by Enabler
+1256,339,2024-08-19,Collection,Peripheral,Low,City_3,339;7;170;218,Collection operation led by Peripheral
+1257,321,2023-10-07,Robbery,Peripheral,High,City_10,321;174;256;308,Robbery operation led by Peripheral
+1258,285,2021-08-12,Arson,Peripheral,Medium,City_2,285;25;323;102,Arson operation led by Peripheral
+1259,396,2021-07-02,Coordination,Broker,High,City_9,396;255;285;220,Coordination operation led by Broker
+1260,271,2023-09-29,Intimidation,Peripheral,Low,City_3,271;186;345,Intimidation operation led by Peripheral
+1261,15,2023-07-28,Coordination,Broker,High,City_10,15;114;323,Coordination operation led by Broker
+1262,235,2020-07-30,Arson,Peripheral,Low,City_6,235;219;87;29,Arson operation led by Peripheral
+1263,67,2023-08-27,Robbery,Peripheral,Low,City_8,67;228;106;357,Robbery operation led by Peripheral
+1264,362,2021-06-01,Strategic Planning,Coordinator,High,City_1,362;136;314,Strategic Planning operation led by Coordinator
+1265,10,2023-12-27,Intimidation,Peripheral,Low,City_5,10;121;123,Intimidation operation led by Peripheral
+1266,75,2020-01-18,Arson,Peripheral,Medium,City_5,75;21;7,Arson operation led by Peripheral
+1267,286,2020-12-18,Weapons Supply,Enabler,Low,City_6,286;105,Weapons Supply operation led by Enabler
+1268,212,2020-01-31,Arson,Peripheral,Low,City_2,212;371,Arson operation led by Peripheral
+1269,219,2023-10-24,Weapons Supply,Enabler,Medium,City_2,219;316;206;99,Weapons Supply operation led by Enabler
+1270,248,2020-01-02,Money Laundering,Coordinator,Severe,City_5,248;309;85;249,Money Laundering operation led by Coordinator
+1271,145,2020-12-19,Robbery,Peripheral,Low,City_2,145;343;186,Robbery operation led by Peripheral
+1272,190,2021-10-08,Robbery,Peripheral,Severe,City_7,190;141,Robbery operation led by Peripheral
+1273,36,2021-10-23,Logistics,Enabler,Medium,City_3,36;259,Logistics operation led by Enabler
+1274,2,2020-07-19,Territory Control,Coordinator,High,City_6,2;239;298,Territory Control operation led by Coordinator
+1275,305,2022-03-05,Resource Distribution,Broker,Medium,City_3,305;319;112,Resource Distribution operation led by Broker
+1276,298,2022-01-28,Illegal Contracts,Broker,High,City_10,298;351,Illegal Contracts operation led by Broker
+1277,198,2023-01-30,Collection,Peripheral,Medium,City_1,198;29;356;270,Collection operation led by Peripheral
+1278,151,2024-07-08,Resource Distribution,Broker,Medium,City_9,151;35,Resource Distribution operation led by Broker
+1279,313,2022-08-04,Resource Distribution,Broker,Low,City_2,313;220;191;151;166,Resource Distribution operation led by Broker
+1280,313,2023-03-22,Illegal Contracts,Broker,Low,City_1,313;254;117,Illegal Contracts operation led by Broker
+1281,342,2023-06-29,Collection,Peripheral,Severe,City_7,342;42;331,Collection operation led by Peripheral
+1282,81,2020-08-18,Money Laundering,Coordinator,Severe,City_8,81;391;156;389;220,Money Laundering operation led by Coordinator
+1283,131,2021-02-01,Document Forgery,Enabler,Medium,City_4,131;142;155;194;4,Document Forgery operation led by Enabler
+1284,206,2020-12-26,Arson,Peripheral,Medium,City_6,206;339;94;209;355,Arson operation led by Peripheral
+1285,210,2022-07-06,Drug Trafficking,Enabler,Low,City_8,210;386,Drug Trafficking operation led by Enabler
+1286,22,2024-06-24,Collection,Peripheral,Low,City_3,22;281;350,Collection operation led by Peripheral
+1287,253,2023-02-11,Strategic Planning,Coordinator,High,City_9,253;44,Strategic Planning operation led by Coordinator
+1288,1,2021-05-19,Extortion,Broker,High,City_10,1;354;394;257;334,Extortion operation led by Broker
+1289,263,2021-09-13,Money Laundering,Coordinator,High,City_8,263;147,Money Laundering operation led by Coordinator
+1290,313,2022-02-05,Resource Distribution,Broker,High,City_3,313;393;128,Resource Distribution operation led by Broker
+1291,379,2024-04-12,Territory Control,Coordinator,Medium,City_8,379;359;233;294;219,Territory Control operation led by Coordinator
+1292,310,2022-04-16,Robbery,Peripheral,Medium,City_1,310;105,Robbery operation led by Peripheral
+1293,148,2023-09-14,Coordination,Broker,High,City_5,148;384;132;62;106,Coordination operation led by Broker
+1294,101,2021-12-06,Document Forgery,Enabler,Low,City_10,101;20,Document Forgery operation led by Enabler
+1295,250,2024-03-31,Logistics,Enabler,Low,City_3,250;368;347;6;391,Logistics operation led by Enabler
+1296,368,2022-10-09,Weapons Supply,Enabler,Severe,City_6,368;23;25;235,Weapons Supply operation led by Enabler
+1297,23,2023-09-22,Collection,Peripheral,Severe,City_3,23;291;37,Collection operation led by Peripheral
+1298,365,2020-06-07,Document Forgery,Enabler,Low,City_10,365;271;318;274;57,Document Forgery operation led by Enabler
+1299,188,2023-09-19,Money Laundering,Coordinator,High,City_8,188;242;296;383;182,Money Laundering operation led by Coordinator
+1300,146,2023-02-23,Weapons Supply,Enabler,Low,City_4,146;186;334,Weapons Supply operation led by Enabler
+1301,123,2024-04-10,Weapons Supply,Enabler,High,City_8,123;285;110,Weapons Supply operation led by Enabler
+1302,158,2023-12-03,Territory Control,Coordinator,Severe,City_3,158;389;186;182,Territory Control operation led by Coordinator
+1303,245,2022-01-03,Document Forgery,Enabler,Medium,City_9,245;168;151,Document Forgery operation led by Enabler
+1304,389,2020-08-14,Strategic Planning,Coordinator,Medium,City_9,389;396;166;146;191,Strategic Planning operation led by Coordinator
+1305,176,2022-03-15,Coordination,Broker,Medium,City_5,176;171;290;59,Coordination operation led by Broker
+1306,31,2024-08-16,Extortion,Broker,Severe,City_2,31;309;71,Extortion operation led by Broker
+1307,384,2024-11-22,Arson,Peripheral,High,City_3,384;71,Arson operation led by Peripheral
+1308,228,2022-05-16,Weapons Supply,Enabler,Low,City_9,228;359;19;360;367,Weapons Supply operation led by Enabler
+1309,296,2022-10-23,Resource Distribution,Broker,Medium,City_4,296;161,Resource Distribution operation led by Broker
+1310,391,2022-04-18,Coordination,Broker,Severe,City_9,391;351;136,Coordination operation led by Broker
+1311,281,2024-06-23,Robbery,Peripheral,Medium,City_2,281;82,Robbery operation led by Peripheral
+1312,286,2020-05-18,Weapons Supply,Enabler,High,City_1,286;327;33;27;218,Weapons Supply operation led by Enabler
+1313,10,2022-02-15,Collection,Peripheral,Low,City_7,10;199,Collection operation led by Peripheral
+1314,93,2023-12-14,Document Forgery,Enabler,High,City_7,93;288,Document Forgery operation led by Enabler
+1315,238,2023-08-03,Intimidation,Peripheral,Medium,City_8,238;287;225;42,Intimidation operation led by Peripheral
+1316,244,2024-06-18,Arson,Peripheral,High,City_8,244;122;216;76,Arson operation led by Peripheral
+1317,85,2022-05-17,Territory Control,Coordinator,High,City_1,85;220;300;358;307,Territory Control operation led by Coordinator
+1318,151,2023-08-24,Extortion,Broker,Medium,City_9,151;274;85;63;336,Extortion operation led by Broker
+1319,197,2023-06-20,Illegal Contracts,Broker,Low,City_8,197;323;201;298,Illegal Contracts operation led by Broker
+1320,207,2020-04-12,Strategic Planning,Coordinator,Severe,City_9,207;85;280;15;368,Strategic Planning operation led by Coordinator
+1321,294,2020-10-30,Corruption,Coordinator,Severe,City_10,294;298;374,Corruption operation led by Coordinator
+1322,66,2022-11-29,Money Laundering,Coordinator,Severe,City_1,66;82;4;162;273,Money Laundering operation led by Coordinator
+1323,366,2024-08-02,Intimidation,Peripheral,Low,City_4,366;7,Intimidation operation led by Peripheral
+1324,245,2020-07-23,Logistics,Enabler,Medium,City_4,245;202;251;288;36,Logistics operation led by Enabler
+1325,132,2022-09-18,Extortion,Broker,Severe,City_4,132;332;34;30;374,Extortion operation led by Broker
+1326,78,2020-05-29,Robbery,Peripheral,High,City_5,78;209,Robbery operation led by Peripheral
+1327,191,2022-08-22,Document Forgery,Enabler,Low,City_6,191;24;92;238,Document Forgery operation led by Enabler
+1328,324,2023-06-24,Coordination,Broker,High,City_1,324;390;185;192,Coordination operation led by Broker
+1329,2,2024-04-01,Money Laundering,Coordinator,Severe,City_9,2;211,Money Laundering operation led by Coordinator
+1330,52,2022-02-22,Extortion,Broker,Medium,City_3,52;161,Extortion operation led by Broker
+1331,229,2020-05-19,Collection,Peripheral,Medium,City_1,229;115;48;42;280,Collection operation led by Peripheral
+1332,219,2024-11-26,Drug Trafficking,Enabler,Severe,City_2,219;114;78;264,Drug Trafficking operation led by Enabler
+1333,30,2020-02-02,Extortion,Broker,Low,City_4,30;320;69,Extortion operation led by Broker
+1334,300,2020-04-26,Extortion,Broker,Medium,City_9,300;332;126;213;18,Extortion operation led by Broker
+1335,43,2021-04-18,Intimidation,Peripheral,Medium,City_10,43;94,Intimidation operation led by Peripheral
+1336,258,2024-10-20,Logistics,Enabler,Low,City_5,258;155;94;345;79,Logistics operation led by Enabler
+1337,351,2024-08-19,Extortion,Broker,Severe,City_8,351;18;249;147,Extortion operation led by Broker
+1338,340,2021-11-10,Arson,Peripheral,Low,City_9,340;201;167;285,Arson operation led by Peripheral
+1339,351,2022-10-17,Coordination,Broker,High,City_3,351;290;274,Coordination operation led by Broker
+1340,197,2021-12-31,Coordination,Broker,Severe,City_9,197;191;254;299,Coordination operation led by Broker
+1341,59,2023-07-20,Illegal Contracts,Broker,High,City_1,59;323;229;267;103,Illegal Contracts operation led by Broker
+1342,340,2024-07-13,Arson,Peripheral,Medium,City_2,340;51;332;13;80,Arson operation led by Peripheral
+1343,184,2020-05-18,Drug Trafficking,Enabler,Medium,City_10,184;321,Drug Trafficking operation led by Enabler
+1344,390,2021-02-23,Logistics,Enabler,Low,City_2,390;231;108,Logistics operation led by Enabler
+1345,174,2022-09-16,Arson,Peripheral,Low,City_5,174;355;241;199;168,Arson operation led by Peripheral
+1346,59,2024-04-03,Resource Distribution,Broker,High,City_2,59;262;129;345;239,Resource Distribution operation led by Broker
+1347,242,2024-12-25,Illegal Contracts,Broker,Severe,City_2,242;138;105;380,Illegal Contracts operation led by Broker
+1348,201,2022-05-19,Arson,Peripheral,Severe,City_6,201;199,Arson operation led by Peripheral
+1349,148,2023-03-27,Illegal Contracts,Broker,High,City_4,148;149,Illegal Contracts operation led by Broker
+1350,189,2022-06-28,Corruption,Coordinator,Severe,City_9,189;283,Corruption operation led by Coordinator
+1351,74,2020-08-26,Collection,Peripheral,High,City_7,74;62;111,Collection operation led by Peripheral
+1352,319,2020-07-16,Document Forgery,Enabler,Severe,City_10,319;317;264;135,Document Forgery operation led by Enabler
+1353,65,2024-09-28,Resource Distribution,Broker,Medium,City_10,65;117,Resource Distribution operation led by Broker
+1354,337,2023-08-20,Robbery,Peripheral,Medium,City_3,337;79;93;179,Robbery operation led by Peripheral
+1355,382,2022-06-25,Collection,Peripheral,Severe,City_6,382;70;16;179,Collection operation led by Peripheral
+1356,378,2023-01-14,Weapons Supply,Enabler,Low,City_3,378;388;19,Weapons Supply operation led by Enabler
+1357,66,2023-02-01,Territory Control,Coordinator,High,City_9,66;185;189;31,Territory Control operation led by Coordinator
+1358,166,2022-10-29,Drug Trafficking,Enabler,Medium,City_8,166;70;205;37,Drug Trafficking operation led by Enabler
+1359,381,2023-04-24,Drug Trafficking,Enabler,Severe,City_10,381;287;205;97;395,Drug Trafficking operation led by Enabler
+1360,390,2020-08-02,Drug Trafficking,Enabler,Medium,City_8,390;121;234,Drug Trafficking operation led by Enabler
+1361,2,2022-08-14,Territory Control,Coordinator,Medium,City_5,2;220;91;9,Territory Control operation led by Coordinator

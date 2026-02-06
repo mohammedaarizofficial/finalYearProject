@@ -1,0 +1,438 @@
+#!/usr/bin/env python3
+"""
+FIXED V2: Synthetic Criminal Network Generator
+Critical fix: Proper noise addition that doesn't explode edge count
+"""
+
+import numpy as np
+import pandas as pd
+import networkx as nx
+from collections import defaultdict
+import random
+from datetime import datetime, timedelta
+
+class SyntheticCriminalNetwork:
+    def __init__(self, n_nodes=500, n_communities=4, seed=42):
+        self.n_nodes = n_nodes
+        self.n_communities = n_communities
+        self.seed = seed
+        np.random.seed(seed)
+        random.seed(seed)
+        
+        # FIXED: Better role distribution
+        self.mo_distribution = {
+            'Coordinator': 0.08,      # INCREASED from 0.06
+            'Broker': 0.14,           # Increased from 0.12
+            'Enabler': 0.20,          # Decreased from 0.22
+            'Peripheral': 0.58        # Decreased from 0.60
+        }
+        
+        self.crime_templates = {
+            'Coordinator': ['Money Laundering', 'Corruption', 'Strategic Planning', 'Territory Control'],
+            'Broker': ['Extortion', 'Illegal Contracts', 'Resource Distribution', 'Coordination'],
+            'Enabler': ['Drug Trafficking', 'Weapons Supply', 'Document Forgery', 'Logistics'],
+            'Peripheral': ['Robbery', 'Arson', 'Intimidation', 'Collection']
+        }
+    
+    def generate_network(self):
+        """Generate complete synthetic criminal network with adaptive edge tuning"""
+        print("Generating synthetic criminal network...")
+
+        max_attempts = 10
+        attempt = 0
+        density = 0
+
+        while (density < 0.015 or density > 0.050) and attempt < max_attempts:
+            community_assignments = self._assign_communities()
+            mo_roles = self._assign_mo_roles(community_assignments)
+
+            # Adjust internal connection intensity adaptively
+            density_scale = 1 + attempt * 0.25  # each retry increases edge density
+
+            G = self._generate_realistic_structure(community_assignments, mo_roles, density_scale=density_scale)
+
+            persons_df = self._generate_persons(community_assignments, mo_roles)
+            incidents_df = self._generate_incidents(persons_df, mo_roles)
+            relations_df = self._generate_relations(G, incidents_df, mo_roles)
+
+            density = nx.density(G)
+            clustering = nx.average_clustering(G)
+            print(f"Attempt {attempt+1}: density={density:.4f}, clustering={clustering:.4f}")
+
+            if density >= 0.015 and density <= 0.050:
+                print("✅ Acceptable density achieved.")
+                break
+
+            attempt += 1
+
+        if attempt == max_attempts:
+            print(f"⚠️ Max attempts reached, proceeding with density={density:.4f}")
+
+        return {
+            'graph': G,
+            'persons': persons_df,
+            'incidents': incidents_df,
+            'relations': relations_df,
+            'mo_roles': mo_roles,
+            'communities': community_assignments
+        }
+
+    
+    def _assign_communities(self):
+        """Assign nodes to communities"""
+        nodes_per_comm = self.n_nodes // self.n_communities
+        communities = {}
+        for i in range(self.n_nodes):
+            communities[i] = min(i // nodes_per_comm, self.n_communities - 1)
+        return communities
+    
+    def _assign_mo_roles(self, communities):
+        """FIXED: Better role assignment with validation"""
+        mo_roles = {}
+        
+        # First: Assign 2-3 Coordinators per community
+        for comm in range(self.n_communities):
+            comm_nodes = [n for n, c in communities.items() if c == comm]
+            n_coord = 2 if comm < 2 else 3  # 2+2+3+3 = 10 total coordinators
+            
+            for node in np.random.choice(comm_nodes, n_coord, replace=False):
+                mo_roles[node] = 'Coordinator'
+        
+        # Second: Assign remaining roles
+        remaining = [n for n in range(self.n_nodes) if n not in mo_roles]
+        np.random.shuffle(remaining)
+        
+        n_brokers = int(len(remaining) * 0.12 / 0.94)   # Adjust for coordinators already assigned
+        n_enablers = int(len(remaining) * 0.22 / 0.94)
+        
+        idx = 0
+        for _ in range(n_brokers):
+            if idx < len(remaining):
+                mo_roles[remaining[idx]] = 'Broker'
+                idx += 1
+        
+        for _ in range(n_enablers):
+            if idx < len(remaining):
+                mo_roles[remaining[idx]] = 'Enabler'
+                idx += 1
+        
+        while idx < len(remaining):
+            mo_roles[remaining[idx]] = 'Peripheral'
+            idx += 1
+        
+        # Validate distribution
+        role_counts = defaultdict(int)
+        for role in mo_roles.values():
+            role_counts[role] += 1
+        
+        print(f"  Role distribution: Coord={role_counts['Coordinator']}, "
+              f"Broker={role_counts['Broker']}, Enabler={role_counts['Enabler']}, "
+              f"Periph={role_counts['Peripheral']}")
+        
+        return mo_roles
+    
+    def _generate_realistic_structure(self, communities, mo_roles, density_scale=1.0):
+        G = nx.Graph()
+        G.add_nodes_from(range(self.n_nodes))
+
+        for comm in range(self.n_communities):
+            comm_nodes = [n for n, c in communities.items() if c == comm]
+            coordinators = [n for n in comm_nodes if mo_roles[n] == 'Coordinator']
+            brokers = [n for n in comm_nodes if mo_roles[n] == 'Broker']
+            enablers = [n for n in comm_nodes if mo_roles[n] == 'Enabler']
+            peripheral = [n for n in comm_nodes if mo_roles[n] == 'Peripheral']
+
+            # Increase connection numbers with density_scale
+            for coord in coordinators:
+                for broker in brokers:
+                    G.add_edge(coord, broker, weight=np.random.randint(8, 15))
+
+                n_enabler_connections = min(int(5 * density_scale), len(enablers))
+                for enabler in np.random.choice(enablers, n_enabler_connections, replace=False):
+                    G.add_edge(coord, enabler, weight=np.random.randint(5, 10))
+
+            for broker in brokers:
+                n_connections = min(int(4 * density_scale), len(enablers))
+                for enabler in np.random.choice(enablers, n_connections, replace=False):
+                    if not G.has_edge(broker, enabler):
+                        G.add_edge(broker, enabler, weight=np.random.randint(4, 9))
+
+            for enabler in enablers:
+                n_connections = min(int(3 * density_scale), len(peripheral))
+                for periph in np.random.choice(peripheral, n_connections, replace=False):
+                    if not G.has_edge(enabler, periph):
+                        G.add_edge(enabler, periph, weight=np.random.randint(2, 5))
+
+            for _ in range(int(len(peripheral) // (15 / density_scale))):
+                if len(peripheral) >= 2:
+                    u, v = np.random.choice(peripheral, 2, replace=False)
+                    if not G.has_edge(u, v):
+                        G.add_edge(u, v, weight=np.random.randint(1, 3))
+
+        # Inter-community connections remain the same
+        all_coordinators = [n for n, role in mo_roles.items() if role == 'Coordinator']
+        for coord in all_coordinators:
+            coord_comm = communities[coord]
+            other_coords = [c for c in all_coordinators if communities[c] != coord_comm]
+            n_connections = min(int(2 * density_scale), len(other_coords))
+            for other in np.random.choice(other_coords, n_connections, replace=False):
+                if not G.has_edge(coord, other):
+                    G.add_edge(coord, other, weight=np.random.randint(10, 15))
+
+        all_brokers = [n for n, role in mo_roles.items() if role == 'Broker']
+        for _ in range(int(len(all_brokers) // (8 / density_scale))):
+            u, v = np.random.choice(all_brokers, 2, replace=False)
+            if communities[u] != communities[v] and not G.has_edge(u, v):
+                G.add_edge(u, v, weight=np.random.randint(3, 7))
+
+        return G
+
+    
+    def _generate_persons(self, communities, mo_roles):
+        """Generate persons dataframe"""
+        persons = []
+        
+        first_names = ['Giuseppe', 'Francesco', 'Antonio', 'Salvatore', 'Giovanni', 'Vincenzo', 
+                      'Pietro', 'Angelo', 'Mario', 'Luigi', 'Domenico', 'Carlo', 'Paolo', 'Marco']
+        last_names = ['Rossi', 'Russo', 'Ferrari', 'Esposito', 'Bianchi', 'Romano', 'Colombo',
+                     'Ricci', 'Marino', 'Greco', 'Bruno', 'Gallo', 'Conti', 'Vitale']
+        
+        for pid in range(self.n_nodes):
+            name = f"{random.choice(first_names)} {random.choice(last_names)}"
+            
+            persons.append({
+                'person_id': pid,
+                'name': name,
+                'role': mo_roles[pid],
+                'community': communities[pid],
+                'age': np.random.randint(25, 65)
+            })
+        
+        return pd.DataFrame(persons)
+    
+    def _generate_incidents(self, persons_df, mo_roles):
+        """Generate incidents with MO-driven crime patterns"""
+        incidents = []
+        incident_id = 0
+        
+        start_date = datetime(2020, 1, 1)
+        end_date = datetime(2024, 12, 31)
+        date_range = (end_date - start_date).days
+        
+        n_incidents = np.random.randint(1200, 1500)
+        
+        # Weight incidents toward important roles
+        role_weights = {
+            'Coordinator': 0.35,
+            'Broker': 0.30,
+            'Enabler': 0.25,
+            'Peripheral': 0.10
+        }
+        
+        for _ in range(n_incidents):
+            # Select primary actor (weighted)
+            roles_list = list(mo_roles.values())
+            weights = [role_weights[r] for r in roles_list]
+            primary_id = np.random.choice(list(mo_roles.keys()), p=np.array(weights)/sum(weights))
+            primary_role = mo_roles[primary_id]
+            
+            crime_type = random.choice(self.crime_templates[primary_role])
+            
+            days_offset = np.random.randint(0, date_range)
+            incident_date = start_date + timedelta(days=days_offset)
+            
+            accomplices = self._select_accomplices(primary_id, primary_role, mo_roles)
+            all_persons = [primary_id] + accomplices
+            
+            severity_weights = {
+                'Coordinator': [0.1, 0.2, 0.3, 0.4],
+                'Broker': [0.2, 0.3, 0.3, 0.2],
+                'Enabler': [0.3, 0.3, 0.2, 0.2],
+                'Peripheral': [0.4, 0.3, 0.2, 0.1]
+            }
+            severity = np.random.choice(['Low', 'Medium', 'High', 'Severe'], 
+                                       p=severity_weights[primary_role])
+            
+            incidents.append({
+                'incident_id': incident_id,
+                'person_id': primary_id,
+                'date': incident_date.strftime('%Y-%m-%d'),
+                'crime_type': crime_type,
+                'modus_operandi': primary_role,
+                'severity': severity,
+                'location': f"City_{np.random.randint(1, 11)}",
+                'persons_involved': ';'.join(map(str, all_persons)),
+                'description': f"{crime_type} operation led by {primary_role}"
+            })
+            
+            incident_id += 1
+        
+        return pd.DataFrame(incidents)
+    
+    def _select_accomplices(self, primary_id, primary_role, mo_roles, max_accomplices=4):
+        """Select accomplices based on role compatibility"""
+        compatible_roles = {
+            'Coordinator': ['Broker', 'Enabler', 'Coordinator'],
+            'Broker': ['Coordinator', 'Broker', 'Enabler', 'Peripheral'],
+            'Enabler': ['Broker', 'Enabler', 'Peripheral'],
+            'Peripheral': ['Enabler', 'Peripheral']
+        }
+        
+        compatible = compatible_roles[primary_role]
+        candidates = [pid for pid, role in mo_roles.items() 
+                     if role in compatible and pid != primary_id]
+        
+        n_accomplices = np.random.randint(1, min(max_accomplices + 1, len(candidates) + 1))
+        return random.sample(candidates, n_accomplices) if candidates else []
+    
+    def _generate_relations(self, G, incidents_df, mo_roles):
+        """Generate relations from graph"""
+        relations = []
+        
+        for u, v, data in G.edges(data=True):
+            weight = data.get('weight', 1)
+            role_u, role_v = mo_roles[u], mo_roles[v]
+            rel_type = self._determine_relation_type(role_u, role_v)
+            
+            relations.append({
+                'from_id': u,
+                'to_id': v,
+                'weight': weight,
+                'relation_type': rel_type
+            })
+        
+        return pd.DataFrame(relations)
+    
+    def _determine_relation_type(self, role_u, role_v):
+        """Determine relation type based on roles"""
+        if role_u == 'Coordinator' or role_v == 'Coordinator':
+            return 'hierarchical'
+        elif role_u == 'Broker' or role_v == 'Broker':
+            return 'coordination'
+        else:
+            return 'operational'
+    
+    def add_noise(self, data, missing_edge_rate=0.15, false_edge_rate=0.03):
+        """
+        CRITICAL FIX: Proper noise addition
+        - Remove % of existing edges
+        - Add small % of false edges (not thousands!)
+        """
+        print(f"Adding noise: {missing_edge_rate*100:.0f}% missing edges, {false_edge_rate*100:.0f}% false edges")
+        
+        relations_df = data['relations'].copy()
+        G = data['graph'].copy()
+        mo_roles = data['mo_roles']
+        
+        original_edges = len(relations_df)
+        print(f"  Original edges: {original_edges}")
+        
+        # STEP 1: Remove edges (but preserve coordinator connections)
+        critical_edges = []
+        regular_edges = []
+        
+        for idx, row in relations_df.iterrows():
+            u, v = row['from_id'], row['to_id']
+            # Keep 80% of coordinator edges (critical for structure)
+            if mo_roles[u] == 'Coordinator' or mo_roles[v] == 'Coordinator':
+                if np.random.random() < 0.8:
+                    critical_edges.append(idx)
+                else:
+                    regular_edges.append(idx)
+            else:
+                regular_edges.append(idx)
+        
+        # Remove from regular edges
+        n_remove = min(int(len(regular_edges) * missing_edge_rate), len(regular_edges))
+        if n_remove > 0:
+            indices_to_remove = np.random.choice(regular_edges, n_remove, replace=False)
+            relations_noisy = relations_df.drop(indices_to_remove).reset_index(drop=True)
+        else:
+            relations_noisy = relations_df.copy()
+        
+        print(f"  Removed: {original_edges - len(relations_noisy)} edges")
+        
+        # STEP 2: Add FALSE edges (SMALL number relative to original)
+        # CRITICAL: false_edge_rate is % of ORIGINAL edges, not all possible edges
+        n_add = int(original_edges * false_edge_rate)
+        
+        existing_edges = set((r['from_id'], r['to_id']) for _, r in relations_noisy.iterrows())
+        all_nodes = list(range(self.n_nodes))
+        
+        false_edges = []
+        attempts = 0
+        max_attempts = n_add * 20
+        
+        while len(false_edges) < n_add and attempts < max_attempts:
+            u, v = random.sample(all_nodes, 2)
+            if u > v:
+                u, v = v, u
+            
+            # Don't create false coordinator-coordinator edges (unrealistic)
+            if mo_roles[u] == 'Coordinator' and mo_roles[v] == 'Coordinator':
+                attempts += 1
+                continue
+            
+            if (u, v) not in existing_edges:
+                false_edges.append({
+                    'from_id': u,
+                    'to_id': v,
+                    'weight': 1,
+                    'relation_type': 'noise'
+                })
+                existing_edges.add((u, v))
+            
+            attempts += 1
+        
+        print(f"  Added: {len(false_edges)} false edges")
+        
+        relations_noisy = pd.concat([relations_noisy, pd.DataFrame(false_edges)], ignore_index=True)
+        
+        # STEP 3: Rebuild graph
+        G_noisy = nx.Graph()
+        G_noisy.add_nodes_from(G.nodes())
+        for _, row in relations_noisy.iterrows():
+            G_noisy.add_edge(row['from_id'], row['to_id'], weight=row['weight'])
+        
+        final_density = nx.density(G_noisy)
+        print(f"  Final edges: {len(relations_noisy)}")
+        print(f"  Final density: {final_density:.4f}")
+        
+        # Validate density
+        if final_density > 0.06:
+            print(f"  ⚠️  Still too dense! Reducing false edges...")
+            # Retry with fewer false edges
+            return self.add_noise(data, missing_edge_rate, false_edge_rate * 0.5)
+        
+        data_noisy = data.copy()
+        data_noisy['relations'] = relations_noisy
+        data_noisy['graph'] = G_noisy
+        
+        return data_noisy
+    
+    def save_dataset(self, data, output_dir='synthetic_criminal_network'):
+        """Save dataset to CSV files"""
+        import os
+        os.makedirs(output_dir, exist_ok=True)
+        
+        data['persons'].to_csv(f'{output_dir}/persons.csv', index=False)
+        data['incidents'].to_csv(f'{output_dir}/incidents.csv', index=False)
+        data['relations'].to_csv(f'{output_dir}/relations.csv', index=False)
+        
+        print(f"✅ Dataset saved to {output_dir}/")
+        print(f"   - Nodes: {len(data['persons'])}")
+        print(f"   - Edges: {len(data['relations'])}")
+        print(f"   - Incidents: {len(data['incidents'])}")
+        print(f"   - Density: {nx.density(data['graph']):.4f}")
+
+
+if __name__ == "__main__":
+    generator = SyntheticCriminalNetwork(n_nodes=500, n_communities=4, seed=42)
+    data = generator.generate_network()
+    
+    data_noisy = generator.add_noise(data, missing_edge_rate=0.15, false_edge_rate=0.03)
+    
+    generator.save_dataset(data_noisy, 'synthetic_criminal_network')
+    
+    print("\nMO Role Distribution:")
+    print(data['persons']['role'].value_counts())

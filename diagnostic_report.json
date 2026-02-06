@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-10-28 13:12:22.588101",
+  "checks": {
+    "Network Structure": false,
+    "Role Distribution": true,
+    "Feature Separability": true,
+    "MO Inference": true,
+    "SEAL Performance": true,
+    "Disruption Effectiveness": false
+  },
+  "issues": [
+    "\u26a0\ufe0f  Low clustering coefficient",
+    "\u26a0\ufe0f  Network is disconnected",
+    "Disruption improvement critically low",
+    "\u274c MO-Based WORSE than baseline!"
+  ],
+  "all_passed": false
+}
