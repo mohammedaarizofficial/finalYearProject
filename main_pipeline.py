@@ -18,6 +18,13 @@ warnings.filterwarnings('ignore')
 
 # Import FIXED modules (ensure these are the updated versions)
 from synthetic_network_gen import SyntheticCriminalNetwork
+try:
+    from synthetic_network_gen_v2 import EnhancedSyntheticCriminalNetwork
+    ENHANCED_GENERATOR_AVAILABLE = True
+except ImportError:
+    ENHANCED_GENERATOR_AVAILABLE = False
+    print("⚠️  Enhanced generator not available, using legacy generator")
+
 from mo_feature_extraction import MOFeatureExtractor, MOInference
 from seal_link_prediction import SEALLinkPredictor
 from disruption_simulation import NetworkDisruption, DisruptionVisualizer
@@ -30,13 +37,17 @@ from disruption_simulation import NetworkDisruption, DisruptionVisualizer
 CONFIG = {
     'OUTPUT_DIR': 'synthetic_criminal_network',
     
+    # STAGE 1: Enhanced generator flag
+    'USE_ENHANCED_GENERATOR': True,  # Set to False to use legacy generator
+    
     # FIXED: Better network parameters
     'N_NODES': 400,
     'N_COMMUNITIES': 3,
+    'CORE_FRACTION': 0.22,  # Coordinators + Brokers
     
     # FIXED: Less missing edges (was too sparse)
-    'MISSING_EDGE_RATE': 0.18,   # REDUCED from 0.30
-    'FALSE_EDGE_RATE': 0.01,
+    'MISSING_EDGE_RATE': 0.20,   # 15-30% range for Stage 1
+    'FALSE_EDGE_RATE': 0.05,     # 5-10% range for Stage 1
     
     'SEED': 67,  # NEW SEED
     
@@ -129,7 +140,7 @@ def load_dataframes(output_dir):
 # ============================================================================
 
 def run_phase1(config, skip_if_complete):
-    """Phase 1: FIXED Synthetic Data Generation"""
+    """Phase 1: Enhanced Synthetic Data Generation (Stage 1)"""
     output_dir = config['OUTPUT_DIR']
     required_files = ['persons.csv', 'incidents.csv', 'relations.csv']
     
@@ -142,15 +153,34 @@ def run_phase1(config, skip_if_complete):
         print(f"   Network: {G_noisy.number_of_nodes()} nodes, {G_noisy.number_of_edges()} edges")
         print(f"   Density: {nx.density(G_noisy):.4f}")
         
+        # Try to load ground truth if available
+        if os.path.exists(f'{output_dir}/relations_ground_truth.csv'):
+            G_clean = load_graph_from_csv(f'{output_dir}/relations_ground_truth.csv')
+            print(f"   Ground truth: {G_clean.number_of_edges()} edges")
+            return {'graph': G_noisy, 'graph_clean': G_clean, **dfs}
+        
         return {'graph': G_noisy, **dfs}
     
     print_section("PHASE 1: SYNTHETIC DATA GENERATION")
     
-    generator = SyntheticCriminalNetwork(
-        n_nodes=config['N_NODES'],
-        n_communities=config['N_COMMUNITIES'],
-        seed=config['SEED']
-    )
+    # Choose generator based on config
+    use_enhanced = config.get('USE_ENHANCED_GENERATOR', False) and ENHANCED_GENERATOR_AVAILABLE
+    
+    if use_enhanced:
+        print("🚀 Using ENHANCED generator (Stage 1: Dual Graphs)")
+        generator = EnhancedSyntheticCriminalNetwork(
+            n_nodes=config['N_NODES'],
+            n_communities=config['N_COMMUNITIES'],
+            core_fraction=config.get('CORE_FRACTION', 0.22),
+            seed=config['SEED']
+        )
+    else:
+        print("📦 Using LEGACY generator")
+        generator = SyntheticCriminalNetwork(
+            n_nodes=config['N_NODES'],
+            n_communities=config['N_COMMUNITIES'],
+            seed=config['SEED']
+        )
     
     print("Generating ground-truth criminal network...")
     data_clean = generator.generate_network()
@@ -159,6 +189,10 @@ def run_phase1(config, skip_if_complete):
     print(f"  Nodes: {data_clean['graph'].number_of_nodes()}")
     print(f"  Edges: {data_clean['graph'].number_of_edges()}")
     print(f"  Density: {nx.density(data_clean['graph']):.4f} (target: 0.02-0.04)")
+    
+    if use_enhanced:
+        print(f"  Meetings graph: {data_clean.get('graph_meetings', nx.Graph()).number_of_edges()} edges")
+        print(f"  Communications graph: {data_clean.get('graph_communications', nx.Graph()).number_of_edges()} edges")
     
     print("\n👥 MO Role Distribution:")
     for role, count in data_clean['persons']['role'].value_counts().items():
@@ -172,6 +206,14 @@ def run_phase1(config, skip_if_complete):
     )
     
     generator.save_dataset(data_noisy, output_dir)
+    
+    # Report ground truth tracking if available
+    if 'graph_clean' in data_noisy:
+        missing_edges = data_noisy['graph_clean'].number_of_edges() - data_noisy['graph'].number_of_edges()
+        print(f"\n📊 Ground Truth Tracking:")
+        print(f"  Clean graph: {data_noisy['graph_clean'].number_of_edges()} edges")
+        print(f"  Noisy graph: {data_noisy['graph'].number_of_edges()} edges")
+        print(f"  Missing edges: {missing_edges} (recovery target for SEAL)")
     
     return data_noisy
 
