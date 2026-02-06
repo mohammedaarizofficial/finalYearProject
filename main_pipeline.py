@@ -26,6 +26,13 @@ except ImportError:
     print("⚠️  Enhanced generator not available, using legacy generator")
 
 from mo_feature_extraction import MOFeatureExtractor, MOInference
+try:
+    from feature_engineering_v2 import EnhancedFeatureEngineer, extract_features_from_persons
+    ENHANCED_FEATURES_AVAILABLE = True
+except ImportError:
+    ENHANCED_FEATURES_AVAILABLE = False
+    print("⚠️  Enhanced feature engineering not available, using legacy")
+
 from seal_link_prediction import SEALLinkPredictor
 from disruption_simulation import NetworkDisruption, DisruptionVisualizer
 
@@ -51,9 +58,14 @@ CONFIG = {
     
     'SEED': 67,  # NEW SEED
     
+    # STAGE 2: Enhanced feature engineering
+    'USE_ENHANCED_FEATURES': True,  # Set to False to use legacy feature extraction
+    
     # MO parameters
-    'MO_EMBEDDING_DIM': 64,
+    'MO_EMBEDDING_DIM': 128,  # Increased for Stage 2
     'MO_NUM_WALKS': 200,
+    'MO_WALK_LENGTH': 30,
+    'MO_NODE2VEC_Q': 0.5,  # BFS bias (q < 1)
     'MO_CLUSTERING_MIN_SIZE': 3,
     
     # SEAL - More aggressive training
@@ -244,9 +256,49 @@ def run_phase2(config, data_noisy, skip_if_complete):
     persons_df = data_noisy['persons']
     incidents_df = data_noisy['incidents']
     
-    print("Extracting enhanced features...")
-    extractor = MOFeatureExtractor(embedding_dim=64, walk_length=30, num_walks=200)
-    features_df = extractor.extract_features(G_noisy, persons_df, incidents_df)
+    # Choose feature extractor based on config
+    use_enhanced_features = config.get('USE_ENHANCED_FEATURES', False) and ENHANCED_FEATURES_AVAILABLE
+    
+    if use_enhanced_features:
+        print("🚀 Using ENHANCED feature engineering (Stage 2)")
+        # Extract community labels if available
+        community_labels = None
+        if 'community' in persons_df.columns:
+            community_labels = dict(zip(persons_df['person_id'], persons_df['community']))
+        
+        # Use enhanced feature engineer
+        engineer = EnhancedFeatureEngineer(
+            embedding_dim=config.get('MO_EMBEDDING_DIM', 128),
+            walk_length=config.get('MO_WALK_LENGTH', 30),
+            num_walks=config.get('MO_NUM_WALKS', 200),
+            q=config.get('MO_NODE2VEC_Q', 0.5)  # BFS bias
+        )
+        
+        # Extract features
+        features_df = engineer.extract_features(
+            G_noisy,
+            community_labels=community_labels,
+            node_ids=persons_df['person_id'].tolist()
+        )
+        
+        # Rename node_id to person_id for consistency
+        if 'node_id' in features_df.columns:
+            features_df = features_df.rename(columns={'node_id': 'person_id'})
+        
+        # Add MO behavioral features from incidents (not in Stage 2, but needed for inference)
+        print("  - Adding MO behavioral features...")
+        extractor_legacy = MOFeatureExtractor()
+        mo_features = extractor_legacy._compute_mo_behavioral_features(persons_df, incidents_df)
+        features_df = pd.merge(features_df, mo_features, on='person_id', how='left')
+        
+    else:
+        print("📦 Using LEGACY feature extraction")
+        extractor = MOFeatureExtractor(
+            embedding_dim=config.get('MO_EMBEDDING_DIM', 64),
+            walk_length=config.get('MO_WALK_LENGTH', 30),
+            num_walks=config.get('MO_NUM_WALKS', 200)
+        )
+        features_df = extractor.extract_features(G_noisy, persons_df, incidents_df)
     
     print("\n🎯 Inferring MO roles (enhanced clustering)...")
     inference = MOInference()
