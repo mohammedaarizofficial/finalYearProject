@@ -131,11 +131,23 @@ class NetworkDisruption:
                                         reverse=True)
         
         # 4. MO-based (if mo_importance_score exists)
+        # Use person_id or node_id depending on what's available
+        id_col = 'person_id' if 'person_id' in features_df.columns else 'node_id'
         if 'mo_importance_score' in features_df.columns:
-            mo_scores = features_df.set_index('person_id')['mo_importance_score'].to_dict()
-            strategies['MO-Based'] = sorted(mo_scores.keys(),
-                                           key=lambda x: mo_scores.get(x, 0),
+            mo_scores = features_df.set_index(id_col)['mo_importance_score'].to_dict()
+            # Ensure all nodes in G have scores (default to 0)
+            mo_scores_complete = {n: mo_scores.get(n, 0.0) for n in G.nodes()}
+            strategies['MO-Based'] = sorted(mo_scores_complete.keys(),
+                                           key=lambda x: mo_scores_complete.get(x, 0),
                                            reverse=True)
+            print(f"  ✅ MO-Based strategy created with {len(strategies['MO-Based'])} nodes")
+            if len(strategies['MO-Based']) > 0:
+                top_mo = strategies['MO-Based'][:5]
+                top_scores = [mo_scores_complete.get(n, 0) for n in top_mo]
+                print(f"     Top 5 MO scores: {[f'{s:.3f}' for s in top_scores]}")
+        else:
+            print("  ⚠️  MO importance scores not found in features_df")
+            print(f"     Available columns: {list(features_df.columns)}")
         
         # 5. Random (baseline)
         nodes_list = list(G.nodes())
@@ -146,8 +158,8 @@ class NetworkDisruption:
         return strategies
     
     def compare_strategies(self, G, G_augmented, features_df, features_augmented_df, 
-                          max_removals=100):
-        """Compare all disruption strategies"""
+                          G_healed=None, features_healed_df=None, max_removals=100):
+        """Compare all disruption strategies on Original, SEAL-augmented, and Rewired graphs"""
         print("\n" + "="*60)
         print("DISRUPTION STRATEGY COMPARISON")
         print("="*60)
@@ -171,6 +183,16 @@ class NetworkDisruption:
                 results_df = self.simulate_disruption(G_augmented, order[:max_removals], 
                                                      strategy_name=f"{name} (SEAL)")
                 all_results[f"{name} (SEAL)"] = results_df
+        
+        # Rewired/Healed network strategies (if available)
+        if G_healed is not None and features_healed_df is not None:
+            print("\n### REWIRED/HEALED NETWORK ###")
+            strategies_healed = self.create_removal_strategies(G_healed, features_healed_df)
+            
+            for name, order in strategies_healed.items():
+                results_df = self.simulate_disruption(G_healed, order[:max_removals], 
+                                                     strategy_name=f"{name} (Rewired)")
+                all_results[f"{name} (Rewired)"] = results_df
         
         return all_results
     
@@ -213,9 +235,17 @@ class NetworkDisruption:
             })
         
         summary_df = pd.DataFrame(summary)
-        summary_df = summary_df.sort_values('Steps_to_50%_LCC')
+        # Sort by Steps_to_50%_LCC ascending (lower = better disruption = more effective)
+        summary_df = summary_df.sort_values('Steps_to_50%_LCC', ascending=True)
         
         print("\n" + summary_df.to_string(index=False))
+        
+        # Highlight best strategy
+        if len(summary_df) > 0:
+            best = summary_df.iloc[0]
+            print(f"\n🏆 BEST DISRUPTION STRATEGY: {best['Strategy']}")
+            print(f"   Steps to 50% LCC: {best['Steps_to_50%_LCC']:.0f}")
+            print(f"   (Lower steps = more effective disruption)")
         
         return summary_df
     

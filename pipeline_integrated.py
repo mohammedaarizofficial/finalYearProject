@@ -41,11 +41,33 @@ except ImportError:
     STAGE4_AVAILABLE = False
     print("⚠️  Stage 4 not available, using legacy")
 
+try:
+    from stage5_adaptive_rewiring import AdaptiveRewiring
+    STAGE5_AVAILABLE = True
+except ImportError:
+    STAGE5_AVAILABLE = False
+    print("⚠️  Stage 5 not available")
+
+try:
+    from stage6_enhanced_visualization import EnhancedVisualizer
+    STAGE6_AVAILABLE = True
+except ImportError:
+    STAGE6_AVAILABLE = False
+    print("⚠️  Stage 6 not available")
+
 # Legacy imports (fallback)
 from synthetic_network_gen import SyntheticCriminalNetwork
 from mo_feature_extraction import MOFeatureExtractor, MOInference
 from seal_link_prediction import SEALLinkPredictor
 from disruption_simulation import NetworkDisruption, DisruptionVisualizer
+
+# New disruption with recovery methodology
+try:
+    from disruption_with_recovery import DisruptionWithRecovery
+    RECOVERY_METHOD_AVAILABLE = True
+except ImportError:
+    RECOVERY_METHOD_AVAILABLE = False
+    print("⚠️  DisruptionWithRecovery not available, using legacy method")
 
 
 # ============================================================================
@@ -511,6 +533,247 @@ def run_phase3_integrated(config, G_noisy, persons_df, incidents_df, features_df
     return G_aug, features_aug, seal_results, eval_aug
 
 
+def run_phase4_integrated(config, G_orig, G_aug, features_orig, features_aug, 
+                          persons_df, G_healed=None, features_healed=None, skip_if_complete=False):
+    """
+    Phase 4: Disruption Simulation with Recovery Evaluation
+    
+    NEW METHODOLOGY:
+    1. Apply disruption strategy
+    2. Attempt recovery (adaptive rewiring)
+    3. Rank by recovery failure (worst recovery = best disruption)
+    """
+    output_dir = config['OUTPUT_DIR']
+    required_files = ['disruption_summary.csv', 'disruption_improvements.csv']
+    
+    checkpoint = load_checkpoint('phase4', output_dir)
+    
+    if skip_if_complete and phase_complete(output_dir, required_files):
+        print_section("PHASE 4: DISRUPTION WITH RECOVERY [SKIPPED]")
+        print("✅ Loading existing results...")
+        summary_df = pd.read_csv(f'{output_dir}/disruption_summary.csv')
+        improvements_df = pd.read_csv(f'{output_dir}/disruption_improvements.csv')
+        all_results = checkpoint.get('all_results', {}) if checkpoint else {}
+        return all_results, summary_df, improvements_df
+    
+    print_section("PHASE 4: DISRUPTION WITH RECOVERY EVALUATION")
+    print("\n🎯 NEW METHODOLOGY: Rank by Recovery Failure")
+    print("   1. Apply disruption strategy")
+    print("   2. Attempt recovery (adaptive rewiring)")
+    print("   3. Measure recovery failure metrics")
+    print("   4. Rank by recovery failure (worst recovery = best disruption)\n")
+    
+    # Use new recovery-based evaluation if available
+    if RECOVERY_METHOD_AVAILABLE:
+        print("✅ Using new recovery-based evaluation methodology")
+        
+        recovery_evaluator = DisruptionWithRecovery(seed=config['SEED'])
+        
+        # Create removal strategies
+        simulator = NetworkDisruption(seed=config['SEED'])
+        strategies_dict = simulator.create_removal_strategies(G_orig, features_orig)
+        
+        # Evaluate each strategy with recovery
+        print(f"\n📊 Evaluating {len(strategies_dict)} strategies with recovery...")
+        summary_df = recovery_evaluator.compare_strategies_with_recovery(
+            G_original=G_orig,
+            features_df=features_orig,
+            persons_df=persons_df,
+            config=config,
+            strategies_dict=strategies_dict,
+            num_removals=config['MAX_REMOVALS']
+        )
+        
+        # Rename columns for compatibility
+        summary_df = summary_df.rename(columns={
+            'strategy': 'Strategy',
+            'lcc_after_recovery': 'LCC_After_Recovery',
+            'efficiency_after_recovery': 'Efficiency_After_Recovery',
+            'mo_collapse_after_recovery': 'MO_Collapse_After_Recovery',
+            'recovery_failure_score': 'Recovery_Failure_Score'
+        })
+        
+        # Create improvements dataframe
+        if len(summary_df) > 0:
+            # Find baseline (Degree strategy)
+            baseline_rows = summary_df[summary_df['Strategy'] == 'Degree']
+            if len(baseline_rows) > 0:
+                baseline_row = baseline_rows.iloc[0]
+                baseline_score = baseline_row['Recovery_Failure_Score']
+            else:
+                # Use worst recovery (last row) as baseline
+                baseline_row = summary_df.iloc[-1]
+                baseline_score = baseline_row['Recovery_Failure_Score']
+            
+            improvements = []
+            for _, row in summary_df.iterrows():
+                improvement = ((row['Recovery_Failure_Score'] - baseline_score) / baseline_score * 100) if baseline_score > 0 else 0
+                improvements.append({
+                    'Strategy': row['Strategy'],
+                    'Recovery_Failure_Score': row['Recovery_Failure_Score'],
+                    'Improvement_%': improvement,
+                    'Better_than_Baseline': improvement > 0
+                })
+            improvements_df = pd.DataFrame(improvements)
+        else:
+            improvements_df = pd.DataFrame()
+        
+        # Identify best strategy (highest recovery failure = best disruption)
+        if len(summary_df) > 0:
+            best_strategy_row = summary_df.iloc[0]  # Already sorted by recovery failure (descending)
+            print(f"\n🏆 BEST DISRUPTION STRATEGY (by recovery failure): {best_strategy_row['Strategy']}")
+            print(f"   Recovery Failure Score: {best_strategy_row['Recovery_Failure_Score']:.3f}")
+            print(f"   LCC After Recovery: {best_strategy_row['LCC_After_Recovery']:.3f} (lower = better)")
+            print(f"   Efficiency After Recovery: {best_strategy_row['Efficiency_After_Recovery']:.3f} (lower = better)")
+            print(f"   MO Collapse After Recovery: {best_strategy_row['MO_Collapse_After_Recovery']:.3f} (higher = better)")
+        
+        # For compatibility, create all_results dict (empty for now)
+        all_results = {}
+        
+    else:
+        # Fallback to old method
+        print("⚠️  Using legacy disruption evaluation (recovery method not available)")
+        simulator = NetworkDisruption(seed=config['SEED'])
+        
+        print("🎮 Running disruption simulations...")
+        all_results = simulator.compare_strategies(
+            G_orig, G_aug, features_orig, features_aug,
+            G_healed=G_healed, features_healed_df=features_healed,
+            max_removals=config['MAX_REMOVALS']
+        )
+        
+        print("\n✅ Simulations complete!")
+        print("\n📊 Analyzing effectiveness...")
+        summary_df = simulator.analyze_disruption_effectiveness(all_results, threshold=0.5)
+        improvements_df = simulator.compute_improvement_metrics(summary_df)
+        
+        if len(summary_df) > 0:
+            best_strategy_row = summary_df.iloc[0]
+            print(f"\n🏆 Most Effective Disruption Strategy: {best_strategy_row['Strategy']}")
+            print(f"   Steps to 50% LCC: {best_strategy_row['Steps_to_50%_LCC']:.0f}")
+    
+    # Save results
+    summary_df.to_csv(f'{output_dir}/disruption_summary.csv', index=False)
+    improvements_df.to_csv(f'{output_dir}/disruption_improvements.csv', index=False)
+    
+    save_checkpoint('phase4', {'all_results': all_results, 'summary_df': summary_df}, output_dir)
+    
+    return all_results, summary_df, improvements_df
+
+
+def run_phase5_integrated(config, G_aug, persons_df, features_aug, skip_if_complete):
+    """Phase 5: Adaptive Rewiring (Heal the SEAL-augmented graph)"""
+    output_dir = config['OUTPUT_DIR']
+    required_files = ['relations_healed.csv', 'node_features_healed.csv']
+    
+    if skip_if_complete and phase_complete(output_dir, required_files):
+        print_section("PHASE 5: ADAPTIVE REWIRING [SKIPPED]")
+        print("✅ Loading existing healed graph...")
+        G_healed = load_graph_from_csv(f'{output_dir}/relations_healed.csv')
+        features_healed = pd.read_csv(f'{output_dir}/node_features_healed.csv')
+        rewiring_log = []
+        return G_healed, features_healed, rewiring_log
+    
+    print_section("PHASE 5: ADAPTIVE REWIRING")
+    
+    if not STAGE5_AVAILABLE:
+        print("⚠️  Stage 5 not available, skipping rewiring")
+        return G_aug, features_aug, []
+    
+    print("🔧 Applying adaptive rewiring to heal the network...")
+    
+    rewiring = AdaptiveRewiring(seed=config['SEED'])
+    
+    # Get community labels if available
+    community_labels = None
+    if 'community' in persons_df.columns:
+        community_labels = dict(zip(persons_df['person_id'], persons_df['community']))
+    
+    # Heal the graph
+    G_healed, features_healed = rewiring.heal_graph(
+        G_aug,
+        features_aug,
+        removed_nodes=None,  # No specific removals yet
+        community_labels=community_labels
+    )
+    
+    # Save healed graph
+    healed_relations = []
+    for u, v, data in G_healed.edges(data=True):
+        healed_relations.append({
+            'from_id': u,
+            'to_id': v,
+            'weight': data.get('weight', 1),
+            'relation_type': data.get('source', 'healed')
+        })
+    
+    pd.DataFrame(healed_relations).to_csv(f'{output_dir}/relations_healed.csv', index=False)
+    features_healed.to_csv(f'{output_dir}/node_features_healed.csv', index=False)
+    
+    print(f"✅ Healed graph saved: {G_healed.number_of_nodes()} nodes, {G_healed.number_of_edges()} edges")
+    
+    return G_healed, features_healed, rewiring.rewiring_log
+
+
+def run_phase6_integrated(config, G_orig, G_aug, G_healed, features_orig, features_aug, 
+                          features_healed, all_results, summary_df, improvements_df,
+                          seal_results, eval_orig, eval_aug, rewiring_log, skip_if_complete):
+    """Phase 6: Enhanced Visualization & Reporting"""
+    output_dir = config['OUTPUT_DIR']
+    required_files = ['FINAL_REPORT.md']
+    
+    if skip_if_complete and phase_complete(output_dir, required_files):
+        print_section("PHASE 6: ENHANCED VISUALIZATION [SKIPPED]")
+        print("✅ All visualizations and reports exist")
+        return
+    
+    print_section("PHASE 6: ENHANCED VISUALIZATION & REPORTING")
+    
+    if not STAGE6_AVAILABLE:
+        print("⚠️  Stage 6 not available, using basic visualizations")
+        # Fallback to basic visualizer
+        visualizer = DisruptionVisualizer()
+        visualizer.plot_disruption_curves(
+            all_results, metric='lcc_normalized',
+            save_path=f'{output_dir}/disruption_lcc_curves.png'
+        )
+        visualizer.plot_disruption_curves(
+            all_results, metric='efficiency_normalized',
+            save_path=f'{output_dir}/disruption_efficiency_curves.png'
+        )
+        visualizer.plot_comparative_bar_chart(
+            summary_df, save_path=f'{output_dir}/disruption_comparison_bar.png'
+        )
+        visualizer.plot_improvement_heatmap(
+            summary_df, baseline='Degree (Original)',
+            save_path=f'{output_dir}/disruption_improvement_heatmap.png'
+        )
+        return
+    
+    print("📊 Generating enhanced visualizations and reports...")
+    
+    visualizer = EnhancedVisualizer()
+    
+    # Use the comprehensive method that generates all visualizations
+    visualizer.create_all_visualizations(
+        G_original=G_orig,
+        G_augmented=G_aug,
+        features_df=features_orig,
+        features_aug=features_aug,
+        all_results=all_results,
+        summary_df=summary_df,
+        config=config,
+        seal_results=seal_results,
+        eval_orig=eval_orig,
+        eval_aug=eval_aug,
+        output_dir=output_dir,
+        rewiring_log=rewiring_log,
+        G_healed=G_healed
+    )
+    
+    print("✅ Enhanced visualizations and reports complete!")
+
+
 # ============================================================================
 # MAIN INTEGRATED PIPELINE
 # ============================================================================
@@ -519,7 +782,7 @@ def main_integrated(start_from_phase=None, skip_completed=True, force_regenerate
     """Main execution pipeline with all enhanced stages"""
     
     print_section("INTEGRATED CRIMINAL NETWORK ANALYSIS PIPELINE")
-    print("🎯 Using Enhanced Stages 1-4")
+    print("🎯 Using Enhanced Stages 1-6")
     print(f"🔄 Checkpoint mode: {'Enabled' if skip_completed else 'Disabled'}")
     
     # Show which stages are enabled
@@ -528,6 +791,8 @@ def main_integrated(start_from_phase=None, skip_completed=True, force_regenerate
     print(f"   Stage 2 (Enhanced Features): {'✅' if CONFIG['USE_STAGE2'] else '❌'}")
     print(f"   Stage 3 (Enhanced MO Inference): {'✅' if CONFIG['USE_STAGE3'] else '❌'}")
     print(f"   Stage 4 (Enhanced SEAL): {'✅' if CONFIG['USE_STAGE4'] else '❌'}")
+    print(f"   Stage 5 (Adaptive Rewiring): {'✅' if STAGE5_AVAILABLE else '❌'}")
+    print(f"   Stage 6 (Enhanced Visualization): {'✅' if STAGE6_AVAILABLE else '❌'}")
     
     config = CONFIG
     os.makedirs(config['OUTPUT_DIR'], exist_ok=True)
@@ -566,18 +831,89 @@ def main_integrated(start_from_phase=None, skip_completed=True, force_regenerate
         seal_results = checkpoint3.get('seal_results', {}) if checkpoint3 else {}
         eval_aug = checkpoint3.get('eval_augmented', {}) if checkpoint3 else {}
     
+    # Phase 5: Adaptive Rewiring (do this BEFORE disruption to test on healed graph)
+    if not start_from_phase or start_from_phase <= 5:
+        G_healed, features_healed, rewiring_log = run_phase5_integrated(
+            config,
+            G_aug,
+            data_noisy['persons'],
+            features_aug,
+            skip_completed
+        )
+    else:
+        G_healed = load_graph_from_csv(f'{config["OUTPUT_DIR"]}/relations_healed.csv')
+        features_healed = pd.read_csv(f'{config["OUTPUT_DIR"]}/node_features_healed.csv')
+        rewiring_log = []
+    
+    # Phase 4: Disruption Simulation with Recovery (on Original network)
+    if not start_from_phase or start_from_phase <= 4:
+        all_results, summary_df, improvements_df = run_phase4_integrated(
+            config,
+            data_noisy['graph'],
+            G_aug,
+            features_df,
+            features_aug,
+            data_noisy['persons'],
+            G_healed=G_healed,
+            features_healed=features_healed,
+            skip_if_complete=skip_completed
+        )
+    else:
+        summary_df = pd.read_csv(f'{config["OUTPUT_DIR"]}/disruption_summary.csv')
+        improvements_df = pd.read_csv(f'{config["OUTPUT_DIR"]}/disruption_improvements.csv')
+        checkpoint4 = load_checkpoint('phase4', config['OUTPUT_DIR'])
+        all_results = checkpoint4.get('all_results', {}) if checkpoint4 else {}
+    
+    # Phase 6: Enhanced Visualization & Reporting
+    if not start_from_phase or start_from_phase <= 6:
+        run_phase6_integrated(
+            config,
+            data_noisy['graph'],
+            G_aug,
+            G_healed,
+            features_df,
+            features_aug,
+            features_healed,
+            all_results,
+            summary_df,
+            improvements_df,
+            seal_results,
+            eval_orig,
+            eval_aug,
+            rewiring_log,
+            skip_completed
+        )
+    
     print_section("PIPELINE COMPLETE")
     print(f"\n✅ All phases completed successfully!")
     print(f"\n📊 Summary:")
     print(f"   MO Inference F1: {eval_orig.get('F1', 0):.3f}")
     print(f"   SEAL AUC: {seal_results.get('best_auc', 0):.3f}")
     
+    # Identify best disruption strategy
+    if len(summary_df) > 0:
+        best_strategy = summary_df.iloc[0]
+        if 'Recovery_Failure_Score' in summary_df.columns:
+            # New recovery-based method
+            print(f"\n🏆 Best Disruption Strategy (by Recovery Failure): {best_strategy['Strategy']}")
+            print(f"   Recovery Failure Score: {best_strategy['Recovery_Failure_Score']:.3f}")
+            print(f"   LCC After Recovery: {best_strategy.get('LCC_After_Recovery', 'N/A')}")
+            print(f"   Efficiency After Recovery: {best_strategy.get('Efficiency_After_Recovery', 'N/A')}")
+            print(f"   MO Collapse After Recovery: {best_strategy.get('MO_Collapse_After_Recovery', 'N/A')}")
+        else:
+            # Legacy method
+            print(f"\n🏆 Best Disruption Strategy: {best_strategy['Strategy']}")
+            print(f"   Steps to 50% LCC: {best_strategy.get('Steps_to_50%_LCC', 'N/A')}")
+    
     return {
         'features_df': features_df,
         'features_aug': features_aug,
+        'features_healed': features_healed,
         'seal_results': seal_results,
         'eval_orig': eval_orig,
-        'eval_aug': eval_aug
+        'eval_aug': eval_aug,
+        'summary_df': summary_df,
+        'improvements_df': improvements_df
     }
 
 
@@ -585,7 +921,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='Integrated Pipeline with Enhanced Stages')
-    parser.add_argument('--start-from', type=int, default=None, help='Start from phase (1-3)')
+    parser.add_argument('--start-from', type=int, default=None, help='Start from phase (1-6)')
     parser.add_argument('--force-rerun', action='store_true', help='Force rerun all phases')
     parser.add_argument('--regenerate', action='store_true', help='Force regenerate network')
     

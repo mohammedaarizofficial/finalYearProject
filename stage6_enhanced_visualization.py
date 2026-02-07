@@ -462,7 +462,9 @@ class EnhancedVisualizer:
         eval_orig: Dict,
         eval_aug: Dict,
         summary_df: pd.DataFrame,
-        output_dir: str
+        output_dir: str,
+        rewiring_log: Optional[List] = None,
+        G_healed: Optional[nx.Graph] = None
     ) -> str:
         """
         Generate comprehensive final report with all metrics
@@ -520,19 +522,76 @@ class EnhancedVisualizer:
                     f.write(f"- **Precision**: {stats.get('precision', 0):.3f}\n")
                 f.write("\n")
             
-            # Stage 5: Disruption Analysis
-            f.write("## Stage 5: Disruption Analysis\n\n")
-            if len(summary_df) > 0:
-                f.write("### Strategy Comparison\n\n")
-                f.write("| Strategy | Steps to 50% LCC | Steps to 50% Efficiency |\n")
-                f.write("|----------|------------------|------------------------|\n")
-                
-                for _, row in summary_df.iterrows():
-                    strategy = row.get('Strategy', 'Unknown')
-                    lcc_steps = row.get('Steps_to_50%_LCC', 'N/A')
-                    eff_steps = row.get('Steps_to_50%_Efficiency', 'N/A')
-                    f.write(f"| {strategy} | {lcc_steps} | {eff_steps} |\n")
+            # Stage 5: Adaptive Rewiring
+            f.write("## Stage 5: Adaptive Rewiring\n\n")
+            f.write("Adaptive rewiring simulates how criminal networks heal and adapt after disruption.\n\n")
+            f.write("**Rewiring Operations:**\n")
+            f.write("- Bridge Restoration: Reconnects predicted missing bridges between communities\n")
+            f.write("- Role Substitution: Replaces removed coordinators with high-MOscore neighbors\n")
+            f.write("- Triadic Closure: Probabilistically adds A–C if A–B and B–C exist\n")
+            f.write("- Preferential Attachment: New edges favor high-importance nodes\n")
+            f.write("- Community Healing: Ensures intra-community cohesion remains realistic\n\n")
+            
+            if G_healed is not None:
+                f.write(f"**Healed Network Statistics:**\n")
+                f.write(f"- **Nodes**: {G_healed.number_of_nodes()}\n")
+                f.write(f"- **Edges**: {G_healed.number_of_edges()}\n")
+                if features_aug is not None and 'person_id' in features_aug.columns:
+                    orig_edges = len(features_aug) * 2  # Approximate
+                    edges_added = G_healed.number_of_edges() - orig_edges if orig_edges > 0 else 0
+                    f.write(f"- **Edges Added**: {edges_added}\n")
                 f.write("\n")
+            
+            if rewiring_log:
+                f.write(f"**Rewiring Operations Logged**: {len(rewiring_log)} operations\n\n")
+            
+            f.write("This stage prepares the network for disruption testing by simulating network resilience.\n\n")
+            
+            # Stage 6: Disruption Analysis
+            f.write("## Stage 6: Disruption Analysis (Recovery-Based Evaluation)\n\n")
+            f.write("**New Methodology:** Strategies are ranked by recovery failure, not initial damage.\n")
+            f.write("After applying each disruption strategy, recovery is attempted using adaptive rewiring.\n")
+            f.write("The strategy producing the weakest network AFTER recovery is the best disruption strategy.\n\n")
+            
+            if len(summary_df) > 0:
+                # Check if using new recovery-based method
+                if 'Recovery_Failure_Score' in summary_df.columns:
+                    f.write("### Strategy Comparison (Ranked by Recovery Failure)\n\n")
+                    f.write("| Strategy | LCC After Recovery | Efficiency After Recovery | MO Collapse | Recovery Failure Score |\n")
+                    f.write("|----------|-------------------|-------------------------|-------------|----------------------|\n")
+                    
+                    for _, row in summary_df.iterrows():
+                        strategy = row.get('Strategy', 'Unknown')
+                        lcc_recovery = row.get('LCC_After_Recovery', row.get('lcc_after_recovery', 'N/A'))
+                        eff_recovery = row.get('Efficiency_After_Recovery', row.get('efficiency_after_recovery', 'N/A'))
+                        mo_collapse = row.get('MO_Collapse_After_Recovery', row.get('mo_collapse_after_recovery', 'N/A'))
+                        failure_score = row.get('Recovery_Failure_Score', row.get('recovery_failure_score', 'N/A'))
+                        
+                        if isinstance(lcc_recovery, (int, float)):
+                            lcc_recovery = f"{lcc_recovery:.3f}"
+                        if isinstance(eff_recovery, (int, float)):
+                            eff_recovery = f"{eff_recovery:.3f}"
+                        if isinstance(mo_collapse, (int, float)):
+                            mo_collapse = f"{mo_collapse:.3f}"
+                        if isinstance(failure_score, (int, float)):
+                            failure_score = f"{failure_score:.3f}"
+                        
+                        f.write(f"| {strategy} | {lcc_recovery} | {eff_recovery} | {mo_collapse} | {failure_score} |\n")
+                    f.write("\n")
+                    f.write("**Note:** Higher Recovery Failure Score = Better Disruption Strategy\n")
+                    f.write("(Lower LCC, Lower Efficiency, Higher MO Collapse after recovery = Better)\n\n")
+                else:
+                    # Legacy format
+                    f.write("### Strategy Comparison\n\n")
+                    f.write("| Strategy | Steps to 50% LCC | Steps to 50% Efficiency |\n")
+                    f.write("|----------|------------------|------------------------|\n")
+                    
+                    for _, row in summary_df.iterrows():
+                        strategy = row.get('Strategy', 'Unknown')
+                        lcc_steps = row.get('Steps_to_50%_LCC', 'N/A')
+                        eff_steps = row.get('Steps_to_50%_Efficiency', 'N/A')
+                        f.write(f"| {strategy} | {lcc_steps} | {eff_steps} |\n")
+                    f.write("\n")
             
             # Key Metrics Summary
             f.write("## Key Metrics Summary\n\n")
@@ -629,7 +688,9 @@ class EnhancedVisualizer:
         seal_results: Dict,
         eval_orig: Dict,
         eval_aug: Dict,
-        output_dir: str
+        output_dir: str,
+        rewiring_log: Optional[List] = None,
+        G_healed: Optional[nx.Graph] = None
     ):
         """
         Create all visualizations and generate final report
@@ -706,7 +767,9 @@ class EnhancedVisualizer:
             eval_orig,
             eval_aug,
             summary_df,
-            output_dir
+            output_dir,
+            rewiring_log=rewiring_log,
+            G_healed=G_healed
         )
         
         print(f"\n✅ All visualizations and reports generated!")
