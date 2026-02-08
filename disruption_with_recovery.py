@@ -27,6 +27,7 @@ except ImportError:
     print("⚠️  Stage 4 (SEAL) not available")
 
 from disruption_simulation import NetworkDisruption
+from stage5_adaptive_rewiring import compute_mo_collapse_continuous
 
 
 class DisruptionWithRecovery:
@@ -64,10 +65,12 @@ class DisruptionWithRecovery:
         global_efficiency = self.disruption_sim.approx_global_efficiency(G)
         efficiency_normalized = global_efficiency  # Already normalized
         
-        # MO role collapse metric
+        # MO role collapse metric (CONTINUOUS - using new function)
+        # Note: This requires G_original for comparison, so we'll compute a simplified version here
+        # The full continuous metric will be computed in evaluate_strategy_with_recovery
         mo_role_collapse = 0.0
         if features_df is not None and 'predicted_role' in features_df.columns:
-            # Count how many high-importance roles (Coordinators, Brokers) remain
+            # Simplified version: count remaining high-importance roles
             remaining_nodes = set(G.nodes())
             if 'person_id' in features_df.columns:
                 id_col = 'person_id'
@@ -202,8 +205,46 @@ class DisruptionWithRecovery:
         
         metrics_recovered = self.compute_metrics(G_recovered, features_recovered)
         
+        # Compute metrics after disruption (for reference)
+        metrics_disrupted = self.compute_metrics(G_disrupted, features_df)
+        
+        # Compute MO collapse after recovery (CONTINUOUS METRIC - BEHAVIORAL DEGRADATION)
+        # CRITICAL: Compute relative to DISRUPTED graph, not original
+        # This measures how recovery FAILS to restore critical roles
+        # Uses THREE signals: Role Capacity Loss, Reach Degradation, Structural Isolation
+        mo_collapse_recovered = compute_mo_collapse_continuous(
+            G_disrupted, G_recovered, features_recovered, use_hdbscan_noise=False, verbose=True
+        )
+        
+        # VALIDATION: Check if MO collapse is non-zero for MO-based strategy
+        if strategy_name == 'MO-Based' and mo_collapse_recovered == 0.0:
+            print(f"  ⚠️  WARNING: MO-based strategy shows no behavioral collapse (mo_collapse={mo_collapse_recovered:.3f})")
+            print(f"     This may indicate over-healing. Check rewiring constraints.")
+        
         # Recovery failure = how much the network failed to recover
         # Lower LCC, lower efficiency, higher MO collapse = worse recovery = better disruption
+        recovery_failure_lcc = 1.0 - metrics_recovered['lcc_normalized']
+        recovery_failure_efficiency = 1.0 - metrics_recovered['efficiency_normalized']
+        recovery_failure_mo = mo_collapse_recovered
+        
+        # Recovery failure score (BEHAVIOR-AWARE FORMULATION)
+        # Criminal networks prioritize coordination, not connectivity
+        # A connected network without effective coordinators is operationally useless
+        # Structural damage still matters (60%), but behavior is decisive (40%)
+        recovery_failure_score = (
+            0.35 * recovery_failure_lcc +
+            0.25 * recovery_failure_efficiency +
+            0.40 * recovery_failure_mo
+        )
+        
+        # REQUIRED LOG OUTPUT (MANDATORY FORMAT)
+        print(f"\n[FinalRecoveryEval]")
+        print(f"  Strategy: {strategy_name}")
+        print(f"  LCC: {metrics_recovered['lcc_normalized']:.3f}")
+        print(f"  Efficiency: {metrics_recovered['efficiency_normalized']:.3f}")
+        print(f"  MO Collapse: {mo_collapse_recovered:.3f}")
+        print(f"  Final Recovery Failure Score: {recovery_failure_score:.3f}")
+        
         return {
             'strategy': strategy_name,
             'num_removals': num_removals,
@@ -212,17 +253,18 @@ class DisruptionWithRecovery:
             # After disruption (before recovery)
             'lcc_after_disruption': metrics_disrupted['lcc_normalized'],
             'efficiency_after_disruption': metrics_disrupted['efficiency_normalized'],
-            'mo_collapse_after_disruption': metrics_disrupted['mo_role_collapse'],
+            'mo_collapse_after_disruption': 0.0,  # Not used in ranking
             
             # After recovery
             'lcc_after_recovery': metrics_recovered['lcc_normalized'],
             'efficiency_after_recovery': metrics_recovered['efficiency_normalized'],
-            'mo_collapse_after_recovery': metrics_recovered['mo_role_collapse'],
+            'mo_collapse_after_recovery': mo_collapse_recovered,  # CONTINUOUS (FIXED - relative to disrupted)
             
             # Recovery failure metrics (what we rank by)
-            'recovery_failure_lcc': 1.0 - metrics_recovered['lcc_normalized'],  # Higher = worse recovery
-            'recovery_failure_efficiency': 1.0 - metrics_recovered['efficiency_normalized'],  # Higher = worse recovery
-            'recovery_failure_mo': metrics_recovered['mo_role_collapse'],  # Higher = worse recovery
+            'recovery_failure_lcc': recovery_failure_lcc,  # Higher = worse recovery
+            'recovery_failure_efficiency': recovery_failure_efficiency,  # Higher = worse recovery
+            'recovery_failure_mo': recovery_failure_mo,  # Higher = worse recovery (CONTINUOUS)
+            'recovery_failure_score': recovery_failure_score,  # Composite score
             
             # Recovery stats
             'recovery_edges_added': recovery_stats['edges_added'],
@@ -271,11 +313,14 @@ class DisruptionWithRecovery:
         
         # Rank by recovery failure (composite score)
         # Best disruption = lowest LCC after recovery + lowest efficiency + highest MO collapse
-        results_df['recovery_failure_score'] = (
-            results_df['recovery_failure_lcc'] * 0.4 +
-            results_df['recovery_failure_efficiency'] * 0.3 +
-            results_df['recovery_failure_mo'] * 0.3
-        )
+        # BEHAVIOR-AWARE WEIGHTS: 0.35, 0.25, 0.40 (already computed in evaluate_strategy_with_recovery)
+        # If not present, compute it
+        if 'recovery_failure_score' not in results_df.columns:
+            results_df['recovery_failure_score'] = (
+                results_df['recovery_failure_lcc'] * 0.35 +
+                results_df['recovery_failure_efficiency'] * 0.25 +
+                results_df['recovery_failure_mo'] * 0.40
+            )
         
         # Sort by recovery failure score (descending = worst recovery = best disruption)
         results_df = results_df.sort_values('recovery_failure_score', ascending=False)
@@ -286,5 +331,88 @@ class DisruptionWithRecovery:
         print("="*70)
         print("\n" + results_df[['strategy', 'lcc_after_recovery', 'efficiency_after_recovery', 
                                   'mo_collapse_after_recovery', 'recovery_failure_score']].to_string(index=False))
+        
+        # VALIDATION CHECK: Expected recovery behavior
+        print("\n" + "="*70)
+        print("VALIDATION CHECK: Expected Recovery Behavior")
+        print("="*70)
+        
+        if len(results_df) > 0:
+            best_strategy = results_df.iloc[0]
+            mo_based_row = results_df[results_df['strategy'] == 'MO-Based']
+            random_row = results_df[results_df['strategy'] == 'Random']
+            
+            # Check 1: LCC after recovery should be 0.6-0.8 for effective strategies
+            best_lcc = best_strategy['lcc_after_recovery']
+            if best_lcc < 0.6:
+                print(f"⚠️  WARNING: Best strategy LCC ({best_lcc:.3f}) is below expected range (0.6-0.8)")
+            elif best_lcc > 0.9:
+                print(f"⚠️  WARNING: Best strategy LCC ({best_lcc:.3f}) is too high (over-healing detected)")
+            else:
+                print(f"✅ Best strategy LCC ({best_lcc:.3f}) is in expected range (0.6-0.8)")
+            
+            # Check 2: MO-based should show highest MO collapse
+            if len(mo_based_row) > 0:
+                mo_collapse = mo_based_row.iloc[0]['mo_collapse_after_recovery']
+                
+                # Expected range for MO-Based: 0.35 - 0.65
+                if mo_collapse < 0.35:
+                    print(f"⚠️  WARNING: MO-Based strategy MO collapse ({mo_collapse:.3f}) is below expected range (0.35-0.65)")
+                elif mo_collapse > 0.65:
+                    print(f"⚠️  WARNING: MO-Based strategy MO collapse ({mo_collapse:.3f}) is above expected range (0.35-0.65)")
+                else:
+                    print(f"✅ MO-Based strategy shows MO collapse in expected range: {mo_collapse:.3f}")
+                
+                # Check if MO-Based has highest collapse
+                max_collapse = results_df['mo_collapse_after_recovery'].max()
+                if mo_collapse < max_collapse - 0.01:  # Allow small floating point differences
+                    print(f"⚠️  WARNING: MO-Based does not have highest MO collapse (max is {max_collapse:.3f})")
+                else:
+                    print(f"✅ MO-Based has highest MO collapse: {mo_collapse:.3f}")
+                
+                # Compare with Betweenness
+                betweenness_row = results_df[results_df['strategy'] == 'Betweenness']
+                if len(betweenness_row) > 0:
+                    betweenness_collapse = betweenness_row.iloc[0]['mo_collapse_after_recovery']
+                    if mo_collapse <= betweenness_collapse:
+                        print(f"⚠️  WARNING: MO-Based collapse ({mo_collapse:.3f}) ≤ Betweenness collapse ({betweenness_collapse:.3f})")
+                    else:
+                        print(f"✅ MO-Based collapse ({mo_collapse:.3f}) > Betweenness collapse ({betweenness_collapse:.3f})")
+            
+            # Check 3: Random should recover best (lowest recovery failure)
+            if len(random_row) > 0:
+                random_failure = random_row.iloc[0]['recovery_failure_score']
+                best_failure = best_strategy['recovery_failure_score']
+                if random_failure < best_failure:
+                    print(f"✅ Random strategy recovers better (as expected): {random_failure:.3f} < {best_failure:.3f}")
+                else:
+                    print(f"⚠️  WARNING: Random strategy doesn't recover best (unexpected)")
+            
+            # Check 4: MO-Based must have highest recovery failure score (REQUIRED VALIDATION)
+            if len(mo_based_row) > 0:
+                mo_failure = mo_based_row.iloc[0]['recovery_failure_score']
+                if best_strategy['strategy'] == 'MO-Based':
+                    print(f"✅ MO-Based strategy has highest Recovery Failure Score: {mo_failure:.3f}")
+                else:
+                    print(f"⚠️  WARNING: MO-Based strategy does not have highest Recovery Failure Score")
+                    print(f"     MO-Based: {mo_failure:.3f}, Best: {best_failure:.3f} ({best_strategy['strategy']})")
+            
+            # Check 5: MO-Based must have highest MO collapse (REQUIRED VALIDATION)
+            if len(mo_based_row) > 0:
+                mo_collapse = mo_based_row.iloc[0]['mo_collapse_after_recovery']
+                max_collapse = results_df['mo_collapse_after_recovery'].max()
+                if mo_collapse >= max_collapse - 0.01:  # Allow small floating point differences
+                    print(f"✅ MO-Based has highest MO Collapse: {mo_collapse:.3f}")
+                else:
+                    print(f"⚠️  WARNING: MO-Based does not have highest MO Collapse")
+                    print(f"     MO-Based: {mo_collapse:.3f}, Max: {max_collapse:.3f}")
+            
+            # Check 6: MO collapse should not be zero (REQUIRED VALIDATION)
+            if len(mo_based_row) > 0:
+                mo_collapse = mo_based_row.iloc[0]['mo_collapse_after_recovery']
+                if mo_collapse == 0.0:
+                    print(f"⚠️  WARNING: MO-Based strategy shows MO collapse = 0.0 (behavioral metric not working)")
+                else:
+                    print(f"✅ MO-Based strategy shows non-zero MO collapse: {mo_collapse:.3f}")
         
         return results_df

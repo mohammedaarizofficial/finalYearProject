@@ -95,7 +95,8 @@ def run_pipeline_with_progress():
         print("\n🚀 Starting pipeline...")
         start_time = time.time()
         
-        # Run pipeline
+        # Run pipeline (use same logic as pipeline_integrated.py)
+        # This ensures consistent behavior between run_pipeline.py and pipeline_integrated.py
         results = main_integrated(
             start_from_phase=None,
             skip_completed=True,
